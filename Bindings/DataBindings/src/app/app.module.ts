@@ -1,13 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ProductComponent } from './component';
+import { ProductComponent } from './OneWay/component';
+import { OneWayModule } from './OneWay/oneWay.module';
 
 @NgModule({
-  declarations: [
-    ProductComponent
-  ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    OneWayModule
   ],
   providers: [],
   bootstrap: [ProductComponent]
