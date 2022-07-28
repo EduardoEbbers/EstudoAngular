@@ -1,4 +1,6 @@
 import { NgModule } from '@angular/core';
+import { AttributeModule } from './Attribute/attribute.model';
+import { ClassModule } from './Class/class.model';
 import { ProductComponent } from './component';
 import { StandardPropertyModule } from './StandardProperty/standardProperty.model';
 import { StringInterpolationModule } from './StringInterpolation/stringInterpolation.model';
@@ -6,7 +8,9 @@ import { StringInterpolationModule } from './StringInterpolation/stringInterpola
 @NgModule({
     imports: [
         StandardPropertyModule,
-        StringInterpolationModule
+        StringInterpolationModule,
+        AttributeModule,
+        ClassModule
     ],
     declarations: [
         ProductComponent
