@@ -1,1 +1,17 @@
-This is working!
+<!--
+    1.3 Attribute Binding
+-->
+<table class="table table-bordered table-striped mt-2 table-sm">
+    <tr>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+    </tr>
+    <tr>
+        <td [attr.colSpan]="repository.getProducts().length">
+            {{ repository.getProduct(1).name || 'None' }}
+        </td>
+    </tr>
+</table>

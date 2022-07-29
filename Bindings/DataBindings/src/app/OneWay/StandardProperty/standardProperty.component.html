@@ -1,1 +1,7 @@
-This is working!
+<!--
+    1.1 Standard Property Binding
+-->
+<div class="form-group">
+    <label>Name</label>
+    <input class="form-control" [value]="repository.getProduct(1)?.name || 'None'" />
+</div>

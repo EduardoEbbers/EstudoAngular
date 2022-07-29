@@ -1,1 +1,45 @@
-This is working!
+<!--
+    1.4 Class Binding
+-->
+
+<!--
+    1.4.1 Standard Property Binding
+
+        - Setting All Classes with property binding
+-->
+<div class="text-white p-2">
+    <div [class]="getClasses(1)">
+        O primeiro produto é {{ repository.getProduct(1).name }}
+    </div>
+</div>
+<div class="text-white p-2">
+    <div [class]="getClasses(2)">
+        O segundo produto é {{ repository.getProduct(2).name }}
+    </div>
+</div>
+
+<!--
+    1.4.2 Special Class Binding
+
+        - Setting Individual Class with Special binding
+-->
+<div class="p-2" [class.bg-danger]="repository.getProduct(2).price < 50" [class.bg-warning]="repository.getProduct(2).price >= 50">
+    O segundo produto é {{ repository.getProduct(2).name }}
+</div>
+
+<!--
+    1.4.3 ngClass Directive
+
+        - Setting Classes with ngClass Directive
+-->
+<div class="text-white m-2">
+    <div class="p-2" [ngClass]="getClassesMap(1)">
+        O primeiro produto é {{ repository.getProduct(1).name }}
+    </div>
+    <div class="p-2" [ngClass]="getClassesMap(2)">
+        O segundo produto é {{ repository.getProduct(2).name }}
+    </div>
+    <div class="p-2" [ngClass]="{'bg-success': repository.getProduct(3).price < 50, 'bg-info': repository.getProduct(3).price >= 50}">
+        O terceiro produto é {{ repository.getProduct(3).name }}
+    </div>
+</div>
