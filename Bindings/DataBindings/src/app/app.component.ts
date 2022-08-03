@@ -7,6 +7,5 @@ import { Repository } from './Models/repository.model';
 })
 export class AppComponent {
   title = 'DataBindings';
-
   repository: Repository = new Repository();
 }

@@ -1,7 +1,10 @@
-<div>
-    <app-one-way></app-one-way>
-</div>
-<br />
-<div>
-    <app-two-way></app-two-way>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-1">
+            <app-header></app-header>
+        </div>
+        <div class="col-9">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
 </div>

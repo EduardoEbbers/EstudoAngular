@@ -1,10 +1,12 @@
+import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
-import { BrowserModule } from "@angular/platform-browser";
 import { ClassComponent } from "./class.component";
+import { ClassRoutingModule } from "./classRouting.module";
 
 @NgModule({
     imports: [
-        BrowserModule
+        CommonModule,
+        ClassRoutingModule
     ],
     declarations: [
         ClassComponent
