@@ -5,84 +5,214 @@
         1.1 Standard Property Binding
         1.2 String Interpolation Binding
         1.3 Attribute Binding
-        1.4  Class Binding
+        1.4 Class Binding
         1.5 Style Binding
         1.6 Event Binding
 -->
 
 <h1>One Way</h1>
-<h3>Basic</h3>
-<ul class="list-unstyled">
-    <li>
-        <a class="btn btn-link" 
-           routerLink="/bindings/oneWay/standardProperty">
-           Standard Property Binding
-        </a>
-    </li>
-    <li>
-        <a class="btn btn-link" 
-           routerLink="/bindings/oneWay/standardProperty">
-           String Interpolation Binding
-        </a>
-    </li>
-    <li>
-        <a class="btn btn-link" 
-           routerLink="/bindings/oneWay/standardProperty">
-           Attribute Binding
-        </a>
-    </li>
-    <li>
-        <a class="btn btn-link" 
-           routerLink="/bindings/oneWay/standardProperty">
-           Class Binding
-        </a>
-    </li>
-    <li>
-        <a class="btn btn-link" 
-           routerLink="/bindings/oneWay/standardProperty">
-           Style Binding
-        </a>
-    </li>
-    <li>
-        <a class="btn btn-link" 
-           routerLink="/bindings/oneWay/standardProperty">
-           Event Binding
-        </a>
-    </li>
-</ul>
+<h3>Básico</h3>
 
-<!--
+<br>
+
+<h5>Estrutura Básica</h5>
+
 <div>
+    <img style="margin: 10px;" src="../../assets/imagens/dataBindings/estrutura_basica.jpg" alt="estrutura basica data bindings" />
+    <img style="margin: 10px;" src="../../assets/imagens/dataBindings/metodo_expressao.jpg" alt="metodo da expressao data bindings" />
+</div>
+<br>
 
-    <p>Dividido em:</p>
-
-    
-    <div class="navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item dropdown mega_menu_holder">
-                <ul class="dropdown mega_menu">
-                    <li class="nav-item">
-                        <a class="" href="" data-toggle="dropdown">Standard Property Binding</a>
+<p style="color: red;">
+        - interpretacao: se a quantidade de produtos for igual a 5 (true) vai ser a expressao sera bg-success, se nao (false) vai ser bg-warning
+        - qdo se tem mais de um valor para se apresentar na expressao, deve-se separar por espacos
+</p>
+<p>
+    A estrutura básica, acima, é dividida em 4 partes:			
+</p>
+<div>
+    <ul>
+        
+        <li>
+            <p>
+                <strong>
+                    <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseHostElement" role="button" aria-expanded="false" aria-controls="collapseHostElement">
+                        Elemento hospedeiro (host element)
+                      </a>
+                </strong>
+            </p>
+            <div class="collapse card-body" id="collapseHostElement">
+                <p>
+                    Elemento HTML ou tag HTML do qual vai mudar a aparência, conteúdo ou comportamento.
+                </p>
+                <p>
+                    Data Bindings pode ser aplicado a qualquer elemento host e um elemento host pode ter múltiplos data bindings.
+                </p>
+            </div>
+            
+        </li>
+        
+        <li>
+            <p>
+                <strong>
+                    <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseBrackets" role="button" aria-expanded="false" aria-controls="collapseBrackets">
+                        Colchetes ou Parênteses
+                      </a>
+                </strong>
+            </p>
+            <div class="collapse card-body" id="collapseBrackets">
+                <p>
+                    Colchetes ou Parênteses indicam que o data bindings possui uma expressão para ser avaliada.
+                </p>
+                <p>
+                    Colchetes indicam que os dados fluem do componente para o template (data bindings).
+                </p>
+                <p>
+                    Parênteses indicam que os dados fluem do template para o componente (event bindings).
+                </p>
+                <ul>
+                    <li>
+                        <p style="color: red;">
+                            Obs 1.: pode-se usar string interpolation bindings visto futuramente 
+                        </p>
                     </li>
-                    <li class="nav-item">
-                        <a class="" href="#" data-toggle="dropdown">String Interpolation Binding</a>
+                    <li>
+                        <p style="color: red;">
+                            Obs 2.: Omitindo o colchetes ou parênteses a expressão não será avaliada passando a ser considerada um valor literal. 
+                        </p>
                     </li>
-                    <li class="nav-item">
-                        <a class="" href="#" data-toggle="dropdown">Attribute Binding</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="" href="#" data-toggle="dropdown">Class Binding</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="" href="#" data-toggle="dropdown">Style Binding</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="" href="#" data-toggle="dropdown">Event Binding</a>
+                    <li>
+                        <p style="color: red;">
+                            Obs 3.: pode-se usar "banana-in-box" visto futuramente 
+                        </p>
                     </li>
                 </ul>
-            </li>
-        </ul>
-    </div>
-</div>
--->
+            </div>
+        </li>
 
+        <li>
+            <p>
+                <strong>
+                    <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseTarget" role="button" aria-expanded="false" aria-controls="collapseTarget">
+                        Alvo (target)
+                      </a>
+                </strong>
+            </p>
+            <div class="collapse card-body" id="collapseTarget">
+                <p>
+                    É aquele que vai ser atingido pelo binding, podendo ser de 2 tipos:
+                </p>
+                <ul>
+                    <li>
+                        Bindings de Propriedade (Property Bindings)
+                        <p>São divididos em:</p> 
+                        <ul>
+                            <li>
+                                <a class="btn btn-link" 
+                                   routerLink="/bindings/oneWay/standardProperty">
+                                   Binding de Propriedade Padrão (Standard Property Binding)
+                                </a>
+                            </li>
+                            <li>
+                                <a class="btn btn-link" 
+                                   routerLink="/bindings/oneWay/stringInterpolation">
+                                    Binding de Interpolação de String (String Interpolation Binding)
+                                </a>
+                            </li>
+                            <li>
+                                <a class="btn btn-link" 
+                                   routerLink="/bindings/oneWay/attribute">
+                                    Binding de Atributo (Attribute Binding)
+                                </a>
+                            </li>
+                            <li>
+                                <a class="btn btn-link" 
+                                   routerLink="/bindings/oneWay/class">
+                                    Binding de Class (Class Binding)
+                                </a>
+                            </li>
+                            <li>
+                                <a class="btn btn-link" 
+                                   routerLink="/bindings/oneWay/style">
+                                    Binding de Estilo (Style Binding)
+                                </a>
+                            </li>
+                            <li>
+                                <a class="btn btn-link" 
+                                   routerLink="/bindings/oneWay/event">
+                                    Binding de Evento (Event Binding)
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+    
+                    <li>
+                        Bindings de Diretiva (Directive Bindings)
+                        <p>
+                            Podem ser fornecidos pelo Angular (built-in directives), prefixados com ng, ou personalizados
+                        </p>
+                        <p>
+                            São divididos em:
+                        </p>
+                        <ul>
+                            <li>
+                                <a class="btn btn-link" 
+                                   routerLink="/bindings/oneWay/event">
+                                    Diretiva ngClass
+                                </a>
+                            </li>
+                            <li>
+                                <a class="btn btn-link" 
+                                   routerLink="/bindings/oneWay/event">
+                                   Diretiva ngStyle
+                                </a>
+                            </li>
+                            <li>
+                                <a class="btn btn-link" 
+                                   routerLink="/bindings/oneWay/ngIf">
+                                   Diretiva ngIf
+                                </a>
+                            </li>
+                            <li>
+                                <a class="btn btn-link" 
+                                   routerLink="/bindings/oneWay/ngFor">
+                                   Diretiva ngFor
+                                </a>
+                            </li>
+                            <li>
+                                <a class="btn btn-link" 
+                                   routerLink="/bindings/oneWay/ngSwitch">
+                                   Diretiva ngSwitch/ngSwitchCase/ngSwitchDefault
+                                </a>
+                            </li>
+                            <li>
+                                <a class="btn btn-link" 
+                                   routerLink="/bindings/oneWay/ngTemplateOutlet">
+                                   Diretiva ngTemplateOutlet
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </li>
+
+        <li>
+            <p>
+                <strong>
+                    <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExpression" role="button" aria-expanded="false" aria-controls="collapseExpression">
+                        Expressão
+                      </a>
+                </strong>
+            </p>
+            <div class="collapse card-body" id="collapseExpression">
+                <p>
+                    Fragmento de código JavaScript analisado pelo componente para ser um valor do alvo, tendo acesso às propriedades e métodos definidos no componente. 
+                </p>
+                <p>
+                    Pode-se misturar metodos e propriedades com um valor string literal na expressão
+                </p>
+            </div>
+        </li>
+    </ul>
+</div>
