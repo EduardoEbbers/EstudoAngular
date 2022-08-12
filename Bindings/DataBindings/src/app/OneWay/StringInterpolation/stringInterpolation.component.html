@@ -1,6 +1,46 @@
 <!--
-    1.2 Interpolation String
+    1. One Way
+    1.2 String Interpolation
 -->
+
+<h1>One Way</h1>
+<h3>String Interpolation Bindings</h3>
+
+<br>
+
+<h5>Estrutura Básica</h5>
+
+<p>
+    Usa-se chaves dupla que inclui o resultado da expressão
+</p>
+
+<p>Assim a expressão é avaliada e setada para o alvo ou propriedade do elemento host modificando o estado ou conteudo</p>
+<p style="color: red;">
+    Obs 1: O retorno da expressão é um string equivalente a usar a propriedade "textContent"
+</p>
+<br>
+
+<p style="color: red;">
+    Colocar o exemplo aqui ?
+
+    <!--
+    <div [ngClass]="'text-white p-2 ' + getClasses()"
+		 [textContent]="'Name: ' + (model.getProduct(1)?.name ?? 'None')">
+		</div>
+
+		<div [ngClass]="'text-white p-2 ' + getClasses()">
+		 Name: {{ model.getProduct(1)?.name ?? 'None' }}
+		</div>
+    -->
+</p>
+
+
+<p>
+    explicacao e mais..
+    ex, propriedade "value" do elemento host input, serve para setar conteudo do input após avaliação da expressão do binding 
+</p>
+
+
 <div class="text-white m-2 p-2 bg-warning">
     Name: {{ repository.getProduct(1)?.name || 'None' }}
 </div>
