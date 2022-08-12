@@ -1,6 +1,158 @@
 <!--
+    1. One Way
     1.5 Style Binding
 -->
+
+<h1>One Way</h1>
+<h3>Style Binding</h3>
+
+<br>
+
+<h5>Estrutura Básica</h5>
+
+<p>
+    Propriedade do elemento host
+
+</p>
+<p>
+    Existe 3 formas de manipulação:     
+</p>
+
+<div>
+    <ul>
+        <li>
+            <p>
+                <strong>
+                    <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseHostElement" role="button" aria-expanded="false" aria-controls="collapseHostElement">
+                        Standard Property Binding
+                      </a>
+                </strong>
+            </p>
+            <div class="collapse card-body" id="collapseHostElement">
+                <p>
+                    Estrutura basica
+                </p>
+                <p>
+                    [style.mystyle]
+                </p>
+                <p>
+                    Seta um único valor de uma única propriedade style
+                </p>
+                <p style="color: red;">
+                    Obs 1: Deve-se incluir as unidades requeridas para o style
+                </p>
+                <p style="color: red;">
+                    <!--
+                    Obs 2: incluir o caution pag 267 ?
+                    -->
+                </p>
+            </div>
+        </li>
+        
+        <li>
+            <p>
+                <strong>
+                    <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseBrackets" role="button" aria-expanded="false" aria-controls="collapseBrackets">
+                        Style Binding Special
+                      </a>
+                </strong>
+            </p>
+            <div class="collapse card-body" id="collapseBrackets">
+                <p>
+                    Estrutura basica
+                </p>
+                <p>
+                    [style.myStyle.units]
+                </p>
+                <p>
+                    Seta um único valor de uma única propriedade style
+                </p>
+                <p style="color: red;">
+                    Obs 1: Não deve incluir as unidades requeridas
+                </p>
+                <p style="color: red;">
+                    <!--
+                    Obs 2: colocar a parte de Tip da pagina 268 ?
+                    -->
+                </p>
+            </div>
+        </li>
+
+        <li>
+            <p>
+                <strong>
+                    <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseTarget" role="button" aria-expanded="false" aria-controls="collapseTarget">
+                        diretiva ngStyle
+                      </a>
+                </strong>
+            </p>
+            <div class="collapse card-body" id="collapseTarget">
+                <p>
+                    Estrutura basica
+                </p>
+                <p>
+                    [ngStyle]
+                </p>
+                <p>
+                    Explicado em diretiva ngStyle
+                </p>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
+<br>
+
+<div>
+    <ul>
+        <li>
+            <p>
+                <strong>
+                    <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseTarget" role="button" aria-expanded="false" aria-controls="collapseTarget">
+                        Lista de Exemplos
+                      </a>
+                </strong>
+            </p>
+            <div class="collapse card-body" id="collapseTarget">
+                <ul>
+                    <li>
+                        <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo1" role="button" aria-expanded="false" aria-controls="collapseExemplo1">    
+                            Exemplo 1
+                        </a> 
+                    </li>
+                    <li>
+                        <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo2" role="button" aria-expanded="false" aria-controls="collapseExemplo2">    
+                            Exemplo 2
+                        </a> 
+                    </li>
+                    <li>
+                        <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo3" role="button" aria-expanded="false" aria-controls="collapseExemplo3">    
+                            Exemplo 3
+                        </a>
+                        <div class="collapse card-body" id="collapseExemplo3">
+                            
+                        </div> 
+                    </li>
+                    <li>
+                        <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo4" role="button" aria-expanded="false" aria-controls="collapseExemplo4">    
+                            Exemplo 4
+                        </a>
+                        <div class="collapse card-body" id="collapseExemplo4">
+                        </div> 
+                    </li>
+                    <li>
+                        <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo5" role="button" aria-expanded="false" aria-controls="collapseExemplo5">    
+                            Exemplo 5
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
 <!--
     1.5.1 Standard Property Binding
 
