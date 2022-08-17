@@ -10,32 +10,25 @@
 
 <h5>Estrutura Básica</h5>
 
-<p>
-    Usa-se colchetes aplicados em propriedades padrão do elemento host que gerenciam o estado do elemento
-</p>
-<p>Assim a expressão é avaliada e setada para o alvo ou propriedade do elemento host modificando o estado ou conteudo</p>
+<div>
+    <img src="../../../assets/imagens/dataBindings/estrutura_basica_standard_property.jpg" alt="estrutura basica standard property binding">
+</div>
 <br>
-
-<p style="color: red;">
-    Colocar o exemplo aqui ?
-
-    <!--
-    <input [value]="repository.getProduct(1)?.name || 'None'" />
-    -->
-
-    Obs 1: Caso o objeto de dados possua um valor nulo, o operador "?", na expressão acima, é uma condicional que, caso o retorno seja nulo, tenha-se um resultado descritivo no input como "None"
-</p>
-
 <p>
-    ex, propriedade "value" do elemento host input, serve para setar conteudo do input após avaliação da expressão do binding 
+    Usa-se colchetes aplicados ao redor de uma propriedade padrão do elemento host que gerenciam o estado do elemento
 </p>
+<p>
+    Assim a expressão é avaliada e setada para o alvo ou propriedade do elemento host modificando o estado ou conteudo
+</p>
+
+
 
 <p style="color: darkgoldenrod;">
     Para saber mais sobre elemento host e suas propriedades e metodos consultar o website do monzila
 </p>
-<p>colocar em anchor ?</p>
-developer.mozilla.org/en-US/docs/Web/API/HTMLElement
-
+<div>
+    <a href="http://developer.mozilla.org/en-US/docs/Web/API/HTMLElement">developer.mozilla.org/en-US/docs/Web/API/HTMLElement</a>
+</div>
 <br>
 
 <div>
@@ -52,23 +45,60 @@ developer.mozilla.org/en-US/docs/Web/API/HTMLElement
                 <ul>
                     <li>
                         <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo1" role="button" aria-expanded="false" aria-controls="collapseExemplo1">    
-                            Exemplo 1
-                        </a> 
+                            <strong>Exemplo 1:</strong> Propriedade href da tag anchor 
+                        </a>
                         <div class="collapse card-body" id="collapseExemplo1">
-                            <a [href]="getHref()">oi</a>
-                        </div>
+                            <div>
+                                <a [href]="getHref()">Seta href</a>
+                            </div>
+                            <br>
+
+                            <div>
+                                <img style="margin: 10px;" src="../../../assets/imagens/dataBindings/esquema_standard_property.jpg" alt="estrutura basica standard property bindings" />
+                            </div>
+
+                            <p>
+                                A propriedade "href" do elemento host anchor (ou tag a), serve para setar um endereço URL válido após avaliação da expressão do binding 
+                            </p>
+                            <p>
+                                A expressão do binding"<strong>getHref()</strong>" é um método do componente do template HTML.
+                            </p>
+                            <p>
+                                No esquema acima, Angular seta o binding na propriedade [href] após avaliação do método <strong>getHref()</strong>
+                            </p>
+                            <p>
+                                O retorno do método <strong>getHref()</strong> no componente é uma string, que avalia se a quantidade de produtos é igual a 5
+                            </p>
+                            <p>
+                                caso sim, o endereço URL será "/bindings/oneWay/standardProperty)", caso não, o endereço URL será a página inicial.
+                            </p>
+
+                            <p>
+                                Aqui temos a tag anchor (a) que possui um binding na propriedade <strong>id</strong> e <strong>title</strong> do elemento host.
+                            </p>
+                            <p>
+                                A expressão "<strong>getId()</strong>" e "<strong>getTitle()</strong>" são métodos do componente do template HTML.
+                            </p>
+                            <p>
+                                No esquema acima, Angular seta o binding na propriedade [href] após avaliação do método getHref()
+                            </p>
+                            <p>
+                                O retorno do método <strong>getHref()</strong> do componente é um string, que avalia se a quantidade de produtos é igual a 5, caso sim (o retorno será /bindings/oneWay/standardProperty), caso não (o retorno será retornar /)
+                            </p>
+                        </div> 
                     </li>
                     <li>
                         <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo2" role="button" aria-expanded="false" aria-controls="collapseExemplo2">    
-                            Exemplo 2
+                            <strong>Exemplo 2:</strong> Propriedade href da tag anchor 
                         </a>
                         <div class="collapse card-body" id="collapseExemplo2">
                             <table class="table table-bordered table-striped">
                                 <tr>
-                                    <th></th>
+                                    <th>Nome</th>
+                                    <th>Categoria</th>
+                                    <th>Preço</th>
                                 </tr>
                                 <tr *ngFor="let product of getProducts(); let i = index">
-                                    <td>{{ i + 1 }}</td>
                                     <td>
                                         <a href="#" [id]="getId(i + 1)" [title]="getTitle(i + 1)">
                                             {{ product.name }}
@@ -77,71 +107,42 @@ developer.mozilla.org/en-US/docs/Web/API/HTMLElement
                                     
                                     <td>{{ product.category }}</td>
                                     <td>{{ product.price }}</td>
+                                    
                                 </tr>
                             </table>
+
+                            
                         </div> 
                     </li>
                     <li>
                         <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo3" role="button" aria-expanded="false" aria-controls="collapseExemplo3">    
-                            Exemplo 3
+                            <strong>Exemplo 3:</strong> Propriedade disabled da tag button 
                         </a>
                         <div class="collapse card-body" id="collapseExemplo3">
-                            <button class="btn btn-primary" [disabled]="getDisabled()">
+                            <button class="btn btn-primary" [disabled]="isDisabled">
                                 Disabled
                             </button>
                         </div> 
                     </li>
                     <li>
                         <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo4" role="button" aria-expanded="false" aria-controls="collapseExemplo4">    
-                            Exemplo 4
+                            <strong>Exemplo 4:</strong> Propriedade placeholder da tag input
                         </a>
                         <div class="collapse card-body" id="collapseExemplo4">
-                            <table class="table table-bordered table-striped">
-                                <tr>
-                                    <th></th>
-                                </tr>
-                                <tr *ngFor="let product of getProducts(); let i = index">
-                                    <td>{{ i + 1 }}</td>
-                                    <td>
-                                        {{ product.name }}
-                                         
-                                    </td>
-                                    
-                                    <td>{{ product.category }}</td>
-                                    <td><button class="btn btn-primary" [name]="product.name">
-                                        product {{ getProduct(1).name }}
-                                    </button></td>
-                                </tr>
-                                <div>
-                                   
-                                </div>
-                            </table>
+                            <input [placeholder]="getPlaceholder()" />
                         </div> 
+                        
                     </li>
                     <li>
                         <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo5" role="button" aria-expanded="false" aria-controls="collapseExemplo5">    
-                            Exemplo 5
+                            <strong>Exemplo 5:</strong> Propriedade value da tag input
                         </a>
                         <div class="collapse card-body" id="collapseExemplo5">
-                            <input [placeholder]="getPlaceholder()" />
-                        </div> 
-                    </li>
-                    <li>
-                        <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo6" role="button" aria-expanded="false" aria-controls="collapseExemplo6">    
-                            Exemplo 6
-                        </a>
-                        <div class="collapse card-body" id="collapseExemplo6">
-                            <input [value]="getProduct(1).name" />
+                            <input [value]="getProduct(1)?.name || 'None'" />
                         </div> 
                     </li>
                 </ul>
             </div>
         </li>
     </ul>
-</div>
-
-
-<div class="form-group">
-    <label>Name</label>
-    <input class="form-control" [value]="repository.getProduct(1)?.name || 'None'" />
 </div>

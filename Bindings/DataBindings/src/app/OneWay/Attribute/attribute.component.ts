@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { Product } from "src/app/Models/product.model";
 import { Repository } from "src/app/Models/repository.model";
 
 @Component({
@@ -7,4 +8,8 @@ import { Repository } from "src/app/Models/repository.model";
 })
 export class AttributeComponent {
     repository: Repository = new Repository();
+
+    getProducts(): Product[] {
+        return this.repository.getProducts();
+    }
 }

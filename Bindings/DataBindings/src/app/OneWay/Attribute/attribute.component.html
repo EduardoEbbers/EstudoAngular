@@ -10,30 +10,94 @@
 
 <h5>Estrutura Básica</h5>
 
+<div>
+    <img style="margin: 10px;" src="../../../assets/imagens/dataBindings/estrutura_basica_attribute.jpg" alt="estrutura basica attribute binding" />
+</div>
+
 <p>
-    Usa-se o prefixo attr com o nome do atributo dentro de colchetes, [attr.nome_do_atributo]
+    Usa-se o prefixo <strong>attr.</strong> com o nome do atributo dentro de colchetes
 </p>
 <p>
     Deve-se usar quando não se tem o atributo do elementos HTML no seu atributo equivalente no API DOM
 </p>
+<p style="color: red;">
+    Obs. 1: colspan e colSpan são diferentes
+</p>
+<p style="color: darkgoldenrod;">
+    Para saber mais informações 
+</p>
+<div>
+    <a href="http://angular.io/guide/property-binding#colspan">https://angular.io/guide/property-binding#colspan</a>
+</div>
+<p></p>
 
 <br>
 
-<table class="table table-bordered table-striped mt-2 table-sm">
-    <tr>
-        <th>1</th>
-        <th>2</th>
-        <th>3</th>
-        <th>4</th>
-        <th>5</th>
-    </tr>
-    <tr>
-        <td [attr.colSpan]="repository.getProducts().length">
-            {{ repository.getProduct(1).name || 'None' }}
-        </td>
-    </tr>
-</table>
+<div>
+    <ul>
+        <li>
+            <p>
+                <strong>
+                    <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseTarget" role="button" aria-expanded="false" aria-controls="collapseTarget">
+                        Lista de Exemplos
+                      </a>
+                </strong>
+            </p>
+            <div class="collapse card-body" id="collapseTarget">
+                <ul>
+                    <li>
+                        <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo1" role="button" aria-expanded="false" aria-controls="collapseExemplo1">    
+                            <strong>Exemplo 1:</strong> Attribute Binding 
+                        </a>
+                        <div class="collapse card-body" id="collapseExemplo1">
+                            <table class="table table-bordered table-striped mt-2 table-sm">
+                                <tr>
+                                    <th>1</th>
+                                    <th>2</th>
+                                    <th>3</th>
+                                    <th>4</th>
+                                    <th>5</th>
+                                </tr>
+                                <tr>
+                                    <td [attr.colSpan]="getProducts().length">
+                                        Existe {{ getProducts().length }} produtos
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                            <p>
+                                interpretacao do exemplo
+                            </p>
 
-<p>
-    interpretacao do exemplo
-</p>
+                            <div>
+                                <img style="margin: 10px;" src="../../../assets/imagens/dataBindings/esquema_attribute.jpg" alt="estrutura basica standard property bindings" />
+                            </div>
+
+                            <br>
+
+                            <p>
+                                Aqui temos a tag anchor (a) que possui um binding na propriedade <strong>id</strong> e <strong>title</strong> do elemento host.
+                            </p>
+                            <p>
+                                A expressão "<strong>getId()</strong>" e "<strong>getTitle()</strong>" são métodos do componente do template HTML.
+                            </p>
+                            <p>
+                                No esquema acima, Angular seta o binding na propriedade [href] após avaliação do método getHref()
+                            </p>
+                            <p>
+                                O retorno do método <strong>getHref()</strong> do componente é um string, que avalia se a quantidade de produtos é igual a 5, caso sim (o retorno será /bindings/oneWay/standardProperty), caso não (o retorno será retornar /)
+                            </p>
+                        </div> 
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
+
+
+
+
+

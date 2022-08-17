@@ -8,14 +8,12 @@
 
 <br>
 
-<h5>Estrutura Básica</h5>
-
 <p>
-    Propriedade do elemento host
+    Propriedade style do elemento host
 
 </p>
 <p>
-    Existe 3 formas de manipulação:     
+    Existe 3 formas de manipulação desta propriedade:     
 </p>
 
 <div>
@@ -23,23 +21,27 @@
         <li>
             <p>
                 <strong>
-                    <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseHostElement" role="button" aria-expanded="false" aria-controls="collapseHostElement">
+                    <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseStyle" role="button" aria-expanded="false" aria-controls="collapseStyle">
                         Standard Property Binding
                       </a>
                 </strong>
             </p>
-            <div class="collapse card-body" id="collapseHostElement">
+            <div class="collapse card-body" id="collapseStyle">
                 <p>
                     Estrutura basica
                 </p>
-                <p>
-                    [style.mystyle]
-                </p>
+                
+                <div>
+                    <img src="../../../assets/imagens/dataBindings/estrutura_basica_style.jpg" alt="estrutura basica style binding">
+                </div>
+                
+                <br>
+
                 <p>
                     Seta um único valor de uma única propriedade style
                 </p>
                 <p style="color: red;">
-                    Obs 1: Deve-se incluir as unidades requeridas para o style
+                    Obs 1: Deve-se incluir as unidades requeridas para o style no componente.
                 </p>
                 <p style="color: red;">
                     <!--
@@ -52,18 +54,22 @@
         <li>
             <p>
                 <strong>
-                    <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseBrackets" role="button" aria-expanded="false" aria-controls="collapseBrackets">
+                    <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseSpecialStyle" role="button" aria-expanded="false" aria-controls="collapseSpecialStyle">
                         Style Binding Special
                       </a>
                 </strong>
             </p>
-            <div class="collapse card-body" id="collapseBrackets">
+            <div class="collapse card-body" id="collapseSpecialStyle">
                 <p>
                     Estrutura basica
                 </p>
-                <p>
-                    [style.myStyle.units]
-                </p>
+
+                <div>
+                    <img src="../../../assets/imagens/dataBindings/estrutura_basica_especial_style.jpg" alt="estrutura basica special style binding">
+                </div>
+
+                <br>
+
                 <p>
                     Seta um único valor de uma única propriedade style
                 </p>
@@ -81,20 +87,26 @@
         <li>
             <p>
                 <strong>
-                    <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseTarget" role="button" aria-expanded="false" aria-controls="collapseTarget">
-                        diretiva ngStyle
+                    <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseDiretivaNgStyle" role="button" aria-expanded="false" aria-controls="collapseDiretivaNgStyle">
+                        Diretiva ngStyle
                       </a>
                 </strong>
             </p>
-            <div class="collapse card-body" id="collapseTarget">
+            <div class="collapse card-body" id="collapseDiretivaNgStyle">
                 <p>
                     Estrutura basica
                 </p>
+                
+                <div>
+                    <img src="../../../assets/imagens/dataBindings/estrutura_basica_diretiva_ngstyle.jpg" alt="estrutura basica diretiva style binding">
+                </div>
+
+                <br>
+                
                 <p>
-                    [ngStyle]
-                </p>
-                <p>
-                    Explicado em diretiva ngStyle
+                    Explicado <a href="/bindings/oneWay/ngStyle">
+                        <strong>aqui</strong>
+                    </a> 
                 </p>
             </div>
         </li>
@@ -118,33 +130,37 @@
                 <ul>
                     <li>
                         <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo1" role="button" aria-expanded="false" aria-controls="collapseExemplo1">    
-                            Exemplo 1
+                            <strong>Exemplo 1:</strong> Style binding
                         </a> 
+                        <div class="collapse card-body" id="collapseExemplo1">
+                            <!--
+                                1.5.1 Standard Property Binding
+
+                                    - Setting with style property binding
+                            -->
+                            <div class="text-white m-2">
+                                <div class="p-2 bg-warning">
+                                    O <span [style.fontSize]="fontSizeWithUnits">primeiro</span> produto é {{ repository.getProduct(1).name }}
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     <li>
                         <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo2" role="button" aria-expanded="false" aria-controls="collapseExemplo2">    
-                            Exemplo 2
+                            <strong>Exemplo 1:</strong> Especial Style binding
                         </a> 
-                    </li>
-                    <li>
-                        <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo3" role="button" aria-expanded="false" aria-controls="collapseExemplo3">    
-                            Exemplo 3
-                        </a>
-                        <div class="collapse card-body" id="collapseExemplo3">
-                            
-                        </div> 
-                    </li>
-                    <li>
-                        <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo4" role="button" aria-expanded="false" aria-controls="collapseExemplo4">    
-                            Exemplo 4
-                        </a>
-                        <div class="collapse card-body" id="collapseExemplo4">
-                        </div> 
-                    </li>
-                    <li>
-                        <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo5" role="button" aria-expanded="false" aria-controls="collapseExemplo5">    
-                            Exemplo 5
-                        </a>
+                        <div class="collapse card-body" id="collapseExemplo2">
+                            <!--
+                                1.5.2 Special Style Binding
+
+                                    - Setting with style special binding
+                            -->
+                            <div class="text-white m-2">
+                                <div class="p-2 bg-info">
+                                    O  <span [style.fontSize.px]="fontSizeWithoutUnits">segundo</span> produto é {{ repository.getProduct(2).name }}
+                                </div>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -153,27 +169,9 @@
 </div>
 
 
-<!--
-    1.5.1 Standard Property Binding
 
-        - Setting with style property binding
--->
-<div class="text-white m-2">
-    <div class="p-2 bg-warning">
-        O <span [style.fontSize]="fontSizeWithUnits">primeiro</span> produto é {{ repository.getProduct(1).name }}
-    </div>
-</div>
 
-<!--
-    1.5.2 Special Style Binding
 
-        - Setting with style special binding
--->
-<div class="text-white m-2">
-    <div class="p-2 bg-info">
-        O  <span [style.fontSize.px]="fontSizeWithoutUnits">segundo</span> produto é {{ repository.getProduct(2).name }}
-    </div>
-</div>
 
 <!--
     1.5.3 ngStyle Directive

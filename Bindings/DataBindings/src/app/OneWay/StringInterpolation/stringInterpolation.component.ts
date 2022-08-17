@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { Product } from "src/app/Models/product.model";
 import { Repository } from "src/app/Models/repository.model";
 
 @Component({
@@ -7,4 +8,8 @@ import { Repository } from "src/app/Models/repository.model";
 })
 export class StringInterpolationComponent {
     repository: Repository = new Repository();
+
+    getProduct(key: number): Product {
+        return this.repository.getProduct(key);
+    }
 }

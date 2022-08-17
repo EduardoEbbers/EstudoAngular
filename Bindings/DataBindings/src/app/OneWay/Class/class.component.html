@@ -8,13 +8,11 @@
 
 <br>
 
-<h5>Estrutura Básica</h5>
-
 <p>
-    Propriedade do elemento host
+    Propriedade class do elemento host
 </p>
 <p>
-    Existe 3 formas de manipulação:     
+    Existe 3 formas de manipulação desta propriedade:     
 </p>
 
 <div>
@@ -22,18 +20,22 @@
         <li>
             <p>
                 <strong>
-                    <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseHostElement" role="button" aria-expanded="false" aria-controls="collapseHostElement">
+                    <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseClass" role="button" aria-expanded="false" aria-controls="collapseClass">
                         Standard Property Binding
                       </a>
                 </strong>
             </p>
-            <div class="collapse card-body" id="collapseHostElement">
+            <div class="collapse card-body" id="collapseClass">
                 <p>
                     Estrutura basica
                 </p>
-                <p>
-                    [class]
-                </p>
+
+                <div>
+                    <img src="../../../assets/imagens/dataBindings/estrutura_basica_class.jpg" alt="estrutura basica class binding">
+                </div>
+
+                <br>
+
                 <p>
                     Seta todas as classes de um elemento após a avaliação da expressão, em uma única etapa, através de uma propriedade ou método do componente
                 </p>
@@ -49,18 +51,22 @@
         <li>
             <p>
                 <strong>
-                    <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseBrackets" role="button" aria-expanded="false" aria-controls="collapseBrackets">
+                    <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseSpecialClass" role="button" aria-expanded="false" aria-controls="collapseSpecialClass">
                         Class Binding Special
                       </a>
                 </strong>
             </p>
-            <div class="collapse card-body" id="collapseBrackets">
+            <div class="collapse card-body" id="collapseSpecialClass">
                 <p>
                     Estrutura basica
                 </p>
-                <p>
-                    [class.myClass]
-                </p>
+                
+                <div>
+                    <img src="../../../assets/imagens/dataBindings/estrutura_basica_especial_class.jpg" alt="estrutura basica special class binding">
+                </div>
+
+                <br>
+
                 <p>
                     Seta uma única classe existente através de um controle mais refinado usando uma expressão
                 </p>
@@ -94,20 +100,26 @@
         <li>
             <p>
                 <strong>
-                    <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseTarget" role="button" aria-expanded="false" aria-controls="collapseTarget">
-                        diretiva ngClass
+                    <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseDiretivaNgClass" role="button" aria-expanded="false" aria-controls="collapseDiretivaNgClass">
+                        Diretiva ngClass
                       </a>
                 </strong>
             </p>
-            <div class="collapse card-body" id="collapseTarget">
+            <div class="collapse card-body" id="collapseDiretivaNgClass">
                 <p>
                     Estrutura basica
                 </p>
+                
+                <div>
+                    <img src="../../../assets/imagens/dataBindings/estrutura_basica_diretiva_ngclass.jpg" alt="estrutura basica diretiva ngClass binding">
+                </div>
+                
+                <br>
+                
                 <p>
-                    [ngClass]
-                </p>
-                <p>
-                    Explicado em diretiva ngClass
+                    Explicado <a href="/bindings/oneWay/ngClass">
+                        <strong>aqui</strong>
+                    </a> 
                 </p>
             </div>
         </li>
@@ -131,33 +143,40 @@
                 <ul>
                     <li>
                         <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo1" role="button" aria-expanded="false" aria-controls="collapseExemplo1">    
-                            Exemplo 1
-                        </a> 
+                            <strong>Exemplo 1:</strong> Class binding
+                        </a>
+                        <div class="collapse card-body" id="collapseExemplo1">
+                            <!--
+                                1.4.1 Standard Property Binding
+
+                                    - Setting All Classes with property binding
+                            -->
+                            <div class="text-white p-2">
+                                <div [class]="getClasses(1)">
+                                    O primeiro produto é {{ repository.getProduct(1).name }}
+                                </div>
+                            </div>
+                            <div class="text-white p-2">
+                                <div [class]="getClasses(2)">
+                                    O segundo produto é {{ repository.getProduct(2).name }}
+                                </div>
+                            </div>
+                        </div> 
                     </li>
                     <li>
                         <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo2" role="button" aria-expanded="false" aria-controls="collapseExemplo2">    
-                            Exemplo 2
+                            <strong>Exemplo 2:</strong> Especial Class binding
                         </a> 
-                    </li>
-                    <li>
-                        <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo3" role="button" aria-expanded="false" aria-controls="collapseExemplo3">    
-                            Exemplo 3
-                        </a>
-                        <div class="collapse card-body" id="collapseExemplo3">
-                            
-                        </div> 
-                    </li>
-                    <li>
-                        <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo4" role="button" aria-expanded="false" aria-controls="collapseExemplo4">    
-                            Exemplo 4
-                        </a>
-                        <div class="collapse card-body" id="collapseExemplo4">
-                        </div> 
-                    </li>
-                    <li>
-                        <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo5" role="button" aria-expanded="false" aria-controls="collapseExemplo5">    
-                            Exemplo 5
-                        </a>
+                        <div class="collapse card-body" id="collapseExemplo2">
+                            <!--
+                                1.4.2 Special Class Binding
+
+                                    - Setting Individual Class with Special binding
+                            -->
+                            <div class="p-2" [class.bg-danger]="repository.getProduct(2).price < 50" [class.bg-warning]="repository.getProduct(2).price >= 50">
+                                O segundo produto é {{ repository.getProduct(2).name }}
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -166,41 +185,9 @@
 </div>
 
 
-<div class="form-group">
-    <label>Name</label>
-    <input class="form-control" [value]="repository.getProduct(1)?.name || 'None'" />
-</div>
 
 
 
-
-
-
-
-<!--
-    1.4.1 Standard Property Binding
-
-        - Setting All Classes with property binding
--->
-<div class="text-white p-2">
-    <div [class]="getClasses(1)">
-        O primeiro produto é {{ repository.getProduct(1).name }}
-    </div>
-</div>
-<div class="text-white p-2">
-    <div [class]="getClasses(2)">
-        O segundo produto é {{ repository.getProduct(2).name }}
-    </div>
-</div>
-
-<!--
-    1.4.2 Special Class Binding
-
-        - Setting Individual Class with Special binding
--->
-<div class="p-2" [class.bg-danger]="repository.getProduct(2).price < 50" [class.bg-warning]="repository.getProduct(2).price >= 50">
-    O segundo produto é {{ repository.getProduct(2).name }}
-</div>
 
 <!--
     1.4.3 ngClass Directive

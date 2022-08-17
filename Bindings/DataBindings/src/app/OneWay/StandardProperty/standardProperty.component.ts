@@ -9,6 +9,8 @@ import { Repository } from "src/app/Models/repository.model";
 export class StandardPropertyComponent {
     repository: Repository = new Repository();
 
+    isDisabled = true;
+
     getProducts(): Product[] {
         return this.repository.getProducts();
     }
@@ -19,7 +21,7 @@ export class StandardPropertyComponent {
 
     getHref(): string {
         return this.getProducts()
-            .length == 5 ? '/bindings/oneWay' : '/bindings/oneWay/standardProperty';
+            .length == 5 ? '/bindings/oneWay/standardProperty' : '/';
     }
 
     getTitle(key: number): string {
