@@ -9,6 +9,18 @@ import { Repository } from "src/app/Models/repository.model";
 export class NgStyleComponent {
     repository: Repository = new Repository();
 
+    fontSizeWithUnits: string = "30px";
+    fontSizeWithoutUnits: string = "30";
+
+    getStylesMap(key: number) {
+        let product = this.repository.getProduct(key);
+        return {
+            fontSize: "30px",
+            "margin.px": 100,
+            color: product.price < 50 ? "red" : "green"
+        };
+    }
+
     isDisabled = true;
 
     getProducts(): Product[] {
