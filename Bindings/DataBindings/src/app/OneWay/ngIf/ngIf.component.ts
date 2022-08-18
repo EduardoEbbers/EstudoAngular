@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { ApplicationRef, Component } from "@angular/core";
 import { Product } from "src/app/Models/product.model";
 import { Repository } from "src/app/Models/repository.model";
 
@@ -8,8 +8,13 @@ import { Repository } from "src/app/Models/repository.model";
 })
 export class NgIfComponent {
     repository: Repository = new Repository();
+    targetName: string = "Kayak";
 
-    isDisabled = true;
+
+    constructor(ref: ApplicationRef) {
+        (<any>window).appRef = ref;
+        (<any>window).repository = this.repository;
+    }
 
     getProducts(): Product[] {
         return this.repository.getProducts();
@@ -19,30 +24,12 @@ export class NgIfComponent {
         return this.repository.getProduct(key);
     }
 
-    getHref(): string {
-        return this.getProducts()
-            .length == 5 ? '/bindings/oneWay/standardProperty' : '/';
+    getProductByPosition(position: number): Product {
+        return this.repository
+            .getProducts()[position];
     }
 
-    getTitle(key: number): string {
-        return this.getProduct(key).category;
-    }
-    
-
-    getId(key: number): string {
-        return this.repository.getProduct(key).name;
-    }
-
-    getDisabled(): boolean {
-        return this.getProducts()
-        .length == 5 ? true : false;
-    }
-    
-    getName(key: number): string {
-        return 'btn-' + this.getProduct(key).name;
-    }
-
-    getPlaceholder(): string {
-        return "Escreva aqui algo";
+    getProductCount(): number {
+        return this.getProducts().length;
     }
 }

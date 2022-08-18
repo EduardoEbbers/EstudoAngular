@@ -5,7 +5,7 @@ import { NgModelDirectiveComponent } from "./ngModelDirective.component";
 const routes: Routes = [
    
     { 
-        path: 'bindings/twoWay/ngModelDirective',
+        path: 'bindings/twoWay/ngModel',
         component: NgModelDirectiveComponent
     }
     
