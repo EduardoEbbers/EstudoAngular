@@ -6,6 +6,7 @@ import { AppComponent } from "./app.component";
 import { AppRoutingModule } from "./appRouting.module";
 import { CoreModule } from "./core/core.module";
 import { OneWayModule } from "./OneWay/oneWay.module";
+import { OthersModule } from "./Others/others.module";
 import { TwoWayModule } from "./TwoWay/twoWay.module";
 
 @NgModule({
@@ -14,6 +15,7 @@ import { TwoWayModule } from "./TwoWay/twoWay.module";
     FormsModule,
     OneWayModule,
     TwoWayModule,
+    OthersModule,
     AppRoutingModule,
     CoreModule,
     RouterModule.forRoot([])
