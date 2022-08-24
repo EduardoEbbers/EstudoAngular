@@ -15,42 +15,30 @@
 </div>
 <br>
 <p>
-    usa-se para gerenciar propriedade style
+    Usa-se para gerenciar propriedade style.
 </p>
 <p>
-    Mais flexiveis em relação ao retorno da expressão que pode ser:
+    Mais flexíveis em relação ao retorno da expressão que é um Object.
 </p>
-<div>
-    <ul>
-        <li>
-            <!--
-                - String ? (confirmar depois)
-					- São adicionados estilos especificadas por um string
-					- Obs. 1: Multiplos estilos são separados por espaços
-            -->
-        </li>
-        <li>
-            <!--
-                - Array ? (confirmar depois)
-					- cada objeto do array representa um estilo que vai ser adicionado no elemento
-            -->
-        </li>
-        <li>
-            <!--
-                - Object (map)
-					- cada propriedade do objeto representa um estilo ou mais, separados por espaços
-					- mais util
-					- Obs. 2: Um estilo será adicionado caso o valor da propriedade for truthy
-            -->
-        </li>
-    </ul>
-</div>
+<p>
+    Cada propriedade do objeto representa um estilo ou mais, separados por espaços.
+</p>
+<p style="color: red;">
+    Obs. 1: Cada propriedade do objeto representa apenas um estilo.
+</p>
+<p style="color: red;">
+    Obs. 2: O estilo será adicionada caso o valor da propriedade for <strong>truthy</strong>.
+</p>
+
+<p>
+    Ver <a href="#">Exemplo 3</a>
+</p>
 
 <br>
 
 <p>
     <!--
-    Aplicar a parte de operador nullish
+    Aplicar a parte de operador nullish ???????
     -->
 </p>
 
@@ -71,14 +59,9 @@
                 <ul>
                     <li>
                         <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo1" role="button" aria-expanded="false" aria-controls="collapseExemplo1">    
-                            <strong>Exemplo 1:</strong> Diretiva ngStyle 
+                            <strong>Exemplo 1:</strong> Usando método com retorno Object 
                         </a>
                         <div class="collapse card-body" id="collapseExemplo1">
-                           <!--
-                                1.5.3 ngStyle Directive
-
-                                    - Setting with ngStyle Directive
-                            -->
                             <div class="text-white m-2">
                                 <div class="p-2 bg-warning">
                                     O <span [ngStyle]="getStylesMap(1)">primeiro</span> produto é {{ repository.getProduct(1).name }}

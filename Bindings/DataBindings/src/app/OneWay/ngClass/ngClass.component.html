@@ -15,54 +15,76 @@
 </div>
 <br>
 <p>
-    Usa-se para gerenciar propriedade class
+    Usa-se para gerenciar propriedade class.
 </p>
 <p>
-    Mais flexiveis em relação ao retorno da expressão que pode ser:
+    Mais flexíveis em relação ao retorno da expressão, que pode ser:
 </p>
 <div>
     <ul>
         <li>
-            String
+            <strong style="text-decoration: underline;">String</strong>
             <ul>
                 <li>
                     <p>
-                        São adicionados classes especificadas por um string
+                        São adicionados classes especificadas através de um string.
                     </p>
                 </li>
                 <li>
                     <p style="color: red;">
-                        Obs. 1: Múltiplas classes são separados por espaços
+                        Obs. 1: Múltiplas classes são separadas por espaços.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Ver <a href="#">Exemplo 1</a>
                     </p>
                 </li>
             </ul>
         </li>
         <li>
-            Array
+            <strong style="text-decoration: underline;">Array (List)</strong>
             <ul>
                 <li>
                     <p>
-                        Cada objeto do array representa uma classe que vai ser adicionado no elemento
+                        Cada objeto do array representa uma classe que vai ser adicionado no elemento.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Ver <a href="#">Exemplo 2</a>
                     </p>
                 </li>
             </ul>
         </li>
         <li>
-            Object (map)
+            <strong style="text-decoration: underline;">Object (Map)</strong>
             <ul>
                 <li>
                     <p>
-                        Cada propriedade do objeto representa uma class ou mais, separados por espaços
+                        Cada propriedade do objeto representa uma class ou mais.
                     </p>
                 </li>
                 <li>
-                    <p>
-                        Mais útil
+                    <strong>
+                        <p style="color: green;">
+                            Mais usado.
+                        </p>
+                    </strong>
+                </li>
+                <li>
+                    <p style="color: red;">
+                        Obs. 1: Múltiplas classes em uma propriedade do objeto são separadas por espaços.
                     </p>
                 </li>
                 <li>
                     <p style="color: red;">
-                        Obs. 2: A classe será adicionada caso o valor da propriedade for truthy
+                        Obs. 2: A classe será adicionada caso o valor da propriedade for <strong>truthy</strong>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Ver <a href="#">Exemplo 3</a>
                     </p>
                 </li>
             </ul>
@@ -77,6 +99,7 @@
     Aplicar a parte de operador nullish
     -->
 </p>
+
 <div>
     <ul>
         <li>
@@ -91,23 +114,54 @@
                 <ul>
                     <li>
                         <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo1" role="button" aria-expanded="false" aria-controls="collapseExemplo1">    
-                            <strong>Exemplo 1:</strong> Diretiva ngClass 
+                            <strong>Exemplo 1:</strong> Usando método com retorno String. 
                         </a>
                         <div class="collapse card-body" id="collapseExemplo1">
-                            <!--
-                                1.4.3 ngClass Directive
-
-                                    - Setting Classes with ngClass Directive
-                            -->
                             <div class="text-white m-2">
-                                <div class="p-2" [ngClass]="getClassesMap(1)">
+                                <div class="p-2" [ngClass]="getClassesString(1)">
                                     O primeiro produto é {{ repository.getProduct(1).name }}
                                 </div>
-                                <div class="p-2" [ngClass]="getClassesMap(2)">
+                                <div class="p-2" [ngClass]="getClassesString(2)">
                                     O segundo produto é {{ repository.getProduct(2).name }}
                                 </div>
-                                <div class="p-2" [ngClass]="{'bg-success': repository.getProduct(3).price < 50, 'bg-info': repository.getProduct(3).price >= 50}">
+                                <div class="p-2" [ngClass]="repository.getProduct(3).name == 'Kayak' ? 'text-center bg-danger' : 'bg-info'">
                                     O terceiro produto é {{ repository.getProduct(3).name }}
+                                </div>
+                            </div>
+                        </div> 
+                    </li>
+                    <li>
+                        <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo2" role="button" aria-expanded="false" aria-controls="collapseExemplo2">    
+                            <strong>Exemplo 2:</strong> Usando método com retorno Array. 
+                        </a>
+                        <div class="collapse card-body" id="collapseExemplo2">
+                            <div class="text-white m-2">
+                                <div class="p-2" [ngClass]="getClassesArray(1)">
+                                    O primeiro produto {{ repository.getProduct(1).name }} tem o preço {{ repository.getProduct(1).price }}
+                                </div>
+                                <div class="p-2" [ngClass]="getClassesArray(2)">
+                                    O segundo produto {{ repository.getProduct(2).name }} tem o preço {{ repository.getProduct(2).price }}
+                                </div>
+                                <div class="p-2" [ngClass]="repository.getProduct(3).price < 50 ? ['text-center bg-danger'] : ['text-center', 'bg-warning']">
+                                    O terceiro produto {{ repository.getProduct(3).name }} tem o preço {{ repository.getProduct(3).price }}
+                                </div>
+                            </div>
+                        </div> 
+                    </li>
+                    <li>
+                        <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo3" role="button" aria-expanded="false" aria-controls="collapseExemplo3">    
+                            <strong>Exemplo 3:</strong> Usando método com retorno Object. 
+                        </a>
+                        <div class="collapse card-body" id="collapseExemplo3">
+                            <div class="text-white m-2">
+                                <div class="p-2" [ngClass]="getClassesMap(1)">
+                                    O primeiro produto {{ repository.getProduct(1).name }} tem o preço {{ repository.getProduct(1).price }}
+                                </div>
+                                <div class="p-2" [ngClass]="getClassesMap(2)">
+                                    O segundo produto {{ repository.getProduct(2).name }} tem o preço {{ repository.getProduct(2).price }}
+                                </div>
+                                <div class="p-2" [ngClass]="{'text-center bg-danger': repository.getProduct(3).name == 'Kayak', 'bg-success': repository.getProduct(3).price < 50}">
+                                    O terceiro produto {{ repository.getProduct(3).name }} tem o preço {{ repository.getProduct(3).price }}
                                 </div>
                             </div>
                         </div> 

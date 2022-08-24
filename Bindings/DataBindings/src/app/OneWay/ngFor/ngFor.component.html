@@ -15,10 +15,17 @@
 </div>
 <br>
 <p>
-    Usa-se quando se quer repetir a secção de conteúdos para cada objeto de um array
+    Usa-se quando se quer repetir a secção de conteúdos para cada objeto de um array.
 </p>
 <p style="color: red;">
-    Obs. 1: Parecido com loop foreach
+    Obs. 1: Equivale com loop foreach do JavaScript
+</p>
+<p style="color: red;">
+    Obs. 1: O asterisco (*) indica que a diretiva é um micro-template, ver
+    <a style="color: red;" href="/bindings/others/microTemplates">
+        <strong>aqui</strong>
+    </a>
+    .
 </p>
 <p>
     A expressão se divide em duas partes:
@@ -26,103 +33,105 @@
 <div>
     <ul>
         <li>
-            <a href="">Variável de template</a>
-			<ul>
-                <li>
-                    <p>
-                        Usa-se keyword let
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        é como os dados são passados dentro do template, usado como por exemplo item.name
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        let item
-                   </p>
-                </li>
-            </ul>
+            <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseTemplateVariable" role="button" aria-expanded="false" aria-controls="collapseTemplateVariable">
+                Variável de Template (Template Variable)
+            </a>
+			<div class="collapse card-body" id="collapseTemplateVariable">
+                <ul>
+                    <li>
+                        <p>
+                            Usa-se a keyword <strong>let</strong> + <strong>nome_variável_template</strong>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            A variável de template recebe os dados recebidos do data source para serem usados dentro do template, representando cada objeto do array.
+                        </p>
+                    </li>
+                </ul>
+            </div>
         </li>
         <li>
-            <a href="">Fonte de Dados</a>
-            <ul>
-                <li>
-                    <p>
-                        Fornece o data source que sera enumerado
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        getProdcuts()
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        <!--
-                        ** nao incluir, pois eh coisa do javascript, a diferenca entre
-                            - of
-                            - in
-                            - tem outro que nao lembro
-                        -->
-                    </p>
-                </li>
-            </ul>
+            <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseDataSource" role="button" aria-expanded="false" aria-controls="collapseDataSource">
+                Fonte de Dados (Data Source)
+            </a>
+            <div class="collapse card-body" id="collapseDataSource">
+                <ul>
+                    <li>
+                        <p>
+                            Fornece a fonte de dados que será enumerado, sendo o array de objetos.
+                        </p>
+                    </li>
+                </ul>
+            </div>
         </li>
     </ul>
 </div>
 
-<p>
-    Outras variáveis de templates:
-</p>
 <p>
     São eles:
 </p>
 <div>
     <ul>
         <li>
-            <p>
-                index
-            </p>
+            <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseIndex" role="button" aria-expanded="false" aria-controls="collapseIndex">
+                <strong>Index</strong>
+            </a>
+            <div class="collapse card-body" id="collapseIndex">
+                
+            </div>
         </li>
         <li>
-            <p>
-                count
-            </p>
+             <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseCount" role="button" aria-expanded="false" aria-controls="collapseCount">
+                <strong>Count</strong>
+            </a>
+            <div class="collapse card-body" id="collapseCount">
+                
+            </div>
         </li>
         <li>
-            <p>
-                odd
-            </p>
+             <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseOdd" role="button" aria-expanded="false" aria-controls="collapseOdd">
+                <strong>Odd</strong>
+            </a>
+            <div class="collapse card-body" id="collapseOdd">
+                
+            </div>
         </li>
         <li>
-            <p>
-                even
-            </p>
+             <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseEven" role="button" aria-expanded="false" aria-controls="collapseEven">
+                <strong>Even</strong>
+            </a>
+            <div class="collapse card-body" id="collapseEven">
+                
+            </div>
         </li>
         <li>
-            <p>
-                first
-            </p>
+             <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseFirst" role="button" aria-expanded="false" aria-controls="collapseFirst">
+                <strong>First</strong>
+            </a>
+            <div class="collapse card-body" id="collapseFirst">
+                
+            </div>
         </li>
         <li>
-            <p>
-                last
-            </p>
+             <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseLast" role="button" aria-expanded="false" aria-controls="collapseLast">
+                <strong>Last</strong>
+            </a>
+            <div class="collapse card-body" id="collapseLast">
+                
+            </div>
         </li>
         <li>
-            <p>
-                getKey
-            </p>
+             <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseGetKey" role="button" aria-expanded="false" aria-controls="collapseGetKey">
+                <strong>GetKey</strong>
+            </a>
+            <div class="collapse card-body" id="collapseGetKey">
+                
+            </div>
         </li>
     </ul>
 </div>
 
-
-<p>
-    Parte do microtemplates
-</p>
 <div>
     <ul>
         <li>

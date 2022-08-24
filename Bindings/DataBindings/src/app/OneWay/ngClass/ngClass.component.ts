@@ -1,5 +1,4 @@
 import { Component } from "@angular/core";
-import { Product } from "src/app/Models/product.model";
 import { Repository } from "src/app/Models/repository.model";
 
 @Component({
@@ -9,9 +8,14 @@ import { Repository } from "src/app/Models/repository.model";
 export class NgClassComponent {
     repository: Repository = new Repository();
 
-    getClasses(key: number): string {
+    getClassesString(key: number): String {
         let product = this.repository.getProduct(key);
-        return "p-2 " + (product.price < 50 ? "bg-info" : "bg-warning");
+        return product.name == "Kayak" ? "text-center bg-danger" : "bg-info";
+    }
+
+    getClassesArray(key: number): String[] {
+        let product = this.repository.getProduct(key);
+        return product.price < 50 ? ["text-center", "bg-danger"] : ["text-center", "bg-warning"];
     }
 
     getClassesMap(key: number): Object {
@@ -20,42 +24,5 @@ export class NgClassComponent {
             "text-center bg-danger": product.name == "Kayak",
             "bg-info": product.price < 50
         };
-    }
-
-    isDisabled = true;
-
-    getProducts(): Product[] {
-        return this.repository.getProducts();
-    }
-
-    getProduct(key: number): Product {
-        return this.repository.getProduct(key);
-    }
-
-    getHref(): string {
-        return this.getProducts()
-            .length == 5 ? '/bindings/oneWay/standardProperty' : '/';
-    }
-
-    getTitle(key: number): string {
-        return this.getProduct(key).category;
-    }
-    
-
-    getId(key: number): string {
-        return this.repository.getProduct(key).name;
-    }
-
-    getDisabled(): boolean {
-        return this.getProducts()
-        .length == 5 ? true : false;
-    }
-    
-    getName(key: number): string {
-        return 'btn-' + this.getProduct(key).name;
-    }
-
-    getPlaceholder(): string {
-        return "Escreva aqui algo";
     }
 }

@@ -1,6 +1,5 @@
 import { Component } from "@angular/core";
 import { Repository } from "src/app/Models/repository.model";
-import { Product } from 'src/app/Models/product.model';
 
 @Component({
     selector: 'app-home',
@@ -10,4 +9,13 @@ import { Product } from 'src/app/Models/product.model';
 export class HomeComponent {
 
     repository: Repository = new Repository();
+
+    getStylesMap(key: number) {
+        let product = this.repository.getProduct(key);
+        return {
+            fontSize: "30px",
+            "margin.px": 100,
+            color: product.price < 50 ? "red" : "green"
+        };
+    }
 }

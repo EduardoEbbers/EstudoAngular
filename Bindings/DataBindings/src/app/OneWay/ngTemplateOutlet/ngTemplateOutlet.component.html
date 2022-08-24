@@ -15,39 +15,49 @@
 </div>
 <br>
 <p>
-    Usa-se para repetir blocos de conteúdos em um local especificado
-</p>
-<p>
-    <!--
-        Acho que vou tirar esta parte
-
-    -->
-    Quando se quer gerar o mesmo conteúdo em diferentes lugares
+    Usa-se para repetir blocos de conteúdos em um locais especificados através do elemento ng-template.
 </p>
 
 <p>
-    Primeiro deve-se definir o template que contem o conteúdo que vai ser repetido
+    Divide-se em três partes:
 </p>
-<p>
-    Que é um elemento ng-template
-</p>
-<p>
-    Que possui variavel de referência (reference variable), que pode ser usado em outras partes do HTML
-</p>
-<p>
-    Segundo deve-se usar o elemento ng-template fazendo um binding com a diretiva ngTemplateOutlet
-</p>
-<p>
-    Assim a expressão deve ser o mesmo nome da variável de referência que foi atribuída no elemento ng-template que se dá a repetição.
-</p>
-<p>
-    <!--
-        Talvez explicar melhor esta estoria acima
-    -->
-</p>
+<div>
+    <ul>
+        <li>
+            Deve-se definir o elemento ng-template, que contem o conteúdo que vai ser repetido, ver 
+            <a style="color: red;" href="/bindings/others/microTemplates">
+                <strong>aqui</strong>
+            </a>
+        </li>
+        <li>
+            <p>
+                Deve-se definir a variável de referência (reference variable) do qual pode ser usado em outras partes do HTML
+            </p>
+            <p>
+                Ver mais 
+                <a style="color: red;" href="/bindings/others/microTemplates">
+                    <strong>aqui</strong>
+                </a>
+                .
+            </p>
+        </li>
+        <li>
+            <p>
+                Deve-se usar a variável de referência do elemento ng-template de repeticao definido antes
+            </p>
+            <p>
+                E faz-se o binding com a diretiva ngTemplateOutlet em outro elemento ng-template
+            </p>
+            <p style="color: red;">
+                A expressão da diretiva ngTemplateOutlet deve ter o mesmo nome da variável de referência que foi atribuída no elemento ng-template de repetição.
+            </p>
+        </li>
+    </ul>
+</div>
 
-<p>
-    <!--
+<p style="color: red;">
+    Context Object
+        <!--
         Explica isso...
     pode-se usar em data bindings o objeto de contexto (context object) dentro do elemento ng-template
     -->

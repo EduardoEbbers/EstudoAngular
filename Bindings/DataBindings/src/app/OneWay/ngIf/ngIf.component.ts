@@ -8,8 +8,6 @@ import { Repository } from "src/app/Models/repository.model";
 })
 export class NgIfComponent {
     repository: Repository = new Repository();
-    targetName: string = "Kayak";
-
 
     constructor(ref: ApplicationRef) {
         (<any>window).appRef = ref;
@@ -18,10 +16,6 @@ export class NgIfComponent {
 
     getProducts(): Product[] {
         return this.repository.getProducts();
-    }
-
-    getProduct(key: number): Product {
-        return this.repository.getProduct(key);
     }
 
     getProductByPosition(position: number): Product {

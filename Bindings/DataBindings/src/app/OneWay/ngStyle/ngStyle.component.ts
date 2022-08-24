@@ -1,5 +1,4 @@
 import { Component } from "@angular/core";
-import { Product } from "src/app/Models/product.model";
 import { Repository } from "src/app/Models/repository.model";
 
 @Component({
@@ -8,10 +7,7 @@ import { Repository } from "src/app/Models/repository.model";
 })
 export class NgStyleComponent {
     repository: Repository = new Repository();
-
-    fontSizeWithUnits: string = "30px";
-    fontSizeWithoutUnits: string = "30";
-
+    
     getStylesMap(key: number) {
         let product = this.repository.getProduct(key);
         return {
@@ -19,42 +15,5 @@ export class NgStyleComponent {
             "margin.px": 100,
             color: product.price < 50 ? "red" : "green"
         };
-    }
-
-    isDisabled = true;
-
-    getProducts(): Product[] {
-        return this.repository.getProducts();
-    }
-
-    getProduct(key: number): Product {
-        return this.repository.getProduct(key);
-    }
-
-    getHref(): string {
-        return this.getProducts()
-            .length == 5 ? '/bindings/oneWay/standardProperty' : '/';
-    }
-
-    getTitle(key: number): string {
-        return this.getProduct(key).category;
-    }
-    
-
-    getId(key: number): string {
-        return this.repository.getProduct(key).name;
-    }
-
-    getDisabled(): boolean {
-        return this.getProducts()
-        .length == 5 ? true : false;
-    }
-    
-    getName(key: number): string {
-        return 'btn-' + this.getProduct(key).name;
-    }
-
-    getPlaceholder(): string {
-        return "Escreva aqui algo";
     }
 }
