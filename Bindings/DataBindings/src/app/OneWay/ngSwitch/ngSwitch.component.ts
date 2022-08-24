@@ -10,7 +10,6 @@ export class NgSwitchComponent {
     repository: Repository = new Repository();
     targetName: string = "Kayak";
 
-
     constructor(ref: ApplicationRef) {
         (<any>window).appRef = ref;
         (<any>window).repository = this.repository;
@@ -18,15 +17,6 @@ export class NgSwitchComponent {
 
     getProducts(): Product[] {
         return this.repository.getProducts();
-    }
-
-    getProduct(key: number): Product {
-        return this.repository.getProduct(key);
-    }
-
-    getProductByPosition(position: number): Product {
-        return this.repository
-            .getProducts()[position];
     }
 
     getProductCount(): number {
