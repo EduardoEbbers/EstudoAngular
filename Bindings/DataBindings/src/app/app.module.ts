@@ -5,9 +5,9 @@ import { RouterModule } from "@angular/router";
 import { AppComponent } from "./app.component";
 import { AppRoutingModule } from "./appRouting.module";
 import { CoreModule } from "./core/core.module";
-import { OneWayModule } from "./OneWay/oneWay.module";
-import { OthersModule } from "./Others/others.module";
-import { TwoWayModule } from "./TwoWay/twoWay.module";
+import { OneWayModule } from "./oneWay/oneWay.module";
+import { OthersModule } from "./others/others.module";
+import { TwoWayModule } from "./twoWay/twoWay.module";
 
 @NgModule({
   imports: [

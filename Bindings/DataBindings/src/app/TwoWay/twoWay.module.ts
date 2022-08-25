@@ -1,6 +1,6 @@
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
-import { NgModelDirectiveModule } from "./ngModelDirective/ngModelDirective.module";
+import { NgModelDirectiveModule } from "./NgModelDirective/ngModelDirective.module";
 import { TwoWayComponent } from "./twoWay.component";
 import { TwoWayRoutingModule } from "./twoWayRouting.module";
 
