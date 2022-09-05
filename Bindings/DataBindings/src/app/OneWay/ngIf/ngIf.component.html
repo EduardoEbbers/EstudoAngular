@@ -56,29 +56,34 @@
                 </strong>
             </p>
             <div class="collapse card-body" id="collapseTarget">
-                <ul>
-                    <li>
-                        <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo1" role="button" aria-expanded="false" aria-controls="collapseExemplo1">    
-                            <strong>Exemplo 1:</strong> Diretiva ngIf 
-                        </a>
-                        <div class="collapse card-body" id="collapseExemplo1">
-                            <div class="text-white">
-                                <div class="bg-info p-2">
-                                    There are {{getProductCount()}} products.
+                <div id="accordionExemplo">
+                    <ul>
+                        <li>
+                            <div>
+                                <div class="card-header" id="headerExemplo1">
+                                    <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplo1" aria-expanded="false" aria-controls="collapseExemplo1">
+                                        <strong>Exemplo 1:</strong> Usando método com retorno String
+                                    </a>
                                 </div>
-                                <div *ngIf="getProductCount() > 4" class="bg-info p-2 mt-1">
-                                    There are more than 4 products in the model
-                                </div>
-                                <div *ngIf="getProductByPosition(0).name != 'Kayak'" class="bg-info p-2 mt-1">
-                                    The first product isn't a Kayak
+                            
+                                <div class="collapse card-body" id="collapseExemplo1" aria-labelledby="headerExemplo1" data-bs-parent="#accordionExemplo">
+                                    <div class="text-white">
+                                        <div class="bg-info p-2">
+                                            There are {{getProductCount()}} products.
+                                        </div>
+                                        <div *ngIf="getProductCount() > 4" class="bg-info p-2 mt-1">
+                                            There are more than 4 products in the model
+                                        </div>
+                                        <div *ngIf="getProductByPosition(0).name != 'Kayak'" class="bg-info p-2 mt-1">
+                                            The first product isn't a Kayak
+                                        </div>
+                                    </div>
+                                    <p>Interpertação</p>
                                 </div>
                             </div>
-                            <p>Interpertação</p>
-                        </div> 
-
-                        
-                    </li>
-                </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </li>
     </ul>

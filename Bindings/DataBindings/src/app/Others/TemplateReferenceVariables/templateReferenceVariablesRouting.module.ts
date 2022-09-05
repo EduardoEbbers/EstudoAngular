@@ -5,7 +5,7 @@ import { TemplateReferenceVariablesComponent } from "./templateReferenceVariable
 const routes: Routes = [
     
     { 
-        path: 'bindings/others/templateReferenceVariables',
+        path: 'bindings/others/templateReferenceVariable',
         component: TemplateReferenceVariablesComponent
     }
     

@@ -1,10 +1,23 @@
+<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">
+        Contents
+    </a>
+</header>
+
+<!--
+    DEVE-SE ADICIONAR UM BUTTON TOGGLE PARA DROPDOWN
+    PARA O CASO DE RESPONSIVIDADE
+-->
+
 <div class="container-fluid">
     <div class="row">
-        <div class="col-1">
+        <div class="col col-lg-2 d-md-block bg-primary">
             <app-header></app-header>
         </div>
-        <div class="col-9">
-            <router-outlet></router-outlet>
+        <div class="col col-lg-10 ms-sm-auto px-md-4">
+            <main>
+                <router-outlet></router-outlet>
+            </main>
         </div>
     </div>
 </div>

@@ -5,7 +5,7 @@ import { OneWayRestrictionsComponent } from "./OneWayRestrictions.component";
 const routes: Routes = [
     
     { 
-        path: 'bindings/others/oneWayRestrictions',
+        path: 'bindings/others/oneWayRestriction',
         component: OneWayRestrictionsComponent
     }
     

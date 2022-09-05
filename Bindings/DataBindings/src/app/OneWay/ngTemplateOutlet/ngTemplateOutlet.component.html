@@ -78,28 +78,35 @@
                 </strong>
             </p>
             <div class="collapse card-body" id="collapseTarget">
-                <ul>
-                    <li>
-                        <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo1" role="button" aria-expanded="false" aria-controls="collapseExemplo1">    
-                            <strong>Exemplo 1:</strong> Diretiva ngTemplateOutlet 
-                        </a>
-                        <div class="collapse card-body" id="collapseExemplo1">
-                            <ng-template #titleTemplate>
-                                <h4 class="p-2 bg-success text-white">
-                                    Repeated Content
-                                </h4>
-                            </ng-template>
+                <div id="accordionExemplo">
+                    <ul>
+                        <li>
+                            <div>
+                                <div class="card-header" id="headerExemplo1">
+                                    <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplo1" aria-expanded="false" aria-controls="collapseExemplo1">
+                                        <strong>Exemplo 1:</strong> Diretiva ngTemplateOutlet
+                                    </a>
+                                </div>
                             
-                            <ng-template [ngTemplateOutlet]="titleTemplate"></ng-template>
-                                
-                            <div class="bg-info p-2 m-2 text-white">
-                                There are {{getProductCount()}} products.
+                                <div class="collapse card-body" id="collapseExemplo1" aria-labelledby="headerExemplo1" data-bs-parent="#accordionExemplo">
+                                    <ng-template #titleTemplate>
+                                        <h4 class="p-2 bg-success text-white">
+                                            Repeated Content
+                                        </h4>
+                                    </ng-template>
+                                    
+                                    <ng-template [ngTemplateOutlet]="titleTemplate"></ng-template>
+                                        
+                                    <div class="bg-info p-2 m-2 text-white">
+                                        There are {{getProductCount()}} products.
+                                    </div>
+                                       
+                                    <ng-template [ngTemplateOutlet]="titleTemplate"></ng-template>
+                                </div>
                             </div>
-                               
-                            <ng-template [ngTemplateOutlet]="titleTemplate"></ng-template>
-                        </div> 
-                    </li>
-                </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </li>
     </ul>

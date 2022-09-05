@@ -8,109 +8,192 @@
 
 <br>
 
-<p>
-    Propriedade class do elemento host
-</p>
-<p>
-    Existe 3 formas de manipulação desta propriedade:     
-</p>
-
-<div>
-    <ul>
-        <li>
-            <p>
-                <strong>
-                    <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseClass" role="button" aria-expanded="false" aria-controls="collapseClass">
-                        Standard Property Binding
-                      </a>
-                </strong>
-            </p>
-            <div class="collapse card-body" id="collapseClass">
-                <p>
-                    Estrutura basica
-                </p>
-
+<div id="container">
+    <p>
+        Propriedade class do elemento host
+    </p>
+    <p>
+        Existe 3 formas de manipulação desta propriedade:     
+    </p>
+    
+    <div id="accordionBody">
+        <ul>
+            <li>
                 <div>
-                    <img src="../../../assets/imagens/dataBindings/estrutura_basica_class.jpg" alt="estrutura basica class binding">
-                </div>
-
-                <br>
-
-                <p>
-                    Seta todas as classes de um elemento após a avaliação da expressão, em uma única etapa, através de uma propriedade ou método do componente
-                </p>
-                <p style="color: red;">
-                    Obs 1: A expressão deve ter um retorno string
-                </p>
-                <p style="color: red;">
-                    Obs 2: Os nomes das classes devem ser separadas por espaços
-                </p>
-            </div>
-        </li>
-        
-        <li>
-            <p>
-                <strong>
-                    <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseSpecialClass" role="button" aria-expanded="false" aria-controls="collapseSpecialClass">
-                        Class Binding Special
-                      </a>
-                </strong>
-            </p>
-            <div class="collapse card-body" id="collapseSpecialClass">
-                <p>
-                    Estrutura basica
-                </p>
+                    <div class="card-header" id="headerClass">
+                        <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseClass" aria-expanded="false" aria-controls="collapseClass">
+                            <strong>Standard Property Binding</strong>
+                        </a>
+                    </div>
                 
+                    <div class="collapse card-body" id="collapseClass" aria-labelledby="headerClass" data-bs-parent="#accordionBody">
+                        
+                        <div id="containerModal">
+                            <h5>Estrutura Básica</h5>
+                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalEstruturaBasica">
+                                <figure class="figure">
+                                    <img class="figure-img img-fluid rounded" src="../../../assets/imagens/dataBindings/OneWay/PropertyBinding/Class/class.png" alt="estrutura basica class bindings">
+                                    <figcaption style="position: absolute;" class="figure-caption">
+                                        <strong>Figura 1:</strong> Estrutura Básica Class Bindings.
+                                    </figcaption>
+                                </figure>
+                            
+                            </button>
+                            
+                            <div class="modal fade" id="modalEstruturaBasica" tabindex="-1" aria-labelledby="modalEstruturaBasicaLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="modalEstruturaBasicaLabel">Estrutura Básica Class Bindings</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img width="100%" height="100%" class="figure-img img-fluid rounded"
+                                            src="../../../assets/imagens/dataBindings/OneWay/PropertyBinding/Class/class.png" alt="estrutura basica class bindings">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <br>
+    
+                        <div id="subContainer">
+                            <p>
+                                Seta todas as classes de um elemento após a avaliação da expressão, em uma única etapa, através de uma propriedade ou método do componente
+                            </p>
+                            <p style="color: red;">
+                                Obs 1: A expressão deve ter um retorno string
+                            </p>
+                            <p style="color: red;">
+                                Obs 2: Os nomes das classes devem ser separadas por espaços
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+    
+            <li>
                 <div>
-                    <img src="../../../assets/imagens/dataBindings/estrutura_basica_especial_class.jpg" alt="estrutura basica special class binding">
-                </div>
-
-                <br>
-
-                <p>
-                    Seta uma única classe existente através de um controle mais refinado usando uma expressão.
-                </p>
-                <p style="color: red;">
-                    Obs 1: A expressão deve ter um retorno baseado em truthy, ver 
-                    <a href="/bindings/others/truthyFalsy">aqui</a>
-                    .
-                </p>
-            </div>
-        </li>
-
-        <li>
-            <p>
-                <strong>
-                    <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseDiretivaNgClass" role="button" aria-expanded="false" aria-controls="collapseDiretivaNgClass">
-                        Diretiva ngClass
-                      </a>
-                </strong>
-            </p>
-            <div class="collapse card-body" id="collapseDiretivaNgClass">
-                <p>
-                    Estrutura basica
-                </p>
+                    <div class="card-header" id="headerSpecialClass">
+                        <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseSpecialClass" aria-expanded="false" aria-controls="collapseSpecialClass">
+                            <strong>Class Binding Special</strong>
+                        </a>
+                    </div>
                 
+                    <div class="collapse card-body" id="collapseSpecialClass" aria-labelledby="headerSpecialClass" data-bs-parent="#accordionBody">
+                        <div id="containerModal">
+                            <h5>Estrutura Básica</h5>
+                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalEstruturaBasica1">
+                                <figure class="figure">
+                                    <img class="figure-img img-fluid rounded" src="../../../assets/imagens/dataBindings/OneWay/PropertyBinding/Class/special_class.png" alt="estrutura basica special class bindings">
+                                    <figcaption style="position: absolute;" class="figure-caption">
+                                        <strong>Figura 1:</strong> Estrutura Básica Special Class Bindings.
+                                    </figcaption>
+                                </figure>
+                            
+                            </button>
+                            
+                            <div class="modal fade" id="modalEstruturaBasica1" tabindex="-1" aria-labelledby="modalEstruturaBasicaLabel1" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="modalEstruturaBasicaLabel1">Estrutura Básica Special Class Bindings</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img width="100%" height="100%" class="figure-img img-fluid rounded"
+                                            src="../../../assets/imagens/dataBindings/OneWay/PropertyBinding/Class/special_class.png" alt="estrutura basica special class bindings">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <br>
+    
+                        <div id="subContainer">
+                            <p>
+                                Seta uma única classe existente através de um controle mais refinado usando uma expressão.
+                            </p>
+                            <p style="color: red;">
+                                Obs 1: A expressão deve ter um retorno baseado em truthy, ver 
+                                <a href="/bindings/others/truthyFalsy">aqui</a>
+                                .
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+    
+            <li>
                 <div>
-                    <img src="../../../assets/imagens/dataBindings/estrutura_basica_diretiva_ngclass.jpg" alt="estrutura basica diretiva ngClass binding">
+                    <div class="card-header" id="headerDiretivaNgClass">
+                        <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseDiretivaNgClass" aria-expanded="false" aria-controls="collapseDiretivaNgClass">
+                            <strong>Diretiva ngClass</strong>
+                        </a>
+                    </div>
+                
+                    <div class="collapse card-body" id="collapseDiretivaNgClass" aria-labelledby="headerDiretivaNgClass" data-bs-parent="#accordionBody">
+                        <div id="containerModal">
+                            <h5>Estrutura Básica</h5>
+                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalEstruturaBasica3">
+                                <figure class="figure">
+                                    <img class="figure-img img-fluid rounded" src="../../../assets/imagens/dataBindings/OneWay/PropertyBinding/Class/ngClass.png" alt="estrutura basica ngclass bindings">
+                                    <figcaption style="position: absolute;" class="figure-caption">
+                                        <strong>Figura 1:</strong> Estrutura Básica NgClass Bindings.
+                                    </figcaption>
+                                </figure>
+                            
+                            </button>
+                            
+                            <div class="modal fade" id="modalEstruturaBasica3" tabindex="-1" aria-labelledby="modalEstruturaBasicaLabel3" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="modalEstruturaBasicaLabel3">Estrutura Básica NgClass Bindings</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img width="100%" height="100%" class="figure-img img-fluid rounded"
+                                            src="../../../assets/imagens/dataBindings/OneWay/PropertyBinding/Class/ngClass.png" alt="estrutura basica ngclass bindings">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <br>
+    
+                        <div id="subContainer">
+                            <p>
+                                Explicado <a href="/bindings/oneWay/ngClass">
+                                    <strong>aqui</strong>
+                                </a> 
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                
-                <br>
-                
-                <p>
-                    Explicado <a href="/bindings/oneWay/ngClass">
-                        <strong>aqui</strong>
-                    </a> 
-                </p>
-            </div>
-        </li>
-    </ul>
+            </li>
+        </ul>
+    </div>
+    
 </div>
+
 
 
 <br>
 
-<div>
+<div id="containerExemplo">
     <ul>
         <li>
             <p>
@@ -121,45 +204,58 @@
                 </strong>
             </p>
             <div class="collapse card-body" id="collapseTarget">
-                <ul>
-                    <li>
-                        <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo1" role="button" aria-expanded="false" aria-controls="collapseExemplo1">    
-                            <strong>Exemplo 1:</strong> Class binding
-                        </a>
-                        <div class="collapse card-body" id="collapseExemplo1">
-                            <!--
-                                1.4.1 Standard Property Binding
+                <div id="accordionExemplo">
+                    <ul>
+                        <li>
+                            <div>
+                                <div class="card-header" id="headerExemplo1">
+                                    <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplo1" aria-expanded="false" aria-controls="collapseExemplo1">
+                                        <strong>Exemplo 1:</strong> Class binding
+                                    </a>
+                                </div>
+                            
+                                <div class="collapse card-body" id="collapseExemplo1" aria-labelledby="headerExemplo1" data-bs-parent="#accordionExemplo">
+                                    <!--
+                                        1.4.1 Standard Property Binding
 
-                                    - Setting All Classes with property binding
-                            -->
-                            <div class="text-white p-2">
-                                <div [class]="getClasses(1)">
-                                    O primeiro produto é {{ repository.getProduct(1).name }}
+                                            - Setting All Classes with property binding
+                                    -->
+                                    <div class="text-white p-2">
+                                        <div [class]="getClasses(1)">
+                                            O primeiro produto é {{ repository.getProduct(1).name }}
+                                        </div>
+                                    </div>
+                                    <div class="text-white p-2">
+                                        <div [class]="getClasses(2)">
+                                            O segundo produto é {{ repository.getProduct(2).name }}
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="text-white p-2">
-                                <div [class]="getClasses(2)">
-                                    O segundo produto é {{ repository.getProduct(2).name }}
+                        </li>
+
+                        <li>
+                            <div>
+                                <div class="card-header" id="headerExemplo2">
+                                    <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplo2" aria-expanded="false" aria-controls="collapseExemplo2">
+                                        <strong>Exemplo 2:</strong> Special Class Binding
+                                    </a>
+                                </div>
+                            
+                                <div class="collapse card-body" id="collapseExemplo2" aria-labelledby="headerExemplo2" data-bs-parent="#accordionExemplo">
+                                    <!--
+                                        1.4.2 Special Class Binding
+
+                                            - Setting Individual Class with Special binding
+                                    -->
+                                    <div class="p-2" [class.bg-danger]="repository.getProduct(2).price < 50" [class.bg-warning]="repository.getProduct(2).price >= 50">
+                                        O segundo produto é {{ repository.getProduct(2).name }}
+                                    </div>
                                 </div>
                             </div>
-                        </div> 
-                    </li>
-                    <li>
-                        <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo2" role="button" aria-expanded="false" aria-controls="collapseExemplo2">    
-                            <strong>Exemplo 2:</strong> Especial Class binding
-                        </a> 
-                        <div class="collapse card-body" id="collapseExemplo2">
-                            <!--
-                                1.4.2 Special Class Binding
-
-                                    - Setting Individual Class with Special binding
-                            -->
-                            <div class="p-2" [class.bg-danger]="repository.getProduct(2).price < 50" [class.bg-warning]="repository.getProduct(2).price >= 50">
-                                O segundo produto é {{ repository.getProduct(2).name }}
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </li>
     </ul>

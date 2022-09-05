@@ -31,102 +31,146 @@
     A expressão se divide em duas partes:
 </p>
 <div>
-    <ul>
-        <li>
-            <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseTemplateVariable" role="button" aria-expanded="false" aria-controls="collapseTemplateVariable">
-                Variável de Template (Template Variable)
-            </a>
-			<div class="collapse card-body" id="collapseTemplateVariable">
-                <ul>
-                    <li>
+    <div id="accordionBody">
+        <ul>
+            <li>
+                <div>
+                    <div class="card-header" id="headerTemplateVariable">
+                        <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseTemplateVariable" aria-expanded="false" aria-controls="collapseTemplateVariable">
+                            <strong>Variável de Template (Template Variable)</strong>
+                        </a>
+                    </div>
+                
+                    <div class="collapse card-body" id="collapseTemplateVariable" aria-labelledby="headerTemplateVariable" data-bs-parent="#accordionBody">
                         <p>
                             Usa-se a keyword <strong>let</strong> + <strong>nome_variável_template</strong>.
                         </p>
-                    </li>
-                    <li>
                         <p>
                             A variável de template recebe os dados recebidos do data source para serem usados dentro do template, representando cada objeto do array.
                         </p>
-                    </li>
-                </ul>
-            </div>
-        </li>
-        <li>
-            <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseDataSource" role="button" aria-expanded="false" aria-controls="collapseDataSource">
-                Fonte de Dados (Data Source)
-            </a>
-            <div class="collapse card-body" id="collapseDataSource">
-                <ul>
-                    <li>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div>
+                    <div class="card-header" id="headerExpression">
+                        <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseExpression" aria-expanded="false" aria-controls="collapseExpression">
+                            <strong>Fonte de Dados (Data Source)</strong>
+                        </a>
+                    </div>
+                
+                    <div class="collapse card-body" id="collapseExpression" aria-labelledby="headerExpression" data-bs-parent="#accordionBody">
                         <p>
                             Fornece a fonte de dados que será enumerado, sendo o array de objetos.
                         </p>
-                    </li>
-                </ul>
-            </div>
-        </li>
-    </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
 </div>
 
 <p>
     São eles:
 </p>
-<div>
+<div id="accordionBody1">
     <ul>
         <li>
-            <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseIndex" role="button" aria-expanded="false" aria-controls="collapseIndex">
-                <strong>Index</strong>
-            </a>
-            <div class="collapse card-body" id="collapseIndex">
-                
+            <div>
+                <div class="card-header" id="headerIndex">
+                    <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseIndex" aria-expanded="false" aria-controls="collapseIndex">
+                        <strong>Index</strong>
+                    </a>
+                </div>
+            
+                <div class="collapse card-body" id="collapseIndex" aria-labelledby="headerIndex" data-bs-parent="#accordionBody1">
+                    
+                </div>
             </div>
         </li>
+
         <li>
-             <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseCount" role="button" aria-expanded="false" aria-controls="collapseCount">
-                <strong>Count</strong>
-            </a>
-            <div class="collapse card-body" id="collapseCount">
-                
+            <div>
+                <div class="card-header" id="headerCount">
+                    <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseCount" aria-expanded="false" aria-controls="collapseCount">
+                        <strong>Count</strong>
+                    </a>
+                </div>
+            
+                <div class="collapse card-body" id="collapseCount" aria-labelledby="headerCount" data-bs-parent="#accordionBody1">
+                    
+                </div>
             </div>
         </li>
+
         <li>
-             <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseOdd" role="button" aria-expanded="false" aria-controls="collapseOdd">
-                <strong>Odd</strong>
-            </a>
-            <div class="collapse card-body" id="collapseOdd">
-                
+            <div>
+                <div class="card-header" id="headerOdd">
+                    <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseOdd" aria-expanded="false" aria-controls="collapseOdd">
+                        <strong>Odd</strong>
+                    </a>
+                </div>
+            
+                <div class="collapse card-body" id="collapseOdd" aria-labelledby="headerOdd" data-bs-parent="#accordionBody1">
+                    
+                </div>
             </div>
         </li>
+
         <li>
-             <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseEven" role="button" aria-expanded="false" aria-controls="collapseEven">
-                <strong>Even</strong>
-            </a>
-            <div class="collapse card-body" id="collapseEven">
-                
+            <div>
+                <div class="card-header" id="headeFirst">
+                    <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseEven" aria-expanded="false" aria-controls="collapseEven">
+                        <strong>Even</strong>
+                    </a>
+                </div>
+            
+                <div class="collapse card-body" id="collapseEven" aria-labelledby="headerEven" data-bs-parent="#accordionBody1">
+                    
+                </div>
             </div>
         </li>
+
         <li>
-             <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseFirst" role="button" aria-expanded="false" aria-controls="collapseFirst">
-                <strong>First</strong>
-            </a>
-            <div class="collapse card-body" id="collapseFirst">
-                
+            <div>
+                <div class="card-header" id="headerFirst">
+                    <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseFirst" aria-expanded="false" aria-controls="collapseFirst">
+                        <strong>First</strong>
+                    </a>
+                </div>
+            
+                <div class="collapse card-body" id="collapseFirst" aria-labelledby="headerFirst" data-bs-parent="#accordionBody1">
+                    
+                </div>
             </div>
         </li>
+
         <li>
-             <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseLast" role="button" aria-expanded="false" aria-controls="collapseLast">
-                <strong>Last</strong>
-            </a>
-            <div class="collapse card-body" id="collapseLast">
-                
+            <div>
+                <div class="card-header" id="headerLast">
+                    <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseLast" aria-expanded="false" aria-controls="collapseLast">
+                        <strong>Last</strong>
+                    </a>
+                </div>
+            
+                <div class="collapse card-body" id="collapseLast" aria-labelledby="headerLast" data-bs-parent="#accordionBody1">
+                    
+                </div>
             </div>
         </li>
+
         <li>
-             <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseGetKey" role="button" aria-expanded="false" aria-controls="collapseGetKey">
-                <strong>GetKey</strong>
-            </a>
-            <div class="collapse card-body" id="collapseGetKey">
-                
+            <div>
+                <div class="card-header" id="headerGetKey">
+                    <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseGetKey" aria-expanded="false" aria-controls="collapseGetKey">
+                        <strong>GetKey</strong>
+                    </a>
+                </div>
+            
+                <div class="collapse card-body" id="collapseGetKey" aria-labelledby="headerGetKey" data-bs-parent="#accordionBody1">
+                    
+                </div>
             </div>
         </li>
     </ul>
@@ -143,31 +187,38 @@
                 </strong>
             </p>
             <div class="collapse card-body" id="collapseTarget">
-                <ul>
-                    <li>
-                        <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo1" role="button" aria-expanded="false" aria-controls="collapseExemplo1">    
-                            <strong>Exemplo 1:</strong> Diretiva ngFor 
-                        </a>
-                        <div class="collapse card-body" id="collapseExemplo1">
-                            <div class="text-white">
-                                <div class="p-1">
-                                    <table class="table table-sm table-bordered text-dark">
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Category</th>
-                                            <th>Price</th>
-                                        </tr>
-                                        <tr *ngFor="let item of getProducts()">
-                                            <td>{{item.name}}</td>
-                                            <td>{{item.category}}</td>
-                                            <td>{{item.price}}</td>
-                                        </tr>
-                                    </table>
+                <div id="accordionExemplo">
+                    <ul>
+                        <li>
+                            <div>
+                                <div class="card-header" id="headerExemplo1">
+                                    <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplo1" aria-expanded="false" aria-controls="collapseExemplo1">
+                                        <strong>Exemplo 1:</strong> Diretiva ngFor
+                                    </a>
+                                </div>
+                            
+                                <div class="collapse card-body" id="collapseExemplo1" aria-labelledby="headerExemplo1" data-bs-parent="#accordionExemplo">
+                                    <div class="text-white">
+                                        <div class="p-1">
+                                            <table class="table table-sm table-bordered text-dark">
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Category</th>
+                                                    <th>Price</th>
+                                                </tr>
+                                                <tr *ngFor="let item of getProducts()">
+                                                    <td>{{item.name}}</td>
+                                                    <td>{{item.category}}</td>
+                                                    <td>{{item.price}}</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div> 
-                    </li>
-                </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </li>
     </ul>

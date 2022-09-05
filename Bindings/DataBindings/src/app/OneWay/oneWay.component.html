@@ -7,215 +7,355 @@
 
 <br>
 
-<h5>Estrutura Básica</h5>
 
-<div>
-    <img style="margin: 10px;" src="../../assets/imagens/dataBindings/estrutura_basica.jpg" alt="estrutura basica data bindings" />
-    <img style="margin: 10px;" src="../../assets/imagens/dataBindings/metodo_expressao.jpg" alt="metodo da expressao data bindings" />
+
+<div id="containerModal">
+    <h5>Estrutura Básica</h5>
+    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalEstruturaBasica">
+        <figure class="figure">
+            <img class="figure-img img-fluid rounded" src="../../assets/imagens/dataBindings/OneWay/PropertyBinding/basic.png" alt="estrutura basica data bindings">
+            <figcaption style="position: absolute;" class="figure-caption">
+                <strong>Figura 1:</strong> Estrutura Básica Data Bindings.
+            </figcaption>
+        </figure>
+    
+    </button>
+    
+    <div class="modal fade" id="modalEstruturaBasica" tabindex="-1" aria-labelledby="modalEstruturaBasicaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalEstruturaBasicaLabel">Estrutura Básica Data Bindings</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img width="100%" height="100%" class="figure-img img-fluid rounded"
+                    src="../../assets/imagens/dataBindings/OneWay/PropertyBinding/basic.png" alt="estrutura basica data bindings">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
 <br>
 
-<p style="color: red;">
-        - interpretacao: se a quantidade de produtos for igual a 5 (true) vai ser a expressao sera bg-success, se nao (false) vai ser bg-warning
-        - qdo se tem mais de um valor para se apresentar na expressao, deve-se separar por espacos
-</p>
-<p>
-    A estrutura básica, acima, é dividida em 4 partes:			
-</p>
-<div>
-    <ul>
-        
-        <li>
-            <p>
-                <strong>
-                    <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseHostElement" role="button" aria-expanded="false" aria-controls="collapseHostElement">
-                        Elemento hospedeiro (Host Element)
-                      </a>
-                </strong>
-            </p>
-            <div class="collapse card-body" id="collapseHostElement">
-                <p>
-                    Elemento HTML ou tag HTML do qual vai mudar a aparência, conteúdo ou comportamento.
-                </p>
-                <p>
-                    Data Bindings pode ser aplicado a qualquer elemento host e um elemento host pode ter múltiplos data bindings.
-                </p>
-            </div>
-            
-        </li>
-        
-        <li>
-            <p>
-                <strong>
-                    <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseBrackets" role="button" aria-expanded="false" aria-controls="collapseBrackets">
-                        Colchetes ou Parênteses (Brackets)
-                      </a>
-                </strong>
-            </p>
-            <div class="collapse card-body" id="collapseBrackets">
-                <p>
-                    Colchetes ou Parênteses indicam que o data bindings possui uma expressão para ser avaliada.
-                </p>
-                <p>
-                    Colchetes indicam que os dados fluem do componente para o template (data bindings).
-                </p>
-                <p>
-                    Parênteses indicam que os dados fluem do template para o componente (event bindings).
-                </p>
-                <ul>
-                    <li>
-                        <p style="color: red;">
-                            Obs. 1: Pode-se usar string interpolation bindings, visto
-                            <a style="color: red;" href="/bindings/oneWay/stringInterpolation">
-                                <strong>aqui</strong>
-                            </a>
-                            .
-                        </p>
-                    </li>
-                    <li>
-                        <p style="color: red;">
-                            Obs. 2: Pode-se usar "banana-in-box", visto
-                            <a style="color: red;" href="/bindings/twoWay">
-                                <strong>aqui</strong>
-                            </a>
-                            .
-                        </p>
-                    </li>
-                    <li>
-                        <p style="color: red;">
-                            Obs. 3: Omitindo o colchetes ou parênteses a expressão não será avaliada passando a ser considerada um valor literal. 
-                        </p>
-                    </li>
-                </ul>
-            </div>
-        </li>
+<div id="container">
+    <p>
+        One-way data binding são recursos usados em templates HTML Angular, 
+        <br>
+        para gerar conteúdos ou modificar comportamento, através da interação com o usuário
+    </p>
+    <p>
+        Possui o fluxo de dados em uma direção (Ver <strong>Figura 1</strong>):
+    </p>
+    <div id="accordionBody">
+        <ul>
+            <li>
+                <div>
+                    <div class="card-header" id="headerDataBinding">
+                        <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseDataBinding" aria-expanded="false" aria-controls="collapseDataBinding">
+                            <strong>Data Bindings</strong>
+                        </a>
+                    </div>
+                
+                    <div class="collapse card-body" id="collapseDataBinding" aria-labelledby="headerDataBinding" data-bs-parent="#accordionBody">
+                        Os dados fluem do componente para o template.
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class="card-header" id="headerEventBinding">
+                        <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseEventBinding" aria-expanded="false" aria-controls="collapseEventBinding">
+                            <strong>Event Bindings</strong>
+                        </a>
+                    </div>
+                
+                    <div class="collapse card-body" id="collapseEventBinding" aria-labelledby="headerEventBinding" data-bs-parent="#accordionBody">
+                        Os dados fluem do componente para o template.
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
 
-        <li>
-            <p>
-                <strong>
-                    <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseTarget" role="button" aria-expanded="false" aria-controls="collapseTarget">
-                        Alvo (Target)
-                      </a>
-                </strong>
-            </p>
-            <div class="collapse card-body" id="collapseTarget">
-                <p>
-                    É aquele que vai ser atingido pelo binding, podendo ser de 2 tipos:
-                </p>
-                <ul>
-                    <li>
-                        Bindings de Propriedade (Property Bindings)
-                        <p>São divididos em:</p> 
-                        <ul>
-                            <li>
-                                <a class="btn btn-link" 
-                                   routerLink="/bindings/oneWay/standardProperty">
-                                   Binding de Propriedade Padrão (Standard Property Binding)
-                                </a>
-                            </li>
-                            <li>
-                                <a class="btn btn-link" 
-                                   routerLink="/bindings/oneWay/stringInterpolation">
-                                    Binding de Interpolação de String (String Interpolation Binding)
-                                </a>
-                            </li>
-                            <li>
-                                <a class="btn btn-link" 
-                                   routerLink="/bindings/oneWay/attribute">
-                                    Binding de Atributo (Attribute Binding)
-                                </a>
-                            </li>
-                            <li>
-                                <a class="btn btn-link" 
-                                   routerLink="/bindings/oneWay/class">
-                                    Binding de Class (Class Binding)
-                                </a>
-                            </li>
-                            <li>
-                                <a class="btn btn-link" 
-                                   routerLink="/bindings/oneWay/style">
-                                    Binding de Estilo (Style Binding)
-                                </a>
-                            </li>
-                            <li>
-                                <a class="btn btn-link" 
-                                   routerLink="/bindings/oneWay/event">
-                                    Binding de Evento (Event Binding)
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
+
+<div id="container1">
+    <p>
+        A estrutura básica, na <strong>Figura 1</strong>, é dividida em 4 partes:	
+    </p>
     
-                    <li>
-                        Bindings de Diretiva (Directive Bindings)
+    <div id="accordionBody1">
+        <ul>
+            <li>
+                <div>
+                    <div class="card-header" id="headerHostElement">
+                        <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseHostElement" aria-expanded="false" aria-controls="collapseHostElement">
+                            <strong>Elemento hospedeiro (Host Element)</strong>
+                        </a>
+                    </div>
+                
+                    <div class="collapse card-body" id="collapseHostElement" aria-labelledby="headerHostElement" data-bs-parent="#accordionBody1">
                         <p>
-                            Podem ser fornecidos pelo Angular (built-in directives) prefixados com ng, ou personalizados.
+                            Elemento HTML ou tag HTML do qual vai mudar a <strong>aparência</strong>, <strong>conteúdo</strong> ou <strong>comportamento</strong>.
                         </p>
                         <p>
-                            São divididos em:
+                            Data Bindings pode ser aplicado a qualquer elemento host e um elemento host pode ter múltiplos data bindings.
                         </p>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <div>
+                    <div class="card-header" id="headerBrackets">
+                        <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseBrackets" aria-expanded="false" aria-controls="collapseBrackets">
+                            <strong>Colchetes (Brackets)</strong>
+                        </a>
+                    </div>
+                
+                    <div class="collapse card-body" id="collapseBrackets" aria-labelledby="headerBrackets" data-bs-parent="#accordionBody1">
+                        <p>
+                            Colchetes (ou Parênteses) envolvem o alvo, denotando avaliar uma expressão passando o resultado para o alvo, do qual faz mudança no elemento host.
+                        </p>
+                        <p>
+                            <strong>Colchetes</strong> indicam que os dados fluem do componente para o template HTML (<strong>data bindings</strong>).
+                        </p>
+                        <p>
+                            <strong>Parênteses</strong> indicam que os dados fluem do template HTML para o componente (<strong>event bindings</strong>).
+                        </p>
+                        
                         <ul>
                             <li>
-                                <a class="btn btn-link" 
-                                   routerLink="/bindings/oneWay/ngClass">
-                                    Diretiva ngClass
-                                </a>
+                                <p style="color: red;">
+                                    Obs. 1: Pode-se também usar string interpolation bindings, visto
+                                    <a style="color: red;" href="/bindings/oneWay/stringInterpolation">
+                                        <strong>aqui</strong>
+                                    </a>
+                                    .
+                                </p>
                             </li>
+                            <!--
+                                mover para a parte de two-way
+
                             <li>
-                                <a class="btn btn-link" 
-                                   routerLink="/bindings/oneWay/ngStyle">
-                                   Diretiva ngStyle
-                                </a>
+                                <p style="color: red;">
+                                    Obs. 2: Pode-se usar "banana-in-box", visto
+                                    <a style="color: red;" href="/bindings/twoWay">
+                                        <strong>aqui</strong>
+                                    </a>
+                                    .
+                                </p>
                             </li>
+                            -->
+
                             <li>
-                                <a class="btn btn-link" 
-                                   routerLink="/bindings/oneWay/ngIf">
-                                   Diretiva ngIf
-                                </a>
-                            </li>
-                            <li>
-                                <a class="btn btn-link" 
-                                   routerLink="/bindings/oneWay/ngFor">
-                                   Diretiva ngFor
-                                </a>
-                            </li>
-                            <li>
-                                <a class="btn btn-link" 
-                                   routerLink="/bindings/oneWay/ngSwitch">
-                                   Diretiva ngSwitch/ngSwitchCase/ngSwitchDefault
-                                </a>
-                            </li>
-                            <li>
-                                <a class="btn btn-link" 
-                                   routerLink="/bindings/oneWay/ngTemplateOutlet">
-                                   Diretiva ngTemplateOutlet
-                                </a>
+                                <!--Aqui tem a palavra valor literal, sera que devo fazer outro em others ? sobre valor literal ?-->
+                                <p style="color: red;">
+                                    Obs. 2: Omitindo o colchetes ou parênteses a expressão não será avaliada passando a ser considerada um 
+                                    <a style="color: red;" href="">
+                                        <strong>valor literal</strong>
+                                    </a>
+                                    . 
+                                </p>
                             </li>
                         </ul>
-                    </li>
-                </ul>
-            </div>
-        </li>
+                    </div>
+                </div>
+            </li>
+    
+            <li>
+                <div>
+                    <div class="card-header" id="headerTarget">
+                        <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseTarget" aria-expanded="false" aria-controls="collapseTarget">
+                            <strong>Alvo (Target)</strong>
+                        </a>
+                    </div>
+                
+                    <div class="collapse card-body" id="collapseTarget" aria-labelledby="headerTarget" data-bs-parent="#accordionBody1">
+                        <p>
+                            É aquele que vai ser atingido pelo binding, podendo ser de 2 tipos:
+                        </p>
 
+                        <div id="accordionSubBody">
+                            <ul>
+                                <li>
+                                    <div>
+                                        <div class="card-header" id="headerPropertyBinding">
+                                            <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapsePropertyBinding" aria-expanded="false" aria-controls="collapsePropertyBinding">
+                                                <strong>Bindings de Propriedade (Property Bindings)</strong>
+                                            </a>
+                                        </div>
+                                    
+                                        <div class="collapse card-body" id="collapsePropertyBinding" aria-labelledby="headerPropertyBinding" data-bs-parent="#accordionSubBody">
+                                            <p>São divididos em:</p>
+                                            <ul>
+                                                <li>
+                                                    <a class="btn btn-link" 
+                                                    routerLink="/bindings/oneWay/standardProperty">
+                                                    Binding de Propriedade Padrão (<strong>Standard Property Binding</strong>)
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="btn btn-link" 
+                                                    routerLink="/bindings/oneWay/stringInterpolation">
+                                                        Binding de Interpolação de String (<strong>String Interpolation Binding</strong>)
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="btn btn-link" 
+                                                    routerLink="/bindings/oneWay/attribute">
+                                                        Binding de Atributo (<strong>Attribute Binding</strong>)
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="btn btn-link" 
+                                                    routerLink="/bindings/oneWay/class">
+                                                        Binding de Class (<strong>Class Binding</strong>)
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="btn btn-link" 
+                                                    routerLink="/bindings/oneWay/style">
+                                                        Binding de Estilo (<strong>Style Binding</strong>)
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="btn btn-link" 
+                                                    routerLink="/bindings/oneWay/event">
+                                                        Binding de Evento (<strong>Event Binding</strong>)
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                
+                                <li>
+                                    <div>
+                                        <div class="card-header" id="headerDirectiveBinding">
+                                            <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseDirectiveBinding" aria-expanded="false" aria-controls="collapseDirectiveBinding">
+                                                <strong>Bindings de Diretiva (Directive Bindings)</strong>
+                                            </a>
+                                        </div>
+                                    
+                                        <div class="collapse card-body" id="collapseDirectiveBinding" aria-labelledby="headerDirectiveBinding" data-bs-parent="#accordionSubBody">
+                                            <p>
+                                                Podem ser fornecidos pelo Angular (built-in directives) prefixados com <strong>ng</strong> ou <strong>personalizados</strong>.
+                                            </p>
+                                            <p>
+                                                São divididos em:
+                                            </p>
+
+                                            <ul>
+                                                <li>
+                                                    <a class="btn btn-link" 
+                                                       routerLink="/bindings/oneWay/ngClass">
+                                                        Diretiva <strong>NgClass</strong>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="btn btn-link" 
+                                                       routerLink="/bindings/oneWay/ngStyle">
+                                                       Diretiva <strong>NgStyle</strong>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="btn btn-link" 
+                                                       routerLink="/bindings/oneWay/ngIf">
+                                                       Diretiva <strong>NgIf</strong>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="btn btn-link" 
+                                                       routerLink="/bindings/oneWay/ngFor">
+                                                       Diretiva <strong>NgFor</strong>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="btn btn-link" 
+                                                       routerLink="/bindings/oneWay/ngSwitch">
+                                                       Diretiva <strong>NgSwitch/NgSwitchCase/NgSwitchDefault</strong>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="btn btn-link" 
+                                                       routerLink="/bindings/oneWay/ngTemplateOutlet">
+                                                       Diretiva <strong>NgTemplateOutlet</strong>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+    
+            <li>
+                <div>
+                    <div class="card-header" id="headerExpression">
+                        <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseExpression" aria-expanded="false" aria-controls="collapseExpression">
+                            <strong>Expressão (Expression)</strong>
+                        </a>
+                    </div>
+                
+                    <div class="collapse card-body" id="collapseExpression" aria-labelledby="headerExpression" data-bs-parent="#accordionBody1">
+                        <p>
+                            Fragmento de código analisado pelo componente (escrito inline nos template), através de propriedades e métodos, será o valor do alvo.
+                        </p>
+
+                        <ul>
+                            <li>
+                                <p style="color: red;">
+                                    <!--
+                                        Colocar exemplo de metodo e string literal ?  [ngClass]="'text-white m-2 p-2 ' + getClasses()"
+                                    -->
+                                    Obs. 1: Na expressão pode-se misturar métodos e propriedades com valores 
+                                    <a style="color: red;" href="">
+                                        <strong>valor literal</strong>
+                                    </a>
+                                    .
+                                </p>
+                            </li>
+
+                            <li>
+                                <p style="color: red;">
+                                    Obs. 2: Dependendo da complexidade da lógica não é aconselhável escrever inline nos templates.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+    
+<div id="container2">
+    <p>
+        Na <strong>Figura 1</strong>, temos o método <strong>getClasses()</strong> que retorna um string
+    </p>
+    <p>
+        O método analisa se a quantidade de produtos é igual a 5
+    </p>
+    <p>
+        Caso <strong>true</strong> a expressão será <strong style="color: #28a745;">bg-success</strong>, caso <strong>false</strong> a expressão será <strong style="color: #ffc107;">bg-warning</strong>
+    </p>
+    <!--
+        Há de se colocar mais coisas aqui
+    -->
+    <ul>
         <li>
-            <p>
-                <strong>
-                    <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExpression" role="button" aria-expanded="false" aria-controls="collapseExpression">
-                        Expressão (Expression)
-                      </a>
-                </strong>
+            <p style="color: red;">
+                Obs. 1: Quando se tem mais de um valor para se apresentar na expressão, deve-se separar por espaços.
             </p>
-            <div class="collapse card-body" id="collapseExpression">
-                <p>
-                    Fragmento de código JavaScript analisado pelo componente para ser um valor do alvo, tendo acesso às propriedades e métodos definidos no componente. 
-                </p>
-                <p>
-                    Pode-se misturar na expressão métodos e propriedades com um valor string literal.
-                    <!--
-                        Colocar exemplo de metodo e string literal ?  [ngClass]="'text-white m-2 p-2 ' + getClasses()"
-                    -->
-                </p>
-            </div>
         </li>
     </ul>
 </div>

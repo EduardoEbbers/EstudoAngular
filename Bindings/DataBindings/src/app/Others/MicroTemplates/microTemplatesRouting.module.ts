@@ -5,7 +5,7 @@ import { MicroTemplatesComponent } from "./microTemplates.component";
 const routes: Routes = [
     
     { 
-        path: 'bindings/others/microTemplates',
+        path: 'bindings/others/microTemplate',
         component: MicroTemplatesComponent
     }
     
