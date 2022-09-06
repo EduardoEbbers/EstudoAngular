@@ -3,99 +3,95 @@
     1.2 String Interpolation
 -->
 
-<h1>One Way</h1>
-<h3>String Interpolation Bindings</h3>
+<div>
+    <h1>One Way</h1>
+    <h3>String Interpolation Bindings</h3>
 
-<br>
-
-<div id="containerModal">
-    <h5>Estrutura Básica</h5>
-    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalEstruturaBasica">
-        <figure class="figure">
-            <img class="figure-img img-fluid rounded" src="../../../assets/imagens/dataBindings/OneWay/PropertyBinding/StringInterpolation/string_interpolation.png" alt="estrutura basica string interpolation binding">
-            <figcaption style="position: absolute;" class="figure-caption">
-                <strong>Figura 1:</strong> Estrutura Básica String Interpolation Bindings.
-            </figcaption>
-        </figure>
-    
-    </button>
-    
-    <div class="modal fade" id="modalEstruturaBasica" tabindex="-1" aria-labelledby="modalEstruturaBasicaLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalEstruturaBasicaLabel">Estrutura Básica String Interpolation Bindings</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img width="100%" height="100%" class="figure-img img-fluid rounded"
-                    src="../../../assets/imagens/dataBindings/OneWay/PropertyBinding/StringInterpolation/string_interpolation.png" alt="estrutura basica string interpolation binding">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    <div id="containerModal"> 
+        <h5>Estrutura Básica</h5>
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalEstruturaBasica">
+            <figure class="figure">
+                <img class="figure-img img-fluid" src="../../../assets/imagens/dataBindings/OneWay/PropertyBinding/StringInterpolation/string_interpolation.png" alt="estrutura basica string interpolation binding">
+                <figcaption class="figure-caption">
+                    <strong>Figura 1:</strong> Estrutura Básica String Interpolation Bindings.
+                </figcaption>
+            </figure>
+        </button>
+        
+        <div class="modal fade" id="modalEstruturaBasica" tabindex="-1" aria-labelledby="modalEstruturaBasicaLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalEstruturaBasicaLabel">Estrutura Básica String Interpolation Bindings</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img class="figure-img img-fluid"
+                        src="../../../assets/imagens/dataBindings/OneWay/PropertyBinding/StringInterpolation/string_interpolation.png" alt="estrutura basica string interpolation binding">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<div id="container">
-    <p>
-        Usa-se dupla chaves que inclui o resultado da expressão
-    </p>
-    
-    <p>Assim a expressão é avaliada e setada como string</p>
-    <p style="color: red;">
-        Obs 1: O retorno da expressão é um string equivalente a usar a propriedade "textContent"
-    </p>
-</div>
-
-
-<br>
-
-<div id="containerExemplo">
-    <ul>
-        <li>
+    <div id="accordionSection">
+        <div id="sectionBody1">
             <p>
-                <strong>
-                    <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseTarget" role="button" aria-expanded="false" aria-controls="collapseTarget">
-                        Lista de Exemplos
-                      </a>
-                </strong>
+                Usa-se dupla chaves que envolve o resultado da expressão.
             </p>
-            <div class="collapse card-body" id="collapseTarget">
-                <div id="accordionExemplo">
-                    <ul>
-                        <li>
-                            <div>
-                                <div class="card-header" id="headerExemplo1">
-                                    <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplo1" aria-expanded="false" aria-controls="collapseExemplo1">
-                                        <strong>Exemplo 1:</strong> Propriedade textContent e string interpolation 
-                                    </a>
-                                </div>
-                            
-                                <div class="collapse card-body" id="collapseExemplo1" aria-labelledby="headerExemplo1" data-bs-parent="#accordionExemplo">
-                                    <p>
-                                        Com a propriedade textContent
-                                    </p>
+            
+            <p>Assim a expressão é avaliada e setada como string no conteúdo do elemento host.</p>
+            <p style="color: red;">
+                <strong>Obs 1:</strong> O retorno da expressão é um string equivalente a usar a propriedade "textContent"
+            </p>
+        </div>
         
-                                    <div [textContent]="'Name: ' + (getProduct(1)?.name || 'None')"></div>
-                                    
-                                    <br>
-                                    
-                                    <p>
-                                        Com string interpolation
-                                    </p>
-        
+        <div id="sectionBodyExemplo">
+            <ul>
+                <li>
+                    <p>
+                        <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseTarget" role="button" aria-expanded="false" aria-controls="collapseTarget">
+                            <strong>Lista de Exemplos</strong>
+                        </a>
+                    </p>
+                    <div class="collapse card-body" id="collapseTarget">
+                        <div id="accordionExemplo">
+                            <ul>
+                                <li>
                                     <div>
-                                        Name: {{ getProduct(1)?.name || 'None' }}
+                                        <div class="card-header" id="headerExemplo1">
+                                            <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplo1" aria-expanded="false" aria-controls="collapseExemplo1">
+                                                <strong>Exemplo 1:</strong> Propriedade textContent e string interpolation 
+                                            </a>
+                                        </div>
+                                    
+                                        <div class="collapse card-body" id="collapseExemplo1" aria-labelledby="headerExemplo1" data-bs-parent="#accordionExemplo">
+                                            <p>
+                                                Com a propriedade textContent
+                                            </p>
+                
+                                            <div [textContent]="'Name: ' + (getProduct(1)?.name || 'None')"></div>
+                                            
+                                            <br>
+                                            
+                                            <p>
+                                                Com string interpolation
+                                            </p>
+                
+                                            <div>
+                                                Name: {{ getProduct(1)?.name || 'None' }}
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </li>
-    </ul>
-</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>    
+</div>    

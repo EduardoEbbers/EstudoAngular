@@ -4,7 +4,8 @@ import { Repository } from "src/app/Models/repository.model";
 
 @Component({
     selector: 'app-ng-if',
-    templateUrl: './ngIf.component.html'
+    templateUrl: './ngIf.component.html',
+    styleUrls: ['./ngIf.component.css']
 })
 export class NgIfComponent {
     repository: Repository = new Repository();

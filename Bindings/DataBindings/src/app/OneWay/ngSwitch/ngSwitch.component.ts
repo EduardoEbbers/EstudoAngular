@@ -4,7 +4,8 @@ import { Repository } from "src/app/Models/repository.model";
 
 @Component({
     selector: 'app-ng-switch',
-    templateUrl: './ngSwitch.component.html'
+    templateUrl: './ngSwitch.component.html',
+    styleUrls: ['./ngSwitch.component.css']
 })
 export class NgSwitchComponent {
     repository: Repository = new Repository();

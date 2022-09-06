@@ -3,133 +3,161 @@
     1.1 Diretiva ngSwitch Binding
 -->
 
-<h1>One Way</h1>
-<h3>Diretiva ngSwitch Bindings</h3>
-
-<br>
-
-<h5>Estrutura Básica</h5>
-
 <div>
-    <img src="../../../assets/imagens/dataBindings/estrutura_basica_diretiva_ngswitch.jpg" alt="estrutura basica diretiva ngSwitch binding">
-</div>
-<br>
-<p>
-    Usa-se quando se quer selecionar um template, dentre outras opções, do <strong>ngSwitchCase</strong> baseado no resultado da expressão do <strong>ngSwitch</strong>.
-</p>
-<p style="color: red;">
-    Obs. 1: Equivalente ao switch case do JavaScript.
-</p>
-<p style="color: red;">
-    Obs. 2: A diretiva ngSwitchCase apenas inclui conteúdo no HTML.
-</p>
-<p style="color: red;">
-    Obs. 3: Asterisco (*) indica que é micro-templates, visto 
-    <a style="color: red;" href="/bindings/others/microTemplates">
-        <strong>aqui</strong>,
-    </a> e colchetes ([]) indica que é binding, ver <strong>estrutura básica</strong> acima.
-</p>
-<p>
-    A expressão se divide em três partes:
-</p>
+    <h1>One Way</h1>
+    <h3>Diretiva ngSwitch Bindings</h3>
 
-<div id="accordionBody">
-    <ul>
-        <li>
-            <div>
-                <div class="card-header" id="headerNgSwitch">
-                    <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseNgSwitch" aria-expanded="false" aria-controls="collapseNgSwitch">
-                        <strong>Diretiva ngSwitch</strong>
-                    </a>
-                </div>
-            
-                <div class="collapse card-body" id="collapseNgSwitch" aria-labelledby="headerNgSwitch" data-bs-parent="#accordionBody">
-                    <p>
-                        Diretiva que faz binding da expressão, tendo o retorno do tipo string ou number ?
-                    </p>
+    <div id="containerModal">
+        <h5>Estrutura Básica</h5>
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalEstruturaBasica">
+            <figure class="figure">
+                <img class="figure-img img-fluid" src="../../../assets/imagens/dataBindings/estrutura_basica_diretiva_ngswitch.jpg" alt="estrutura basica diretiva ngswitch">
+                <figcaption class="figure-caption">
+                    <strong>Figura 1:</strong> Estrutura Básica Diretiva NgSwitch.
+                </figcaption>
+            </figure>
+        </button>
+        
+        <div class="modal fade" id="modalEstruturaBasica" tabindex="-1" aria-labelledby="modalEstruturaBasicaLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalEstruturaBasicaLabel">Estrutura Básica Diretiva NgSwitch</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img class="figure-img img-fluid"
+                        src="../../../assets/imagens/dataBindings/estrutura_basica_diretiva_ngfor.jpg" alt="estrutura basica diretiva ngswitch">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
-        </li>
+        </div>
+    </div>
 
-        <li>
-            <div>
-                <div class="card-header" id="headerNgSwitchCase">
-                    <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseNgSwitchCase" aria-expanded="false" aria-controls="collapseNgSwitchCase">
-                        <strong>Diretiva ngSwitchCase</strong>
-                    </a>
-                </div>
-            
-                <div class="collapse card-body" id="collapseNgSwitchCase" aria-labelledby="headerNgSwitchCase" data-bs-parent="#accordionBody">
-                    <p>
-                        Diretiva que adiciona conteúdo do qual possui opção do valor da expressão que se iguala com a expressão do binding ngSwitch.
-                    </p>
-                </div>
-            </div>
-        </li>
-
-        <li>
-            <div>
-                <div class="card-header" id="headerNgSwitchDefault">
-                    <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseNgSwitchDefault" aria-expanded="false" aria-controls="collapseNgSwitchDefault">
-                        <strong>Diretiva ngSwitchDefault</strong>
-                    </a>
-                </div>
-            
-                <div class="collapse card-body" id="collapseNgSwitchDefault" aria-labelledby="headerNgSwitchDefault" data-bs-parent="#accordionBody">
-                    <p>
-                        Diretiva que adiciona conteúdo caso não exista nenhuma opção de ngSwitchCase.
-                    </p>
-                </div>
-            </div>
-        </li>
-    </ul>
-</div>
-
-
-<p style="color: red;">
-    Parte sobre o problema com valor literal
-</p>
-
-<br>
-
-<div>
-    <ul>
-        <li>
+    <div id="accordionSection">
+        <div id="sectionBody1">
             <p>
-                <strong>
-                    <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseTarget" role="button" aria-expanded="false" aria-controls="collapseTarget">
-                        Lista de Exemplos
-                      </a>
-                </strong>
+                Usa-se quando se quer selecionar um template, dentre outras opções, do <strong>ngSwitchCase</strong> baseado no resultado da expressão do <strong>ngSwitch</strong>.
             </p>
-            <div class="collapse card-body" id="collapseTarget">
-                <div id="accordionExemplo">
-                    <ul>
-                        <li>
-                            <div>
-                                <div class="card-header" id="headerExemplo1">
-                                    <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplo1" aria-expanded="false" aria-controls="collapseExemplo1">
-                                        <strong>Exemplo 1:</strong> Diretiva ngSwitch
-                                    </a>
-                                </div>
-                            
-                                <div class="collapse card-body" id="collapseExemplo1" aria-labelledby="headerExemplo1" data-bs-parent="#accordionExemplo">
-                                    <div class="text-white">
-                                        <div class="bg-info p-2">
-                                            There are {{getProductCount()}} products.
+            <p style="color: red;">
+                Obs. 1: Equivalente ao switch case do JavaScript.
+            </p>
+            <p style="color: red;">
+                Obs. 2: A diretiva ngSwitchCase apenas inclui conteúdo no HTML.
+            </p>
+            <p style="color: red;">
+                Obs. 3: Asterisco (*) indica que é micro-templates, visto 
+                <a style="color: red;" href="/bindings/others/microTemplates">
+                    <strong>aqui</strong>,
+                </a> e colchetes ([]) indica que é binding, ver <strong>estrutura básica</strong> acima.
+            </p>
+            <p>
+                A expressão se divide em três partes:
+            </p>
+
+            <div id="accordionSectionBody1">
+                <ul>
+                    <li>
+                        <div>
+                            <div class="card-header" id="headerNgSwitch">
+                                <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseNgSwitch" aria-expanded="false" aria-controls="collapseNgSwitch">
+                                    <strong>Diretiva ngSwitch</strong>
+                                </a>
+                            </div>
+                        
+                            <div class="collapse card-body" id="collapseNgSwitch" aria-labelledby="headerNgSwitch" data-bs-parent="#accordionSection">
+                                <p>
+                                    Diretiva que faz binding da expressão, tendo o retorno do tipo string ou number ?
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+            
+                    <li>
+                        <div>
+                            <div class="card-header" id="headerNgSwitchCase">
+                                <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseNgSwitchCase" aria-expanded="false" aria-controls="collapseNgSwitchCase">
+                                    <strong>Diretiva ngSwitchCase</strong>
+                                </a>
+                            </div>
+                        
+                            <div class="collapse card-body" id="collapseNgSwitchCase" aria-labelledby="headerNgSwitchCase" data-bs-parent="#accordionSection">
+                                <p>
+                                    Diretiva que adiciona conteúdo do qual possui opção do valor da expressão que se iguala com a expressão do binding ngSwitch.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+            
+                    <li>
+                        <div>
+                            <div class="card-header" id="headerNgSwitchDefault">
+                                <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseNgSwitchDefault" aria-expanded="false" aria-controls="collapseNgSwitchDefault">
+                                    <strong>Diretiva ngSwitchDefault</strong>
+                                </a>
+                            </div>
+                        
+                            <div class="collapse card-body" id="collapseNgSwitchDefault" aria-labelledby="headerNgSwitchDefault" data-bs-parent="#accordionSection">
+                                <p>
+                                    Diretiva que adiciona conteúdo caso não exista nenhuma opção de ngSwitchCase.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--
+            <p style="color: red;">
+                Parte sobre o problema com valor literal
+            </p>
+        -->
+
+        <div id="sectionBodyExemplo">
+            <ul>
+                <li>
+                    <p>
+                        <strong>
+                            <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseTarget" role="button" aria-expanded="false" aria-controls="collapseTarget">
+                                Lista de Exemplos
+                              </a>
+                        </strong>
+                    </p>
+                    <div class="collapse card-body" id="collapseTarget">
+                        <div id="accordionExemplo">
+                            <ul>
+                                <li>
+                                    <div>
+                                        <div class="card-header" id="headerExemplo1">
+                                            <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplo1" aria-expanded="false" aria-controls="collapseExemplo1">
+                                                <strong>Exemplo 1:</strong> Diretiva ngSwitch
+                                            </a>
                                         </div>
-                                        <div class="bg-info p-2 mt-1" [ngSwitch]="getProductCount()">
-                                            <span *ngSwitchCase="2">There are two products</span>
-                                            <span *ngSwitchCase="5">There are five products</span>
-                                            <span *ngSwitchDefault>This is the default</span>
+                                    
+                                        <div class="collapse card-body" id="collapseExemplo1" aria-labelledby="headerExemplo1" data-bs-parent="#accordionSection">
+                                            <div class="text-white">
+                                                <div class="bg-info p-2">
+                                                    There are {{getProductCount()}} products.
+                                                </div>
+                                                <div class="bg-info p-2 mt-1" [ngSwitch]="getProductCount()">
+                                                    <span *ngSwitchCase="2">There are two products</span>
+                                                    <span *ngSwitchCase="5">There are five products</span>
+                                                    <span *ngSwitchDefault>This is the default</span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </li>
-    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
 </div>
+

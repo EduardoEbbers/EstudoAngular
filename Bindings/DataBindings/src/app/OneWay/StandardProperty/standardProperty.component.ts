@@ -4,7 +4,8 @@ import { Repository } from "src/app/Models/repository.model";
 
 @Component({
     selector: 'app-standard-property',
-    templateUrl: './standardProperty.component.html'
+    templateUrl: './standardProperty.component.html',
+    styleUrls: ['./standardProperty.component.css']
 })
 export class StandardPropertyComponent {
     repository: Repository = new Repository();

@@ -3,9 +3,9 @@ import { NgModule } from "@angular/core";
 import { TemplateReferenceVariablesModule } from "./TemplateReferenceVariables/templateReferenceVariables.module";
 import { MicroTemplatesModule } from "./MicroTemplates/microTemplates.module";
 import { NgContainerElementModule } from "./NgContainerElement/ngContainerElement.module";
-import { OneWayRestrictionsModule } from "./OneWayRestrictons/oneWayRestrictions.module";
 import { NgTemplateElementModule } from "./NgTemplateElement/ngTemplateElement.module";
 import { TruthyFalsyModule } from "./truthyFalse/truthyFalsy.module";
+import { OneWayRestrictionsModule } from "./OneWayRestrictions/oneWayRestrictions.module";
 
 
 @NgModule({

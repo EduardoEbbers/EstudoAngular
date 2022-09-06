@@ -4,7 +4,8 @@ import { Repository } from "src/app/Models/repository.model";
 
 @Component({
     selector: 'app-ng-for',
-    templateUrl: './ngFor.component.html'
+    templateUrl: './ngFor.component.html',
+    styleUrls: ['./ngFor.component.css']
 })
 export class NgForComponent {
     repository: Repository = new Repository();

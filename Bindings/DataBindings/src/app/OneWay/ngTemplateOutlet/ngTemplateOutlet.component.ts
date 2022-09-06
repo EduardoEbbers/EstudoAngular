@@ -4,7 +4,8 @@ import { Repository } from "src/app/Models/repository.model";
 
 @Component({
     selector: 'app-ng-template-outlet',
-    templateUrl: './ngTemplateOutlet.component.html'
+    templateUrl: './ngTemplateOutlet.component.html',
+    styleUrls: ['./ngTemplateOutlet.component.css']
 })
 export class NgTemplateOutletComponent {
     repository: Repository = new Repository();

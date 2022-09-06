@@ -4,7 +4,8 @@ import { Repository } from "src/app/Models/repository.model";
 
 @Component({
     selector: 'app-attribute',
-    templateUrl: './attribute.component.html'
+    templateUrl: './attribute.component.html',
+    styleUrls: ['./attribute.component.css']
 })
 export class AttributeComponent {
     repository: Repository = new Repository();

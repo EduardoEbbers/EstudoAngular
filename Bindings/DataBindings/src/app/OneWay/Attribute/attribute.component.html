@@ -3,118 +3,115 @@
     1.3 Attribute Binding
 -->
 
-<h1>One Way</h1>
-<h3>Attribute Binding</h3>
+<div>
+    <h1>One Way</h1>
+    <h3>Attribute Binding</h3>
 
-<div id="containerModal">
-    <h5>Estrutura Básica</h5>
-    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalEstruturaBasica">
-        <figure class="figure">
-            <img class="figure-img img-fluid rounded" src="../../../assets/imagens/dataBindings/OneWay/PropertyBinding/Attribute/attribute.png" alt="estrutura basica data bindings">
-            <figcaption style="position: absolute;" class="figure-caption">
-                <strong>Figura 1:</strong> Estrutura Básica Attribute Bindings.
-            </figcaption>
-        </figure>
-    
-    </button>
-    
-    <div class="modal fade" id="modalEstruturaBasica" tabindex="-1" aria-labelledby="modalEstruturaBasicaLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalEstruturaBasicaLabel">Estrutura Básica Attribute Bindings</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img width="100%" height="100%" class="figure-img img-fluid rounded"
-                    src="../../../assets/imagens/dataBindings/OneWay/PropertyBinding/Attribute/attribute.png" alt="estrutura basica data bindings">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    <div id="containerModal">
+        <h5>Estrutura Básica</h5>
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalEstruturaBasica">
+            <figure class="figure">
+                <img class="figure-img img-fluid"
+                    src="../../../assets/imagens/dataBindings/OneWay/PropertyBinding/Attribute/attribute.png"
+                    alt="estrutura basica attribute bindings">
+                <figcaption class="figure-caption">
+                    <strong>Figura 1:</strong> Estrutura Básica Attribute Bindings.
+                </figcaption>
+            </figure>
+
+        </button>
+
+        <div class="modal fade" id="modalEstruturaBasica" tabindex="-1" aria-labelledby="modalEstruturaBasicaLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalEstruturaBasicaLabel">Estrutura Básica Attribute Bindings</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img class="figure-img img-fluid "
+                            src="../../../assets/imagens/dataBindings/OneWay/PropertyBinding/Attribute/attribute.png"
+                            alt="estrutura basica attribute bindings">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<div id="container">
-    <p>
-        Usa-se o prefixo <strong>attr.</strong> com o nome do atributo dentro de colchetes
-    </p>
-    <p>
-        Deve-se usar quando não se tem o atributo do elementos HTML no seu atributo equivalente no API DOM
-    </p>
-    <p style="color: red;">
-        Obs. 1: colspan e colSpan são diferentes
-    </p>
-    <p style="color: darkgoldenrod;">
-        Nota 1: Para saber mais sobre a Obs1., consultar 
-        <a style="color: darkgoldenrod;" href="http://angular.io/guide/property-binding#colspan">
-            <strong>website</strong>
-        </a>
-        .
-    </p>
-</div>
-
-
-<br>
-
-
-<div id="containerExemplo">
-    <ul>
-        <li>
+    <div id="accordionSection">
+        <div id="sectionBody1">
             <p>
-                <strong>
-                    <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseTarget" role="button" aria-expanded="false" aria-controls="collapseTarget">
-                        Lista de Exemplos
-                      </a>
-                </strong>
+                Usa-se o prefixo <strong>attr.</strong> com o nome do atributo dentro de colchetes
             </p>
-            <div class="collapse card-body" id="collapseTarget">
-                <div id="accordionExemplo">
-                    <ul>
-                        <li>
-                            <div>
-                                <div class="card-header" id="headerExemplo1">
-                                    <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplo1" aria-expanded="false" aria-controls="collapseExemplo1">
-                                        <strong>Exemplo 1:</strong> Attribute Binding 
-                                    </a>
-                                </div>
-                            
-                                <div class="collapse card-body" id="collapseExemplo1" aria-labelledby="headerExemplo1" data-bs-parent="#accordionExemplo">
-                                    <table class="table table-bordered table-striped mt-2 table-sm">
-                                        <tr>
-                                            <th>1</th>
-                                            <th>2</th>
-                                            <th>3</th>
-                                            <th>4</th>
-                                            <th>5</th>
-                                        </tr>
-                                        <tr>
-                                            <td [attr.colSpan]="getProducts().length">
-                                                Existe {{ getProducts().length }} produtos
-                                            </td>
-                                        </tr>
-                                    </table>
-                                    
-                                    <p>
-                                        interpretacao do exemplo
-                                    </p>
-        
-                                    
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </li>
-    </ul>
+            <p>
+                Deve-se usar quando não se tem o atributo do elemento HTML na propriedade equivalente no API DOM
+            </p>
+            <p style="color: red;">
+                <strong>Obs. 1:</strong> colspan e colSpan são diferentes
+            </p>
+            <p style="color: darkgoldenrod;">
+                <strong>Nota 1:</strong> Para saber mais sobre a Obs1., consultar
+                <a style="color: darkgoldenrod;" href="http://angular.io/guide/property-binding#colspan">
+                    <strong>website</strong>
+                </a>
+                .
+            </p>
+        </div>
+
+        <div id="sectionBodyExemplo">
+            <ul>
+                <li>
+                    <p>
+                        <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseTarget" role="button"
+                            aria-expanded="false" aria-controls="collapseTarget">
+                            <strong>Lista de Exemplos</strong>
+                        </a>
+                    </p>
+                    <div class="collapse card-body" id="collapseTarget">
+                        <div id="accordionExemplo">
+                            <ul>
+                                <li>
+                                    <div>
+                                        <div class="card-header" id="headerExemplo1">
+                                            <a class="btn btn-link" role="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseExemplo1" aria-expanded="false"
+                                                aria-controls="collapseExemplo1">
+                                                <strong>Exemplo 1:</strong> Attribute Binding
+                                            </a>
+                                        </div>
+    
+                                        <div class="collapse card-body" id="collapseExemplo1"
+                                            aria-labelledby="headerExemplo1" data-bs-parent="#accordionExemplo">
+                                            <table class="table table-bordered table-striped mt-2 table-sm">
+                                                <tr>
+                                                    <th>1</th>
+                                                    <th>2</th>
+                                                    <th>3</th>
+                                                    <th>4</th>
+                                                    <th>5</th>
+                                                </tr>
+                                                <tr>
+                                                    <td [attr.colSpan]="getProducts().length">
+                                                        Existe {{ getProducts().length }} produtos
+                                                    </td>
+                                                </tr>
+                                            </table>
+    
+                                            <p>
+                                                interpretacao do exemplo
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
 </div>
-
-
-
-
-
-
-

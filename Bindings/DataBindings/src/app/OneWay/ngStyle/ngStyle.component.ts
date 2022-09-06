@@ -3,7 +3,8 @@ import { Repository } from "src/app/Models/repository.model";
 
 @Component({
     selector: 'app-ng-style',
-    templateUrl: './ngStyle.component.html'
+    templateUrl: './ngStyle.component.html',
+    styleUrls: ['./ngStyle.component.css']
 })
 export class NgStyleComponent {
     repository: Repository = new Repository();
