@@ -20,3 +20,7 @@ p:first-child {
     text-decoration: none;
     padding-top: 0;
 }
+
+#obs-style-color {
+    color: red;
+}

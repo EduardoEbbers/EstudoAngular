@@ -25,6 +25,20 @@ figcaption {
 #accordionSubSectionTarget li>a {
     text-decoration: underline;
 }
+
+#obs-style-color {
+    color: red;
+}
+
+#obs-style-color a {
+    color: red;
+    text-decoration: underline;
+}
+
+#obs-style-color a:hover {
+    color: rgb(218, 2, 2);
+}
+
 /*
 
 

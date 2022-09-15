@@ -181,38 +181,26 @@
                                     <strong>Parênteses</strong> indicam que os dados fluem do template HTML para o componente (<strong>event bindings</strong>).
                                 </p>
                                 
-                                <div id="sectionObs">
-                                    <ul>
-                                        <li>
-                                            <!--
-                                                tirar este style e fazer em css
-                                            -->
-                                            <p style="color: red;">
-                                                <strong>Obs. 1:</strong> Pode-se também usar <strong>dupla chaves</strong> visto em
-                                                <!--
-                                                    configurar o a-hover para a tag a abaixo
-                                                -->
-                                                <a style="color: red;" href="/bindings/oneWay/stringInterpolation">
-                                                    <strong>string interpolation bindings</strong>
-                                                </a>
-                                                e uma combinação de colchetes envolvendo parênteses, chamado <strong>banana-in-box</strong>, visto em 
-                                                <a style="color: red;" href="/bindings/twoWay">
-                                                    <strong>two-way bindings</strong>
-                                                </a>.
-                                            </p>
-                                        </li>
-            
-                                        <li>
-                                            <!--Aqui tem a palavra valor literal, sera que devo fazer outro em others ? sobre valor literal ?-->
-                                            <p style="color: red;">
-                                                <strong>Obs. 2:</strong> Omitindo o colchetes ou parênteses a expressão não será avaliada, passando a ser considerada um 
-                                                <a style="color: red;" href="#">
-                                                    <strong>valor literal</strong>
-                                                </a>. 
-                                            </p>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <p id="obs-style-color">
+                                    <strong>Obs. 1:</strong> Pode-se também usar <strong>dupla chaves</strong> visto em
+                                    <!--
+                                        configurar o a-hover para a tag a abaixo
+                                    -->
+                                    <a href="/bindings/oneWay/stringInterpolation">
+                                        <strong>string interpolation bindings</strong>
+                                    </a>
+                                    e uma combinação de colchetes envolvendo parênteses, chamado <strong>banana-in-box</strong>, visto em 
+                                    <a href="/bindings/twoWay">
+                                        <strong>two-way bindings</strong>
+                                    </a>.
+                                </p>
+
+                                <p id="obs-style-color">
+                                    <strong>Obs. 2:</strong> Omitindo o colchetes ou parênteses a expressão não será avaliada, passando a ser considerada um 
+                                    <a href="#">
+                                        <strong>valor literal</strong>
+                                    </a>. 
+                                </p>
                             </div>
                         </div>
                     </li>
@@ -364,33 +352,23 @@
                                     Fragmento de código analisado pelo componente (ou escrito inline no template) através de propriedades e métodos, sendo assim o valor do alvo.
                                 </p>
         
-                                <div id="sectionObs">
-                                    <ul>
-                                        <li>
-                                            <p style="color: red;">
-                                                <!--
-                                                    Colocar exemplo de metodo e string literal ?  [ngClass]="'text-white m-2 p-2 ' + getClasses()"
-                                                -->
-                                                <strong>Obs. 1:</strong> Na expressão pode-se misturar métodos e propriedades com 
-                                                <a style="color: red;" href="">
-                                                    <strong>valor literal</strong>
-                                                </a>.
-                                            </p>
-                                        </li>
-            
-                                        <li>
-                                            <p style="color: red;">
-                                                <strong>Obs. 2:</strong> Dependendo da complexidade da lógica não é aconselhável escrever inline no template.
-                                            </p>
-                                        </li>
+                                <p id="obs-style-color">
+                                    <!--
+                                        Colocar exemplo de metodo e string literal ?  [ngClass]="'text-white m-2 p-2 ' + getClasses()"
+                                    -->
+                                    <strong>Obs. 1:</strong> Na expressão pode-se misturar métodos e propriedades com 
+                                    <a href="">
+                                        <strong>valor literal</strong>
+                                    </a>.
+                                </p>
 
-                                        <li>
-                                            <p style="color: red;">
-                                                <strong>Obs. 3:</strong> Quando se tem mais de um valor para se apresentar na expressão, deve-se separar por espaços.
-                                            </p>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <p id="obs-style-color">
+                                    <strong>Obs. 2:</strong> Dependendo da complexidade da lógica não é aconselhável escrever inline no template.
+                                </p>
+
+                                <p id="obs-style-color">
+                                    <strong>Obs. 3:</strong> Quando se tem mais de um valor para se apresentar na expressão, deve-se separar por espaços.
+                                </p>
                             </div>
                         </div>
                     </li>

@@ -20,3 +20,15 @@ p:first-child {
     text-decoration: none;
     padding-top: 0;
 }
+
+#nota-style-color {
+    color: darkgoldenrod;
+}
+
+#nota-style-color a {
+    color: darkgoldenrod;
+}
+
+#nota-style-color a:hover {
+    color: rgb(156, 114, 10);
+}
