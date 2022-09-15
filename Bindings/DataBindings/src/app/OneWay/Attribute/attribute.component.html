@@ -7,32 +7,32 @@
     <h1>One Way</h1>
     <h3>Attribute Binding</h3>
 
-    <div id="containerModal">
+    <div id="containerModalEstruturaBasica">
         <h5>Estrutura Básica</h5>
         <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalEstruturaBasica">
             <figure class="figure">
                 <img class="figure-img img-fluid"
                     src="../../../assets/imagens/dataBindings/OneWay/PropertyBinding/Attribute/attribute.png"
-                    alt="estrutura basica attribute bindings">
+                    alt="estrutura basica attribute binding">
                 <figcaption class="figure-caption">
-                    <strong>Figura 1:</strong> Estrutura Básica Attribute Bindings.
+                    <strong>Figura 1:</strong> Estrutura Básica Attribute Binding.
                 </figcaption>
             </figure>
 
         </button>
 
-        <div class="modal fade" id="modalEstruturaBasica" tabindex="-1" aria-labelledby="modalEstruturaBasicaLabel"
+        <div class="modal fade" id="modalEstruturaBasica" tabindex="-1" aria-labelledby="labelModalEstruturaBasica"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="modalEstruturaBasicaLabel">Estrutura Básica Attribute Bindings</h5>
+                        <h5 class="modal-title" id="labelModalEstruturaBasica">Estrutura Básica Attribute Binding</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <img class="figure-img img-fluid "
+                        <img class="figure-img img-fluid"
                             src="../../../assets/imagens/dataBindings/OneWay/PropertyBinding/Attribute/attribute.png"
-                            alt="estrutura basica attribute bindings">
+                            alt="estrutura basica attribute binding">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -43,7 +43,7 @@
     </div>
 
     <div id="accordionSection">
-        <div id="sectionBody1">
+        <div id="sectionBody">
             <p>
                 Usa-se o prefixo <strong>attr.</strong> com o nome do atributo dentro de colchetes
             </p>
@@ -62,56 +62,60 @@
             </p>
         </div>
 
-        <div id="sectionBodyExemplo">
-            <ul>
-                <li>
-                    <p>
-                        <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseTarget" role="button"
-                            aria-expanded="false" aria-controls="collapseTarget">
-                            <strong>Lista de Exemplos</strong>
-                        </a>
-                    </p>
-                    <div class="collapse card-body" id="collapseTarget">
-                        <div id="accordionExemplo">
-                            <ul>
-                                <li>
-                                    <div>
-                                        <div class="card-header" id="headerExemplo1">
-                                            <a class="btn btn-link" role="button" data-bs-toggle="collapse"
-                                                data-bs-target="#collapseExemplo1" aria-expanded="false"
-                                                aria-controls="collapseExemplo1">
-                                                <strong>Exemplo 1:</strong> Attribute Binding
-                                            </a>
-                                        </div>
-    
-                                        <div class="collapse card-body" id="collapseExemplo1"
-                                            aria-labelledby="headerExemplo1" data-bs-parent="#accordionExemplo">
-                                            <table class="table table-bordered table-striped mt-2 table-sm">
-                                                <tr>
-                                                    <th>1</th>
-                                                    <th>2</th>
-                                                    <th>3</th>
-                                                    <th>4</th>
-                                                    <th>5</th>
-                                                </tr>
-                                                <tr>
-                                                    <td [attr.colSpan]="getProducts().length">
-                                                        Existe {{ getProducts().length }} produtos
-                                                    </td>
-                                                </tr>
-                                            </table>
-    
-                                            <p>
-                                                interpretacao do exemplo
-                                            </p>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
+        <div id="sectionExemplo">
+            <div id="accordionSectionExemplo">
+                <ul>
+                    <li>
+                        <div id="containerExemplo">
+                            <div class="headerExemplo">
+                                <a class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo" role="button" aria-expanded="false" aria-controls="collapseExemplo">
+                                    <strong>Lista de Exemplos</strong>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                </li>
-            </ul>
+                        
+                        <div class="collapse" id="collapseExemplo" aria-labelledby="headerExemplo" data-bs-parent="#accordionSection">
+                            <div id="accordionSubSectionExemplo">
+                                <ul>
+                                    <li>
+                                        <div id="containerExemplo1">
+                                            <div id="headerExemplo1">
+                                                <a class="btn btn-link" role="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseExemplo1" aria-expanded="false"
+                                                    aria-controls="collapseExemplo1">
+                                                    <strong>Exemplo 1:</strong> Attribute Binding
+                                                </a>
+                                            </div>
+        
+                                            <div class="collapse" id="collapseExemplo1"
+                                                aria-labelledby="headerExemplo1" data-bs-parent="#accordionSubSectionExemplo">
+                                                <table class="table table-bordered table-striped mt-2 table-sm">
+                                                    <tr>
+                                                        <th>1</th>
+                                                        <th>2</th>
+                                                        <th>3</th>
+                                                        <th>4</th>
+                                                        <th>5</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td [attr.colSpan]="getProducts().length">
+                                                            Existe {{ getProducts().length }} produtos
+                                                        </td>
+                                                    </tr>
+                                                </table>
+        
+                                                <p>
+                                                    interpretacao do exemplo
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>

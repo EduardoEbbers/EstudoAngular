@@ -7,255 +7,249 @@
     <h1>One Way</h1>
     <h3>Style Binding</h3>
     
-    <br>
-    
-    <div id="sectionBody1">
-        <p>
-            Propriedade <strong>style</strong> do elemento host.
-        
-        </p>
-        <p>
-            Existe 3 formas de manipulação desta propriedade:     
-        </p>
-        
-        <div id="accordionBody">
-            <ul>
-                <li>
-                    <div>
-                        <div class="card-header" id="headerStyle">
-                            <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseStyle" aria-expanded="false" aria-controls="collapseStyle">
-                                <strong>Standard Property Binding</strong>
-                            </a>
-                        </div>
-                    
-                        <div class="collapse card-body" id="collapseStyle" aria-labelledby="headerStyle" data-bs-parent="#accordionBody">
-                            <div id="containerModal">
-                                <h5>Estrutura Básica</h5>
-                                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalEstruturaBasica1">
-                                    <figure class="figure">
-                                        <img class="figure-img img-fluid" src="../../../assets/imagens/dataBindings/OneWay/PropertyBinding/Style/style.png" alt="estrutura basica style bindings">
-                                        <figcaption class="figure-caption">
-                                            <strong>Figura 1:</strong> Estrutura Básica Style Bindings.
-                                        </figcaption>
-                                    </figure>
-                                
-                                </button>
-                                
-                                <div class="modal fade" id="modalEstruturaBasica1" tabindex="-1" aria-labelledby="modalEstruturaBasicaLabel1" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered modal-lg">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="modalEstruturaBasicaLabel1">Estrutura Básica Style Bindings</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <img class="figure-img img-fluid"
-                                                src="../../../assets/imagens/dataBindings/OneWay/PropertyBinding/Style/style.png" alt="estrutura basica style bindings">
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    <div id="accordionSection">
+        <div id="sectionBody">
+            <p>
+                Propriedade <strong>style</strong> do elemento host.
+            
+            </p>
+            <p>
+                Existe 3 formas de manipulação desta propriedade:     
+            </p>
+            
+            <div id="accordionSectionBody">
+                <ul>
+                    <li>
+                        <div id="containerStyle">
+                            <div id="headerStyle">
+                                <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseStyle" aria-expanded="false" aria-controls="collapseStyle">
+                                    <strong>Standard Property Binding</strong>
+                                </a>
+                            </div>
+                        
+                            <div class="collapse" id="collapseStyle" aria-labelledby="headerStyle" data-bs-parent="#accordionSection">
+                                <div id="containerModalEstruturaBasicaStyle">
+                                    <h5>Estrutura Básica</h5>
+                                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalEstruturaBasicaStyle">
+                                        <figure class="figure">
+                                            <img class="figure-img img-fluid" src="../../../assets/imagens/dataBindings/OneWay/PropertyBinding/Style/style.png" alt="estrutura basica style binding">
+                                            <figcaption class="figure-caption">
+                                                <strong>Figura 1:</strong> Estrutura Básica Style Binding.
+                                            </figcaption>
+                                        </figure>
+                                    </button>
+                                    
+                                    <div class="modal fade" id="modalEstruturaBasicaStyle" tabindex="-1" aria-labelledby="labelModalEstruturaBasicaStyle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="labelModalEstruturaBasicaStyle">Estrutura Básica Style Binding</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <img class="figure-img img-fluid"
+                                                    src="../../../assets/imagens/dataBindings/OneWay/PropertyBinding/Style/style.png" alt="estrutura basica style binding">
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            
-                            <br>
-        
-                            <div id="subSectionStyle">
-                                <p>
-                                    Seta um único valor de uma única propriedade style.
-                                </p>
-                                <p style="color: red;">
-                                    <strong>Obs 1:</strong> Deve-se incluir as unidades requeridas para o style no componente.
-                                </p>
-                                <p style="color: red;">
-                                    <!--
-                                    Obs 2: incluir o caution pag 267 ?
-                                    -->
-                                </p>
+            
+                                <div id="subSection">
+                                    <p>
+                                        Seta um único valor de uma única propriedade style.
+                                    </p>
+                                    <p style="color: red;">
+                                        <strong>Obs 1:</strong> Deve-se incluir as unidades requeridas para o style no componente.
+                                    </p>
+                                    <p style="color: red;">
+                                        <!--
+                                        Obs 2: incluir o caution pag 267 ?
+                                        -->
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </li>
-        
-                <li>
-                    <div>
-                        <div class="card-header" id="headerSpecialStyle">
-                            <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseSpecialStyle" aria-expanded="false" aria-controls="collapseSpecialStyle">
-                                <strong>Style Binding Special</strong>
-                            </a>
-                        </div>
-                    
-                        <div class="collapse card-body" id="collapseSpecialStyle" aria-labelledby="headerSpecialStyle" data-bs-parent="#accordionBody">
-                            <div id="containerModal">
-                                <h5>Estrutura Básica</h5>
-                                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalEstruturaBasica2">
-                                    <figure class="figure">
-                                        <img class="figure-img img-fluid" src="../../../assets/imagens/dataBindings/OneWay/PropertyBinding/Style/special_style.png" alt="estrutura basica special style bindings">
-                                        <figcaption class="figure-caption">
-                                            <strong>Figura 1:</strong> Estrutura Básica Special Style Bindings.
-                                        </figcaption>
-                                    </figure>
-                                
-                                </button>
-                                
-                                <div class="modal fade" id="modalEstruturaBasica2" tabindex="-1" aria-labelledby="modalEstruturaBasicaLabel2" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered modal-lg">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="modalEstruturaBasicaLabel2">Estrutura Básica Special Style Bindings</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <img class="figure-img img-fluid"
-                                                src="../../../assets/imagens/dataBindings/OneWay/PropertyBinding/Style/special_style.png" alt="estrutura basica special style bindings">
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </li>
+            
+                    <li>
+                        <div id="containerSpecialStyle">
+                            <div id="headerSpecialStyle">
+                                <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseSpecialStyle" aria-expanded="false" aria-controls="collapseSpecialStyle">
+                                    <strong>Special Style Binding</strong>
+                                </a>
+                            </div>
+                        
+                            <div class="collapse" id="collapseSpecialStyle" aria-labelledby="headerSpecialStyle" data-bs-parent="#accordionSection">
+                                <div id="containerModalEstruturaBasicaSpecialStyle">
+                                    <h5>Estrutura Básica</h5>
+                                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalEstruturaBasicaSpecialStyle">
+                                        <figure class="figure">
+                                            <img class="figure-img img-fluid" src="../../../assets/imagens/dataBindings/OneWay/PropertyBinding/Style/special_style.png" alt="estrutura basica special style binding">
+                                            <figcaption class="figure-caption">
+                                                <strong>Figura 1:</strong> Estrutura Básica Special Style Binding.
+                                            </figcaption>
+                                        </figure>
+                                    </button>
+                                    
+                                    <div class="modal fade" id="modalEstruturaBasicaSpecialStyle" tabindex="-1" aria-labelledby="labelModalEstruturaBasicaSpecialStyle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="labelModalEstruturaBasicaSpecialStyle">Estrutura Básica Special Style Binding</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <img class="figure-img img-fluid"
+                                                    src="../../../assets/imagens/dataBindings/OneWay/PropertyBinding/Style/special_style.png" alt="estrutura basica special style binding">
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            
-                            <br>
-        
-                            <div id="subSectionSpecialStyle">
-                                <p>
-                                    Seta um único valor de uma única propriedade style.
-                                </p>
-                                <p style="color: red;">
-                                    <strong>Obs 1:</strong> Não deve incluir as unidades requeridas.
-                                </p>
-                                <p style="color: red;">
-                                    <!--
-                                    Obs 2: colocar a parte de Tip da pagina 268 ?
-                                    -->
-                                </p>
+            
+                                <div id="subSection">
+                                    <p>
+                                        Seta um único valor de uma única propriedade style.
+                                    </p>
+                                    <p style="color: red;">
+                                        <strong>Obs 1:</strong> Não deve incluir as unidades requeridas.
+                                    </p>
+                                    <p style="color: red;">
+                                        <!--
+                                        Obs 2: colocar a parte de Tip da pagina 268 ?
+                                        -->
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </li>
-        
-                <li>
-                    <div>
-                        <div class="card-header" id="headerDirectiveNgStyle">
-                            <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseDirectiveNgStyle" aria-expanded="false" aria-controls="collapseDirectiveNgStyle">
-                                <strong>Diretiva NgStyle</strong>
-                            </a>
-                        </div>
-                    
-                        <div class="collapse card-body" id="collapseDirectiveNgStyle" aria-labelledby="headerDirectiveNgStyle" data-bs-parent="#accordionBody">
-                            <div id="containerModal">
-                                <h5>Estrutura Básica</h5>
-                                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalEstruturaBasica3">
-                                    <figure class="figure">
-                                        <img class="figure-img img-fluid" src="../../../assets/imagens/dataBindings/OneWay/PropertyBinding/Style/ngStyle.png" alt="estrutura basica ngstyle bindings">
-                                        <figcaption class="figure-caption">
-                                            <strong>Figura 1:</strong> Estrutura Básica NgStyle Bindings.
-                                        </figcaption>
-                                    </figure>
-                                
-                                </button>
-                                
-                                <div class="modal fade" id="modalEstruturaBasica3" tabindex="-1" aria-labelledby="modalEstruturaBasicaLabel3" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered modal-lg">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="modalEstruturaBasicaLabel3">Estrutura Básica NgStyle Bindings</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <img class="figure-img img-fluid"
-                                                src="../../../assets/imagens/dataBindings/OneWay/PropertyBinding/Style/ngStyle.png" alt="estrutura basica ngstyle bindings">
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </li>
+            
+                    <li>
+                        <div id="containerNgStyle">
+                            <div id="headerNgStyle">
+                                <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseNgStyle" aria-expanded="false" aria-controls="collapseNgStyle">
+                                    <strong>Diretiva NgStyle</strong>
+                                </a>
+                            </div>
+                        
+                            <div class="collapse" id="collapseNgStyle" aria-labelledby="headerNgStyle" data-bs-parent="#accordionSection">
+                                <div id="containerModalEstruturaBasicaNgStyle">
+                                    <h5>Estrutura Básica</h5>
+                                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalEstruturaBasicaNgStyle">
+                                        <figure class="figure">
+                                            <img class="figure-img img-fluid" src="../../../assets/imagens/dataBindings/OneWay/DirectiveBinding/NgStyle/ngstyle.png" alt="estrutura basica diretiva ngstyle binding">
+                                            <figcaption class="figure-caption">
+                                                <strong>Figura 1:</strong> Estrutura Básica Diretiva NgStyle Binding.
+                                            </figcaption>
+                                        </figure>
+                                    </button>
+                                    
+                                    <div class="modal fade" id="modalEstruturaBasicaNgStyle" tabindex="-1" aria-labelledby="labelModalEstruturaBasicaNgStyle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="labelModalEstruturaBasicaNgStyle">Estrutura Básica Diretiva NgStyle Binding</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <img class="figure-img img-fluid"
+                                                    src="../../../assets/imagens/dataBindings/OneWay/DirectiveBinding/NgStyle/ngstyle.png" alt="estrutura basica diretiva ngstyle binding">
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            
-                            <br>
-        
-                            <div id="subSectionDirectiveNgStyle">
-                                <p>
-                                    Explicado <a href="/bindings/oneWay/ngStyle">
-                                        <strong>aqui</strong>
-                                    </a> 
-                                </p>
+            
+                                <div id="subSection">
+                                    <p>
+                                        Explicado <a href="/bindings/oneWay/ngStyle">
+                                            <strong>aqui</strong>
+                                        </a> 
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </li>
-            </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
         
-    </div>
-    
-    
-    <div id="sectionBodyExemplo">
-        <ul>
-            <li>
-                <p>
-                    <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseTarget" role="button" aria-expanded="false" aria-controls="collapseTarget">
-                        <strong>Lista de Exemplos</strong>
-                    </a>
-                </p>
-                <div class="collapse card-body" id="collapseTarget">
-                    <div id="accordionExemplo">
-                        <ul>
-                            <li>
-                                <div>
-                                    <div class="card-header" id="headerExemplo1">
-                                        <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplo1" aria-expanded="false" aria-controls="collapseExemplo1">
-                                            <strong>Exemplo 1:</strong> Style binding
-                                        </a>
-                                    </div>
-                                
-                                    <div class="collapse card-body" id="collapseExemplo1" aria-labelledby="headerExemplo1" data-bs-parent="#accordionExemplo">
-                                        <!--
-                                            1.5.1 Standard Property Binding
-    
-                                                - Setting with style property binding
-                                        -->
-                                <div class="text-white m-2">
-                                    <div class="p-2 bg-warning">
-                                        O <span [style.fontSize]="fontSizeWithUnits">primeiro</span> produto é {{ repository.getProduct(1).name }}
-                                    </div>
-                                </div>
-                                    </div>
-                                </div>
-                            </li>
-    
-                            <li>
-                                <div>
-                                    <div class="card-header" id="headerExemplo2">
-                                        <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplo2" aria-expanded="false" aria-controls="collapseExemplo2">
-                                            <strong>Exemplo 2:</strong> Special Style Binding
-                                        </a>
-                                    </div>
-                                
-                                    <div class="collapse card-body" id="collapseExemplo2" aria-labelledby="headerExemplo2" data-bs-parent="#accordionExemplo">
-                                        <!--
-                                            1.5.2 Special Style Binding
-    
-                                                - Setting with style special binding
-                                        -->
-                                        <div class="text-white m-2">
-                                            <div class="p-2 bg-info">
-                                                O  <span [style.fontSize.px]="fontSizeWithoutUnits">segundo</span> produto é {{ repository.getProduct(2).name }}
+        <div id="sectionExemplo">
+            <div id="accordionSectionExemplo">
+                <ul>
+                    <li>
+                        <div id="containerExemplo">
+                            <div class="headerExemplo">
+                                <a class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo" role="button" aria-expanded="false" aria-controls="collapseExemplo">
+                                    <strong>Lista de Exemplos</strong>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="collapse" id="collapseExemplo" aria-labelledby="headerExemplo" data-bs-parent="#accordionSection">
+                            <div id="accordionSubSectionExemplo">
+                                <ul>
+                                    <li>
+                                        <div id="containerExemplo1">
+                                            <div id="headerExemplo1">
+                                                <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplo1" aria-expanded="false" aria-controls="collapseExemplo1">
+                                                    <strong>Exemplo 1:</strong> Style binding
+                                                </a>
+                                            </div>
+                                        
+                                            <div class="collapse" id="collapseExemplo1" aria-labelledby="headerExemplo1" data-bs-parent="#accordionSubSectionExemplo">
+                                                <!--
+                                                    1.5.1 Standard Property Binding
+            
+                                                        - Setting with style property binding
+                                                -->
+                                                <div class="text-white m-2">
+                                                    <div class="p-2 bg-warning">
+                                                        O <span [style.fontSize]="fontSizeWithUnits">primeiro</span> produto é {{ repository.getProduct(1).name }}
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </li>
-        </ul>
+                                    </li>
+            
+                                    <li>
+                                        <div id="containerExemplo2">
+                                            <div id="headerExemplo2">
+                                                <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplo2" aria-expanded="false" aria-controls="collapseExemplo2">
+                                                    <strong>Exemplo 2:</strong> Special Style Binding
+                                                </a>
+                                            </div>
+                                        
+                                            <div class="collapse" id="collapseExemplo2" aria-labelledby="headerExemplo2" data-bs-parent="#accordionSubSectionExemplo">
+                                                <!--
+                                                    1.5.2 Special Style Binding
+            
+                                                        - Setting with style special binding
+                                                -->
+                                                <div class="text-white m-2">
+                                                    <div class="p-2 bg-info">
+                                                        O  <span [style.fontSize.px]="fontSizeWithoutUnits">segundo</span> produto é {{ repository.getProduct(2).name }}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>

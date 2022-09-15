@@ -6,27 +6,26 @@
     <h1>One Way</h1>
     <h3>Básico</h3>
     
-    <div id="containerModal">
+    <div id="containerModalEstruturaBasica">
         <h5>Estrutura Básica</h5>
         <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalEstruturaBasica">
             <figure class="figure">
-                <img class="figure-img img-fluid" src="../../assets/imagens/dataBindings/OneWay/PropertyBinding/basic.png" alt="estrutura basica data bindings">
+                <img class="figure-img img-fluid" src="../../assets/imagens/dataBindings/OneWay/basic.png" alt="estrutura basica data binding">
                 <figcaption class="figure-caption">
-                    <strong>Figura 1:</strong> Estrutura Básica Data Bindings.
+                    <strong>Figura 1:</strong> Estrutura Básica Data Binding.
                 </figcaption>
             </figure>
         </button>
         
-        <div class="modal fade" id="modalEstruturaBasica" tabindex="-1" aria-labelledby="modalEstruturaBasicaLabel" aria-hidden="true">
+        <div class="modal fade" id="modalEstruturaBasica" tabindex="-1" aria-labelledby="labelModalEstruturaBasica" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="modalEstruturaBasicaLabel">Estrutura Básica Data Bindings</h5>
+                        <h5 class="modal-title" id="labelModalEstruturaBasica">Estrutura Básica Data Binding</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <img class="figure-img img-fluid"
-                        src="../../assets/imagens/dataBindings/OneWay/PropertyBinding/basic.png" alt="estrutura basica data bindings">
+                        <img class="figure-img img-fluid" src="../../assets/imagens/dataBindings/OneWay/basic.png" alt="estrutura basica data binding">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -37,16 +36,15 @@
     </div>
 
     <div id="accordionSection">
-
-        <div id="sectionBody1">
-            <div>
+        <div id="sectionBody">
+            <div id="containerInterpretacao">
                 <div id="headerInterpretacao">
                     <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseInterpretacao" aria-expanded="false" aria-controls="collapseInterpretacao">
                         <strong>Interpretação da Estrutura Básica</strong>
                     </a>
                 </div>
             
-                <div class="collapse card-body" id="collapseInterpretacao" aria-labelledby="headerInterpretacao" data-bs-parent="#accordionSection">
+                <div class="collapse" id="collapseInterpretacao" aria-labelledby="headerInterpretacao" data-bs-parent="#accordionSection">
                     <p>
                         À esquerda da <strong>Figura 1</strong>, temos colchetes envolvendo um alvo ([ngClass]) indicando que o fluxo de dados vai ser do componente para o template (data bindings). 
                     </p>
@@ -61,26 +59,26 @@
                         Caso <strong>true</strong> a expressão retornará <strong style="color: #198754;">"bg-success"</strong>, caso <strong>false</strong> a expressão retornará <strong style="color: #ffc107;">bg-warning</strong>
                     </p>
         
-                    <div id="containerModal1">
+                    <div id="containerModalFluxograma">
                         <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalFluxograma">
                             <figure class="figure">
-                                <img class="figure-img img-fluid" src="../../assets/imagens/dataBindings/OneWay/PropertyBinding/fluxograma_basic.png" alt="fluxograma método getClasses()">
+                                <img class="figure-img img-fluid" src="../../assets/imagens/dataBindings/OneWay/fluxogram_basic.png" alt="fluxograma método getClasses()">
                                 <figcaption class="figure-caption">
                                     <strong>Figura 1:</strong> Fluxograma do Método getClasses().
                                 </figcaption>
                             </figure>
                         </button>
                         
-                        <div class="modal fade" id="modalFluxograma" tabindex="-1" aria-labelledby="modalFluxogramaLabel" aria-hidden="true">
+                        <div class="modal fade" id="modalFluxograma" tabindex="-1" aria-labelledby="labelModalFluxograma" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="modalFluxogramaLabel">Fluxograma do Método getClasses()</h5>
+                                        <h5 class="modal-title" id="labelModalFluxograma">Fluxograma do Método getClasses()</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
                                         <img class="figure-img img-fluid"
-                                        src="../../assets/imagens/dataBindings/OneWay/PropertyBinding/fluxograma_basic.png" alt="fluxograma método getClasses()">
+                                        src="../../assets/imagens/dataBindings/OneWay/fluxogram_basic.png" alt="fluxograma método getClasses()">
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -93,7 +91,7 @@
             </div>
         </div>
         
-        <div id="sectionBody2">
+        <div id="sectionBody">
             <p>
                 One-way data binding são recursos usados em templates HTML do Angular, 
                 <br>
@@ -102,32 +100,32 @@
             <p>
                 Possui o fluxo de dados em uma direção (Ver <strong>Figura 1</strong>):
             </p>
-            <div id="accordionSectionBody1">
+            <div id="accordionSectionBody">
                 <ul>
                     <li>
-                        <div>
+                        <div id="containerDataBinding">
                             <div id="headerDataBinding">
                                 <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseDataBinding" aria-expanded="false" aria-controls="collapseDataBinding">
                                     <strong>Binding de Dados (Data Bindings)</strong>
                                 </a>
                             </div>
                         
-                            <div class="collapse card-body" id="collapseDataBinding" aria-labelledby="headerDataBinding" data-bs-parent="#accordionSection">
-                                Os dados fluem do <strong>componente</strong> para o <strong>template</strong>.
+                            <div class="collapse" id="collapseDataBinding" aria-labelledby="headerDataBinding" data-bs-parent="#accordionSection">
+                                <p>Os dados fluem do <strong>componente</strong> para o <strong>template</strong>.</p>
                             </div>
                         </div>
                     </li>
 
                     <li>
-                        <div>
+                        <div id="containerEventBinding">
                             <div id="headerEventBinding">
                                 <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseEventBinding" aria-expanded="false" aria-controls="collapseEventBinding">
                                     <strong>Binding de Eventos (Event Bindings)</strong>
                                 </a>
                             </div>
                         
-                            <div class="collapse card-body" id="collapseEventBinding" aria-labelledby="headerEventBinding" data-bs-parent="#accordionSection">
-                                Os dados fluem do <strong>template</strong> para o <strong>componente</strong>. 
+                            <div class="collapse" id="collapseEventBinding" aria-labelledby="headerEventBinding" data-bs-parent="#accordionSection">
+                                <p>Os dados fluem do <strong>template</strong> para o <strong>componente</strong>.</p>
                             </div>
                         </div>
                     </li>
@@ -135,22 +133,22 @@
             </div>
         </div>
 
-        <div id="sectionBody3">
+        <div id="sectionBody">
             <p>
                 A estrutura básica, à esquerda da <strong>Figura 1</strong>, é dividida em 4 partes:	
             </p>
             
-            <div id="accordionSectionBody2">
+            <div id="accordionSectionBody">
                 <ul>
                     <li>
-                        <div>
-                            <div class="card-header" id="headerHostElement">
+                        <div id="containerHostElement">
+                            <div id="headerHostElement">
                                 <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseHostElement" aria-expanded="false" aria-controls="collapseHostElement">
                                     <strong>Elemento hospedeiro (Host Element)</strong>
                                 </a>
                             </div>
                         
-                            <div class="collapse card-body" id="collapseHostElement" aria-labelledby="headerHostElement" data-bs-parent="#accordionSection">
+                            <div class="collapse" id="collapseHostElement" aria-labelledby="headerHostElement" data-bs-parent="#accordionSection">
                                 <p>
                                     Elemento HTML ou tag HTML do qual vai mudar a <strong>aparência</strong>, <strong>conteúdo</strong> ou <strong>comportamento</strong>.
                                 </p>
@@ -165,14 +163,14 @@
                     </li>
                     
                     <li>
-                        <div>
-                            <div class="card-header" id="headerBrackets">
+                        <div id="containerBrackets">
+                            <div id="headerBrackets">
                                 <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseBrackets" aria-expanded="false" aria-controls="collapseBrackets">
                                     <strong>Colchetes (Brackets)</strong>
                                 </a>
                             </div>
                         
-                            <div class="collapse card-body" id="collapseBrackets" aria-labelledby="headerBrackets" data-bs-parent="#accordionSection">
+                            <div class="collapse" id="collapseBrackets" aria-labelledby="headerBrackets" data-bs-parent="#accordionSection">
                                 <p>
                                     Colchetes (ou Parênteses) envolvem o alvo, denotando avaliar uma expressão passando o resultado para o alvo, do qual faz mudança no elemento host.
                                 </p>
@@ -183,7 +181,7 @@
                                     <strong>Parênteses</strong> indicam que os dados fluem do template HTML para o componente (<strong>event bindings</strong>).
                                 </p>
                                 
-                                <div>
+                                <div id="sectionObs">
                                     <ul>
                                         <li>
                                             <!--
@@ -220,29 +218,29 @@
                     </li>
             
                     <li>
-                        <div>
-                            <div class="card-header" id="headerTarget">
+                        <div id="containerTarget">
+                            <div id="headerTarget">
                                 <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseTarget" aria-expanded="false" aria-controls="collapseTarget">
                                     <strong>Alvo (Target)</strong>
                                 </a>
                             </div>
                         
-                            <div class="collapse card-body" id="collapseTarget" aria-labelledby="headerTarget" data-bs-parent="#accordionSection">
+                            <div class="collapse" id="collapseTarget" aria-labelledby="headerTarget" data-bs-parent="#accordionSection">
                                 <p>
                                     É aquele que vai ser atingido pelo binding, podendo ser de 2 tipos:
                                 </p>
         
-                                <div id="accordionSubSection1">
+                                <div id="accordionSubSectionTarget">
                                     <ul>
                                         <li>
-                                            <div>
-                                                <div class="card-header" id="headerPropertyBinding">
+                                            <div id="containerPropertyBinding">
+                                                <div id="headerPropertyBinding">
                                                     <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapsePropertyBinding" aria-expanded="false" aria-controls="collapsePropertyBinding">
                                                         <strong>Bindings de Propriedade (Property Bindings)</strong>
                                                     </a>
                                                 </div>
                                             
-                                                <div class="collapse card-body" id="collapsePropertyBinding" aria-labelledby="headerPropertyBinding" data-bs-parent="#accordionSubSection1">
+                                                <div class="collapse" id="collapsePropertyBinding" aria-labelledby="headerPropertyBinding" data-bs-parent="#accordionSubSectionTarget">
                                                     <p>São divididos em:</p>
                                                     <div>
                                                         <ul>
@@ -289,14 +287,14 @@
                                         </li>
                                         
                                         <li>
-                                            <div>
-                                                <div class="card-header" id="headerDirectiveBinding">
+                                            <div id="containerDirectiveBinding">
+                                                <div id="headerDirectiveBinding">
                                                     <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseDirectiveBinding" aria-expanded="false" aria-controls="collapseDirectiveBinding">
                                                         <strong>Bindings de Diretiva (Directive Bindings)</strong>
                                                     </a>
                                                 </div>
                                             
-                                                <div class="collapse card-body" id="collapseDirectiveBinding" aria-labelledby="headerDirectiveBinding" data-bs-parent="#accordionSubSection1">
+                                                <div class="collapse" id="collapseDirectiveBinding" aria-labelledby="headerDirectiveBinding" data-bs-parent="#accordionSubSectionTarget">
                                                     <p>
                                                         Podem ser fornecidos pelo Angular (built-in directives) prefixados com <strong>ng</strong> ou <strong>personalizados</strong>.
                                                     </p>
@@ -346,7 +344,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </li>
+                                       </li>
                                     </ul>
                                 </div>
                             </div>
@@ -354,19 +352,19 @@
                     </li>
             
                     <li>
-                        <div>
-                            <div class="card-header" id="headerExpression">
+                        <div id="containerExpression">
+                            <div id="headerExpression">
                                 <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseExpression" aria-expanded="false" aria-controls="collapseExpression">
                                     <strong>Expressão (Expression)</strong>
                                 </a>
                             </div>
                         
-                            <div class="collapse card-body" id="collapseExpression" aria-labelledby="headerExpression" data-bs-parent="#accordionSection">
+                            <div class="collapse " id="collapseExpression" aria-labelledby="headerExpression" data-bs-parent="#accordionSection">
                                 <p>
                                     Fragmento de código analisado pelo componente (ou escrito inline no template) através de propriedades e métodos, sendo assim o valor do alvo.
                                 </p>
         
-                                <div>
+                                <div id="sectionObs">
                                     <ul>
                                         <li>
                                             <p style="color: red;">

@@ -3,7 +3,8 @@ import { Repository } from "src/app/Models/repository.model";
 
 @Component({
     selector: 'app-style',
-    templateUrl: './style.component.html'
+    templateUrl: './style.component.html',
+    styleUrls: ['./style.component.css']
 })
 export class StyleComponent {
     fontSizeWithUnits: string = "30px";
