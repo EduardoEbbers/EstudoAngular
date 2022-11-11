@@ -8,11 +8,9 @@ import { Repository } from "src/app/Models/repository.model";
     styleUrls: ['./ngFor.component.css']
 })
 export class NgForComponent {
-    repository: Repository = new Repository();
     targetName: string = "Kayak";
 
-
-    constructor(ref: ApplicationRef) {
+    constructor(ref: ApplicationRef, public repository: Repository) {
         (<any>window).appRef = ref;
         (<any>window).repository = this.repository;
     }

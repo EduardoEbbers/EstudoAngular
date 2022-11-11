@@ -8,8 +8,10 @@ import { Repository } from "src/app/Models/repository.model";
 })
 export class HomeComponent {
 
-    repository: Repository = new Repository();
+    constructor(public repository: Repository) {
 
+    }
+    
     getStylesMap(key: number) {
         let product = this.repository.getProduct(key);
         return {

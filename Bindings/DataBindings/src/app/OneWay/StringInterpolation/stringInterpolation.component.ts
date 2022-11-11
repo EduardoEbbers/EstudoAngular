@@ -8,8 +8,10 @@ import { Repository } from "src/app/Models/repository.model";
     styleUrls: ['./stringInterpolation.component.css']
 })
 export class StringInterpolationComponent {
-    repository: Repository = new Repository();
-
+    constructor(public repository: Repository) {
+        
+    }
+    
     getProduct(key: number): Product {
         return this.repository.getProduct(key);
     }

@@ -8,7 +8,9 @@ import { Repository } from "src/app/Models/repository.model";
     styleUrls: ['./attribute.component.css']
 })
 export class AttributeComponent {
-    repository: Repository = new Repository();
+    constructor(public repository: Repository) {
+
+    }
 
     getProducts(): Product[] {
         return this.repository.getProducts();

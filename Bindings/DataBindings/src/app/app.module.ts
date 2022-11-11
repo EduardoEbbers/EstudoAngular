@@ -5,6 +5,7 @@ import { RouterModule } from "@angular/router";
 import { AppComponent } from "./app.component";
 import { AppRoutingModule } from "./appRouting.module";
 import { CoreModule } from "./core/core.module";
+import { ModelsModule } from "./Models/models.module";
 import { OneWayModule } from "./oneWay/oneWay.module";
 import { OthersModule } from "./others/others.module";
 import { TwoWayModule } from "./twoWay/twoWay.module";
@@ -12,6 +13,7 @@ import { TwoWayModule } from "./twoWay/twoWay.module";
 @NgModule({
   imports: [
     BrowserModule,
+    ModelsModule,
     FormsModule,
     OneWayModule,
     TwoWayModule,

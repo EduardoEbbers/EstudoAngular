@@ -6,5 +6,7 @@ import { Repository } from "../Models/repository.model";
     templateUrl: './twoWay.component.html'
 })
 export class TwoWayComponent {
-    repository: Repository = new Repository();
+    constructor(public repository: Repository) {
+        
+    }
 }

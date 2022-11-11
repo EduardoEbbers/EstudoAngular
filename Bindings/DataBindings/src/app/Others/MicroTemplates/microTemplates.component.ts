@@ -6,5 +6,7 @@ import { Repository } from "src/app/Models/repository.model";
     templateUrl: './microTemplates.component.html'
 })
 export class MicroTemplatesComponent {
-    repository: Repository = new Repository();
+    constructor(public repository: Repository) {
+        
+    }
 }

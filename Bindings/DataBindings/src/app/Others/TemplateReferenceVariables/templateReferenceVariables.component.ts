@@ -7,8 +7,10 @@ import { Repository } from "src/app/Models/repository.model";
     templateUrl: './templateReferenceVariables.component.html'
 })
 export class TemplateReferenceVariablesComponent {
-    repository: Repository = new Repository();
-
+    constructor(public repository: Repository) {
+        
+    }
+    
     getProducts(): Product[] {
         return this.repository.getProducts();
     }

@@ -8,10 +8,9 @@ import { Repository } from "src/app/Models/repository.model";
     styleUrls: ['./ngSwitch.component.css']
 })
 export class NgSwitchComponent {
-    repository: Repository = new Repository();
     targetName: string = "Kayak";
 
-    constructor(ref: ApplicationRef) {
+    constructor(ref: ApplicationRef, public repository: Repository) {
         (<any>window).appRef = ref;
         (<any>window).repository = this.repository;
     }

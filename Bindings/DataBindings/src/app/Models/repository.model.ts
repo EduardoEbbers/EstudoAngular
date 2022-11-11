@@ -1,12 +1,13 @@
 
+import { Injectable } from "@angular/core";
 import { DataSource } from "./datasource.model";
 import { Product } from "./product.model";
 
+@Injectable()
 export class Repository {
-    private dataSource: DataSource;
     private products: Product[];
 
-    constructor() {
+    constructor(private dataSource: DataSource) {
         this.dataSource = new DataSource();
         this.products = new Array<Product>();
         this.dataSource

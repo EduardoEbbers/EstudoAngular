@@ -6,5 +6,7 @@ import { Repository } from "src/app/Models/repository.model";
     templateUrl: './ngModelDirective.component.html'
 })
 export class NgModelDirectiveComponent {
-    repository: Repository = new Repository();
+    constructor(public repository: Repository) {
+        
+    }
 }

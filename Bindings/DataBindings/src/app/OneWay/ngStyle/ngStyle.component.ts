@@ -7,8 +7,9 @@ import { Repository } from "src/app/Models/repository.model";
     styleUrls: ['./ngStyle.component.css']
 })
 export class NgStyleComponent {
-    repository: Repository = new Repository();
-    
+    constructor(public repository: Repository) {
+
+    }
     getStylesMap(key: number) {
         let product = this.repository.getProduct(key);
         return {

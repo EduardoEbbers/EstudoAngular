@@ -9,8 +9,11 @@ import { Repository } from "src/app/Models/repository.model";
 export class StyleComponent {
     fontSizeWithUnits: string = "30px";
     fontSizeWithoutUnits: string = "30";
-    repository: Repository = new Repository();
 
+    constructor(public repository: Repository) {
+
+    }
+    
     getStylesMap(key: number) {
         let product = this.repository.getProduct(key);
         return {

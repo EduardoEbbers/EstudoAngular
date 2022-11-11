@@ -7,10 +7,13 @@ import { Repository } from "src/app/Models/repository.model";
     templateUrl: './ngTemplateElement.component.html'
 })
 export class NgTemplateElementComponent {
-    repository: Repository = new Repository();
-
+    
     isDisabled = true;
-
+    
+    constructor(public repository: Repository) {
+        
+    }
+    
     getProducts(): Product[] {
         return this.repository.getProducts();
     }

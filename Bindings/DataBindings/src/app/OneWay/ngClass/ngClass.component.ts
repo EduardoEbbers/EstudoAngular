@@ -7,8 +7,10 @@ import { Repository } from "src/app/Models/repository.model";
     styleUrls: ['./ngClass.component.css']
 })
 export class NgClassComponent {
-    repository: Repository = new Repository();
+    constructor(public repository: Repository) {
 
+    }
+    
     getClassesString(key: number): String {
         let product = this.repository.getProduct(key);
         return product.name == "Kayak" ? "text-center bg-danger" : "bg-info";

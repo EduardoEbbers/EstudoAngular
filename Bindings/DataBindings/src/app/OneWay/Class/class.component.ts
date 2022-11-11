@@ -7,7 +7,9 @@ import { Repository } from "src/app/Models/repository.model";
     styleUrls: ['./class.component.css']
 })
 export class ClassComponent {
-    repository: Repository = new Repository();
+    constructor(public repository: Repository) {
+
+    }
 
     getClasses(key: number): string {
         let product = this.repository.getProduct(key);

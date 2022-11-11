@@ -7,7 +7,8 @@ import { Repository } from "src/app/Models/repository.model";
     templateUrl: './ngContainerElement.component.html'
 })
 export class NgContainerElementComponent {
-    repository: Repository = new Repository();
-
+    constructor(public repository: Repository) {
+        
+    }
     
 }

@@ -6,7 +6,8 @@ import { Repository } from "src/app/Models/repository.model";
     templateUrl: './oneWayRestrictions.component.html'
 })
 export class OneWayRestrictionsComponent {
-    repository: Repository = new Repository();
-
+    constructor(public repository: Repository) {
+        
+    }
    
 }

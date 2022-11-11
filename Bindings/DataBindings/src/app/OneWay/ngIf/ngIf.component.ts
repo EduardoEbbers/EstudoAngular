@@ -8,9 +8,8 @@ import { Repository } from "src/app/Models/repository.model";
     styleUrls: ['./ngIf.component.css']
 })
 export class NgIfComponent {
-    repository: Repository = new Repository();
 
-    constructor(ref: ApplicationRef) {
+    constructor(ref: ApplicationRef, public repository: Repository) {
         (<any>window).appRef = ref;
         (<any>window).repository = this.repository;
     }

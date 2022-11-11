@@ -1,4 +1,6 @@
 import { NgModule } from "@angular/core";
+import { DataSource } from "./datasource.model";
+import { Repository } from "./repository.model";
 
 @NgModule({
     imports: [
@@ -8,7 +10,8 @@ import { NgModule } from "@angular/core";
         
     ],
     providers: [
-        
+        DataSource,
+        Repository
     ],
     exports: [
         

@@ -8,9 +8,11 @@ import { Repository } from "src/app/Models/repository.model";
     styleUrls: ['./standardProperty.component.css']
 })
 export class StandardPropertyComponent {
-    repository: Repository = new Repository();
+     isDisabled = true;
 
-    isDisabled = true;
+    constructor(public repository: Repository) {
+
+    }
 
     getProducts(): Product[] {
         return this.repository.getProducts();
