@@ -24,3 +24,15 @@ p:first-child {
 #obs-style-color {
     color: red;
 }
+
+#nota-style-color {
+    color: darkgoldenrod;
+}
+
+#nota-style-color a {
+    color: darkgoldenrod;
+}
+
+#nota-style-color a:hover {
+    color: rgb(156, 114, 10);
+}

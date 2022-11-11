@@ -21,6 +21,10 @@ p:first-child {
     padding-top: 0;
 }
 
+#subSection p a {
+    text-decoration: underline;
+}
+
 #obs-style-color {
     color: red;
 }

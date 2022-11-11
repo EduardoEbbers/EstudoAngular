@@ -7,27 +7,27 @@
     <h1>One Way</h1>
     <h3>Diretiva ngFor Bindings</h3>
 
-    <div id="containerModal">
+    <div id="containerModalEstruturaBasica">
         <h5>Estrutura Básica</h5>
         <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalEstruturaBasica">
             <figure class="figure">
-                <img class="figure-img img-fluid" src="../../../assets/imagens/dataBindings/estrutura_basica_diretiva_ngfor.jpg" alt="estrutura basica diretiva ngfor">
+                <img class="figure-img img-fluid" src="../../../assets/imagens/dataBindings/OneWay/DirectiveBinding/NgFor/ngfor.png" alt="estrutura basica diretiva ngfor binding">
                 <figcaption class="figure-caption">
-                    <strong>Figura 1:</strong> Estrutura Básica Diretiva NgFor.
+                    <strong>Figura 1:</strong> Estrutura Básica Diretiva NgFor Binding.
                 </figcaption>
             </figure>
         </button>
         
-        <div class="modal fade" id="modalEstruturaBasica" tabindex="-1" aria-labelledby="modalEstruturaBasicaLabel" aria-hidden="true">
+        <div class="modal fade" id="modalEstruturaBasica" tabindex="-1" aria-labelledby="labelModalEstruturaBasica" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="modalEstruturaBasicaLabel">Estrutura Básica Diretiva NgFor</h5>
+                        <h5 class="modal-title" id="labelModalEstruturaBasica">Estrutura Básica Diretiva NgFor Binding</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <img class="figure-img img-fluid"
-                        src="../../../assets/imagens/dataBindings/estrutura_basica_diretiva_ngfor.jpg" alt="estrutura basica diretiva ngfor">
+                        src="../../../assets/imagens/dataBindings/OneWay/DirectiveBinding/NgFor/ngfor.png" alt="estrutura basica diretiva ngfor binding">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -38,194 +38,265 @@
     </div>
 
     <div id="accordionSection">
-        <div id="sectionBody1">
-            <div>
-                <p>
-                    Usa-se quando se quer repetir a secção de conteúdos para cada objeto de um array.
-                </p>
-                <p style="color: red;">
-                    <strong>Obs. 1:</strong> Equivale com loop foreach do JavaScript
-                </p>
-                <p style="color: red;">
-                    <strong>Obs. 2:</strong> O asterisco (*) indica que a diretiva é um micro-template, ver
-                    <a style="color: red;" href="/bindings/others/microTemplates">
-                        <strong>aqui</strong>
-                    </a>.
-                </p>
-                <p>
-                    A expressão se divide em duas partes:
-                </p>
-                
-                <div id="accordionSectionBody1">
-                    <ul>
-                        <li>
-                            <div>
-                                <div class="card-header" id="headerTemplateVariable">
-                                    <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseTemplateVariable" aria-expanded="false" aria-controls="collapseTemplateVariable">
-                                        <strong>Variável de Template (Template Variable)</strong>
-                                    </a>
-                                </div>
-                            
-                                <div class="collapse card-body" id="collapseTemplateVariable" aria-labelledby="headerTemplateVariable" data-bs-parent="#accordionSection">
-                                    <p>
-                                        Usa-se a keyword <strong>let</strong> + <strong>nome_variável_template</strong>.
-                                    </p>
-                                    <p>
-                                        A variável de template recebe os dados recebidos do data source para serem usados dentro do template, representando cada objeto do array.
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-            
-                        <li>
-                            <div>
-                                <div class="card-header" id="headerExpression">
-                                    <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseExpression" aria-expanded="false" aria-controls="collapseExpression">
-                                        <strong>Fonte de Dados (Data Source)</strong>
-                                    </a>
-                                </div>
-                            
-                                <div class="collapse card-body" id="collapseExpression" aria-labelledby="headerExpression" data-bs-parent="#accordionSection">
-                                    <p>
-                                        Fornece a fonte de dados que será enumerado, sendo o array de objetos.
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div id="sectionBody2">
+        <div id="sectionBody">
             <p>
-                São eles:
+                Usa-se quando se quer <strong>repetir</strong> a secção de conteúdos para <strong>cada objeto</strong> de um array.
             </p>
-            <div id="accordionSectionBody2">
+            <p id="obs-style-color">
+                <strong>Obs.:</strong> Asterisco (*) indica que a diretiva é um <strong>micro-template</strong>, visto
+                <a href="/bindings/others/microTemplates">
+                    <strong>aqui</strong>
+                </a>.
+            </p>
+
+            
+            <p id="obs-style-color">
+                <strong>Obs.:</strong> Equivale com loop foreach do JavaScript
+            </p>
+            <!--
+                Talvez colocar uma nota dizendo com o website para explicar a diferenca entre of e in de ngFor do javascript
+            -->
+
+            <!--
+                Colocar a parte que geralmente o ngFor popula uma tabela gerando uma linha para cada objeto ?  
+            -->
+
+            <!--
+                Colocar a parte que o melhor jeito de se usar é eh elementos aninhados (como uma tabela)  
+            -->
+
+
+            <p>
+                A expressão se divide em duas partes:
+            </p>
+            
+            <div id="accordionSectionBody">
                 <ul>
                     <li>
-                        <div>
-                            <div class="card-header" id="headerIndex">
-                                <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseIndex" aria-expanded="false" aria-controls="collapseIndex">
-                                    <strong>Index</strong>
+                        <div id="containerTemplateVariable">
+                            <div id="headerTemplateVariable">
+                                <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseTemplateVariable" aria-expanded="false" aria-controls="collapseTemplateVariable">
+                                    <strong>Variável de Template (Template Variable)</strong>
                                 </a>
                             </div>
                         
-                            <div class="collapse card-body" id="collapseIndex" aria-labelledby="headerIndex" data-bs-parent="#accordionSection">
+                            <div class="collapse" id="collapseTemplateVariable" aria-labelledby="headerTemplateVariable" data-bs-parent="#accordionSection">
+                                <p>
+                                    Usa-se a keyword de inicialização de variável <strong>let</strong> e o <strong>nome da variável de template</strong>.
+                                </p>
+                                <p>
+                                    A variável de template representa cada <strong>objeto ou item</strong> do <strong>data source</strong> (fonte de dados) para serem usados dentro do template.
+                                </p>
+                                <p id="obs-style-color">
+                                    <strong>Obs.:</strong> Variáveis de template geralmente são usadas dentro de string interpolation binding.
+                                </p>
+                                <p>
+                                    Existem outras variáveis de template (que são separadas por <strong>ponto-e-vígula</strong> (;) após a expressão), são eles:
+                                </p>
+                                <div id="accordionSubSectionTemplateVariable">
+                                    <ul>
+                                        <li>
+                                            <div id="containerIndex">
+                                                <div id="headerIndex">
+                                                    <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseIndex" aria-expanded="false" aria-controls="collapseIndex">
+                                                        <strong>Index</strong>
+                                                    </a>
+                                                </div>
+                                            
+                                                <div class="collapse" id="collapseIndex" aria-labelledby="headerIndex" data-bs-parent="#accordionSubSectionTemplateVariable">
+                                                    <p>
+                                                        Indica a <strong>posição</strong> do objeto <strong>atual</strong>.
+                                                    </p>
+                                                    <p>
+                                                        Usa-se <strong>incrementando</strong> para cada objeto do data source.
+                                                    </p>
+                                                    <p id="obs-style-color">
+                                                        <strong>Obs.:</strong> O valor da variável é do tipo <strong>number</strong>.
+                                                    </p>
+                                                    
+                                                </div>
+                                            </div>
+                                        </li>
                                 
+                                        <li>
+                                            <div id="containerCount">
+                                                <div id="headerCount">
+                                                    <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseCount" aria-expanded="false" aria-controls="collapseCount">
+                                                        <strong>Count</strong>
+                                                    </a>
+                                                </div>
+                                            
+                                                <div class="collapse" id="collapseCount" aria-labelledby="headerCount" data-bs-parent="#accordionSubSectionTemplateVariable">
+                                                    <p>
+                                                        Indica a <strong>quantidade</strong> de itens no <strong>data source</strong>.
+                                                    </p>
+                                                    <p id="obs-style-color">
+                                                        <strong>Obs.:</strong> O valor da variável é do tipo <strong>number</strong>.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                
+                                        <li>
+                                            <div id="containerOdd">
+                                                <div id="headerOdd">
+                                                    <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseOdd" aria-expanded="false" aria-controls="collapseOdd">
+                                                        <strong>Odd</strong>
+                                                    </a>
+                                                </div>
+                                            
+                                                <div class="collapse" id="collapseOdd" aria-labelledby="headerOdd" data-bs-parent="#accordionSubSectionTemplateVariable">
+                                                    <p>
+                                                        Indica que a <strong>posição</strong> (index) do atual objeto no data source é <strong>impar</strong>, caso retorne <strong>true</strong>.
+                                                    </p>
+                                                    <p id="obs-style-color">
+                                                        <strong>Obs.:</strong> O valor da variável é do tipo <strong>boolean</strong>.
+                                                    </p>
+                                                    <p id="obs-style-color">
+                                                        <strong>Obs.:</strong> A contagem da posição no data source (um array geralmente) inicia-se em zero.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                
+                                        <li>
+                                            <div id="containerEven">
+                                                <div id="headerEven">
+                                                    <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseEven" aria-expanded="false" aria-controls="collapseEven">
+                                                        <strong>Even</strong>
+                                                    </a>
+                                                </div>
+                                            
+                                                <div class="collapse" id="collapseEven" aria-labelledby="headerEven" data-bs-parent="#accordionSubSectionTemplateVariable">
+                                                    <p>
+                                                        Indica que a <strong>posição</strong> (index) do atual objeto no data source é <strong>par</strong>, caso retorne <strong>true</strong>.
+                                                    </p>
+                                                    <p id="obs-style-color">
+                                                        <strong>Obs.:</strong> O valor da variável é do tipo <strong>boolean</strong>.
+                                                    </p>
+                                                    <p id="obs-style-color">
+                                                        <strong>Obs.:</strong> A contagem da posição no data source (um array geralmente) inicia-se em zero.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                
+                                        <li>
+                                            <div id="containerFirst">
+                                                <div id="headerFirst">
+                                                    <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseFirst" aria-expanded="false" aria-controls="collapseFirst">
+                                                        <strong>First</strong>
+                                                    </a>
+                                                </div>
+                                            
+                                                <div class="collapse" id="collapseFirst" aria-labelledby="headerFirst" data-bs-parent="#accordionSubSectionTemplateVariable">
+                                                    <p>
+                                                        Indica que a <strong>posição</strong> do atual objeto é o <strong>primeiro</strong> no data source, caso retorne <strong>true</strong>.
+                                                    </p>
+                                                    <p id="obs-style-color">
+                                                        <strong>Obs.:</strong> O valor da variável é do tipo <strong>boolean</strong>.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                
+                                        <li>
+                                            <div id="containerLast">
+                                                <div id="headerLast">
+                                                    <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseLast" aria-expanded="false" aria-controls="collapseLast">
+                                                        <strong>Last</strong>
+                                                    </a>
+                                                </div>
+                                            
+                                                <div class="collapse" id="collapseLast" aria-labelledby="headerLast" data-bs-parent="#accordionSubSectionTemplateVariable">
+                                                    <p>
+                                                        Indica que a <strong>posição</strong> do atual objeto é o <strong>último</strong> no data source, caso retorne <strong>true</strong>.
+                                                    </p>
+                                                    <p id="obs-style-color">
+                                                        <strong>Obs.:</strong> O valor da variável é do tipo <strong>boolean</strong>.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </li>
-            
+        
                     <li>
-                        <div>
-                            <div class="card-header" id="headerCount">
-                                <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseCount" aria-expanded="false" aria-controls="collapseCount">
-                                    <strong>Count</strong>
+                        <div id="containerDataSource">
+                            <div id="headerDataSource">
+                                <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseDataSource" aria-expanded="false" aria-controls="collapseDataSource">
+                                    <strong>Fonte de Dados (Data Source)</strong>
                                 </a>
                             </div>
                         
-                            <div class="collapse card-body" id="collapseCount" aria-labelledby="headerCount" data-bs-parent="#accordionSection">
-                                
-                            </div>
-                        </div>
-                    </li>
-            
-                    <li>
-                        <div>
-                            <div class="card-header" id="headerOdd">
-                                <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseOdd" aria-expanded="false" aria-controls="collapseOdd">
-                                    <strong>Odd</strong>
-                                </a>
-                            </div>
-                        
-                            <div class="collapse card-body" id="collapseOdd" aria-labelledby="headerOdd" data-bs-parent="#accordionSection">
-                                
-                            </div>
-                        </div>
-                    </li>
-            
-                    <li>
-                        <div>
-                            <div class="card-header" id="headeFirst">
-                                <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseEven" aria-expanded="false" aria-controls="collapseEven">
-                                    <strong>Even</strong>
-                                </a>
-                            </div>
-                        
-                            <div class="collapse card-body" id="collapseEven" aria-labelledby="headerEven" data-bs-parent="#accordionSection">
-                                
-                            </div>
-                        </div>
-                    </li>
-            
-                    <li>
-                        <div>
-                            <div class="card-header" id="headerFirst">
-                                <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseFirst" aria-expanded="false" aria-controls="collapseFirst">
-                                    <strong>First</strong>
-                                </a>
-                            </div>
-                        
-                            <div class="collapse card-body" id="collapseFirst" aria-labelledby="headerFirst" data-bs-parent="#accordionSection">
-                                
-                            </div>
-                        </div>
-                    </li>
-            
-                    <li>
-                        <div>
-                            <div class="card-header" id="headerLast">
-                                <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseLast" aria-expanded="false" aria-controls="collapseLast">
-                                    <strong>Last</strong>
-                                </a>
-                            </div>
-                        
-                            <div class="collapse card-body" id="collapseLast" aria-labelledby="headerLast" data-bs-parent="#accordionSection">
-                                
-                            </div>
-                        </div>
-                    </li>
-            
-                    <li>
-                        <div>
-                            <div class="card-header" id="headerGetKey">
-                                <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseGetKey" aria-expanded="false" aria-controls="collapseGetKey">
-                                    <strong>GetKey</strong>
-                                </a>
-                            </div>
-                        
-                            <div class="collapse card-body" id="collapseGetKey" aria-labelledby="headerGetKey" data-bs-parent="#accordionSection">
-                                
+                            <div class="collapse" id="collapseDataSource" aria-labelledby="headerDataSource" data-bs-parent="#accordionSection">
+                                <p>
+                                    Fornece os <strong>dados</strong> que será enumerado, sendo o <strong>array</strong> de objetos.
+                                </p>
                             </div>
                         </div>
                     </li>
                 </ul>
             </div>
-        </div>
 
-        <div id="sectionBodyExemplo">
+            <!--
+                Separar esta parte de tudo
+
+
+
+                <li>
+                    <div id="containerTrackBy">
+                        <div id="headerTrackBy">
+                            <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseTrackBy" aria-expanded="false" aria-controls="collapseTrackBy">
+                                <strong>TrackBy</strong>
+                            </a>
+                        </div>
+                    
+                        <div class="collapse" id="collapseTrackBy" aria-labelledby="headerTrackBy" data-bs-parent="#accordionSubSectionTemplateVariable">
+                            <p>
+                                Indica que a <strong>posição</strong> do atual objeto é o <strong>último</strong> no data source, caso retorne <strong>true</strong>.
+                            </p>
+                            <p id="obs-style-color">
+                                <strong>Obs.:</strong> O valor da variável é do tipo <strong>boolean</strong>.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+
+
+
+                VER P 290-293
+            -->
+
+
+        </div>
+        
+        <div id="sectionExemplo">
             <ul>
                 <li>
-                    <p>
-                        <strong>
-                            <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseTarget" role="button" aria-expanded="false" aria-controls="collapseTarget">
-                                Lista de Exemplos
-                              </a>
-                        </strong>
-                    </p>
-                    <div class="collapse card-body" id="collapseTarget">
-                        <div id="accordionExemplo">
+                    <div id="containerExemplo">
+                        <div class="headerExemplo">
+                            <a class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo" role="button" aria-expanded="false" aria-controls="collapseExemplo">
+                                <strong>Lista de Exemplos</strong>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="collapse" id="collapseExemplo" aria-labelledby="headerExemplo" data-bs-parent="#accordionSection">
+                        <div id="accordionSubSectionExemplo">
                             <ul>
                                 <li>
-                                    <div>
-                                        <div class="card-header" id="headerExemplo1">
+                                    <div id="containerExemplo1">
+                                        <div id="headerExemplo1">
                                             <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplo1" aria-expanded="false" aria-controls="collapseExemplo1">
                                                 <strong>Exemplo 1:</strong> Diretiva ngFor
                                             </a>
                                         </div>
                                     
-                                        <div class="collapse card-body" id="collapseExemplo1" aria-labelledby="headerExemplo1" data-bs-parent="#accordionSection">
+                                        <div class="collapse" id="collapseExemplo1" aria-labelledby="headerExemplo1" data-bs-parent="#accordionSubSectionExemplo">
                                             <div class="text-white">
                                                 <div class="p-1">
                                                     <table class="table table-sm table-bordered text-dark">

@@ -39,8 +39,10 @@ figcaption {
     color: rgb(218, 2, 2);
 }
 
-/*
-
-
-    talvez inserir word-break: break-word; nos textos, porem em qual etapa ?
-*/
+#divisor {
+    height: 0;
+    margin: 0.5rem 0;
+    overflow: hidden;
+    border-top: 2.5px solid rgb(73, 80, 87);
+    opacity: 1
+}

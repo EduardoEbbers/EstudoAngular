@@ -7,27 +7,27 @@
     <h1>One Way</h1>
     <h3>Diretiva NgStyle Bindings</h3>
 
-    <div id="containerModal">
+    <div id="containerModalEstruturaBasica">
         <h5>Estrutura Básica</h5>
         <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalEstruturaBasica">
             <figure class="figure">
-                <img class="figure-img img-fluid" src="../../../assets/imagens/dataBindings/OneWay/DirectiveBinding/NgStyle/ngstyle.png" alt="estrutura basica diretiva ngstyle">
+                <img class="figure-img img-fluid" src="../../../assets/imagens/dataBindings/OneWay/DirectiveBinding/NgStyle/ngstyle.png" alt="estrutura basica diretiva ngstyle binding">
                 <figcaption class="figure-caption">
-                    <strong>Figura 1:</strong> Estrutura Básica Diretiva NgStyle.
+                    <strong>Figura 1:</strong> Estrutura Básica Diretiva NgStyle Binding.
                 </figcaption>
             </figure>
         </button>
         
-        <div class="modal fade" id="modalEstruturaBasica" tabindex="-1" aria-labelledby="modalEstruturaBasicaLabel" aria-hidden="true">
+        <div class="modal fade" id="modalEstruturaBasica" tabindex="-1" aria-labelledby="labelModalEstruturaBasica" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="modalEstruturaBasicaLabel">Estrutura Básica Diretiva NgStyle</h5>
+                        <h5 class="modal-title" id="labelModalEstruturaBasica">Estrutura Básica Diretiva NgStyle Binding</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <img class="figure-img img-fluid"
-                        src="../../../assets/imagens/dataBindings/OneWay/DirectiveBinding/NgStyle/ngstyle.png" alt="estrutura basica diretiva ngstyle">
+                        src="../../../assets/imagens/dataBindings/OneWay/DirectiveBinding/NgStyle/ngstyle.png" alt="estrutura basica diretiva ngstyle binding">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -37,71 +37,80 @@
         </div>
     </div>
 
-    <div id="sectionBody1">
-        <p>
-            Usa-se para gerenciar propriedade style.
-        </p>
-        <p>
-            Mais flexíveis em relação ao retorno da expressão que é um Object.
-        </p>
-        <p>
-            Cada propriedade do objeto representa um estilo ou mais, separados por espaços.
-        </p>
-        <p style="color: red;">
-            <strong>Obs. 1:</strong> Cada propriedade do objeto representa apenas um estilo.
-        </p>
-        <p style="color: red;">
-            <strong>Obs. 2:</strong> O estilo será adicionada caso o valor da propriedade for <strong>truthy</strong>.
-        </p>
-        
-        <p>
-            Ver <a href="#">Exemplo 3</a>
-        </p>
-        
-        <!--
-            Aplicar a parte de operador nullish ???????
-            -->
-    </div>
-
-    <div id="sectionBodyExemplo">
-        <ul>
-            <li>
-                <p>
-                    <strong>
-                        <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseTarget" role="button" aria-expanded="false" aria-controls="collapseTarget">
-                            Lista de Exemplos
-                          </a>
-                    </strong>
-                </p>
-                <div class="collapse card-body" id="collapseTarget">
-                    <div id="accordionExemplo">
-                        <ul>
-                            <li>
-                                <div>
-                                    <div class="card-header" id="headerExemplo1">
-                                        <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplo1" aria-expanded="false" aria-controls="collapseExemplo1">
-                                            <strong>Exemplo 1:</strong> Usando método com Object
-                                        </a>
-                                    </div>
-                                
-                                    <div class="collapse card-body" id="collapseExemplo1" aria-labelledby="headerExemplo1" data-bs-parent="#accordionExemplo">
-                                        <div class="text-white m-2">
-                                            <div class="p-2 bg-warning">
-                                                O <span [ngStyle]="getStylesMap(1)">primeiro</span> produto é {{ repository.getProduct(1).name }}
-                                            </div>
-                                        </div>
-                                        <div class="p-2 bg-info">
-                                            <div class="p-2 bg-info">
-                                                O <span [ngStyle]="getStylesMap(2)">segundo</span> produto é {{ repository.getProduct(2).name }}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
+    <div id="accordionSection">
+        <div id="sectionBody">
+            <p>
+                Usa-se para gerenciar propriedade style.
+            </p>
+            <p>
+                Mais flexíveis em relação ao retorno da expressão que é um Object.
+            </p>
+            <p>
+                Cada propriedade do objeto representa um estilo ou mais, separados por espaços.
+            </p>
+            
+            <p id="obs-style-color">
+                <strong>Obs.:</strong> Cada propriedade do objeto representa apenas um estilo.
+            </p> 
+            <p id="obs-style-color">
+                <strong>Obs.:</strong> O estilo será adicionada caso o valor da propriedade for <strong>truthy</strong>, visto 
+                <a href="/bindings/others/truthyFalsy">
+                    <strong>aqui</strong>
+                </a>.
+            </p> 
+            <p>
+                <!--
+                    Talvez tirar esta parte
+                -->
+                Ver <a href="#">Exemplo 3</a>
+            </p>
+            
+            <!--
+                Aplicar a parte de operador nullish ???????
+                -->
+        </div>
+    
+        <div id="sectionExemplo">
+            <ul>
+                <li>
+                    <div id="containerExemplo">
+                        <div class="headerExemplo">
+                            <a class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo" role="button" aria-expanded="false" aria-controls="collapseExemplo">
+                                <strong>Lista de Exemplos</strong>
+                            </a>
+                        </div>
                     </div>
-                </div>
-            </li>
-        </ul>
+                    
+                    <div class="collapse" id="collapseExemplo" aria-labelledby="headerExemplo" data-bs-parent="#accordionSection">
+                        <div id="accordionSubSectionExemplo">
+                            <ul>
+                                <li>
+                                    <div id="containerExemplo1">
+                                        <div id="headerExemplo1">
+                                            <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplo1" aria-expanded="false" aria-controls="collapseExemplo1">
+                                                <strong>Exemplo 1:</strong> Usando método com Object
+                                            </a>
+                                        </div>
+                                    
+                                        <div class="collapse" id="collapseExemplo1" aria-labelledby="headerExemplo1" data-bs-parent="#accordionSubSectionExemplo">
+                                            <div class="text-white m-2">
+                                                <div class="p-2 bg-warning">
+                                                    O <span [ngStyle]="getStylesMap(1)">primeiro</span> produto é {{ repository.getProduct(1).name }}
+                                                </div>
+                                            </div>
+                                            <div class="p-2 bg-info">
+                                                <div class="p-2 bg-info">
+                                                    O <span [ngStyle]="getStylesMap(2)">segundo</span> produto é {{ repository.getProduct(2).name }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>

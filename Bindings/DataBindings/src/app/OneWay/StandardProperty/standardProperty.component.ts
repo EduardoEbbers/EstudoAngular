@@ -29,18 +29,8 @@ export class StandardPropertyComponent {
         return this.getProduct(key).category;
     }
     
-
     getId(key: number): string {
         return this.repository.getProduct(key).name;
-    }
-
-    getDisabled(): boolean {
-        return this.getProducts()
-        .length == 5 ? true : false;
-    }
-    
-    getName(key: number): string {
-        return 'btn-' + this.getProduct(key).name;
     }
 
     getPlaceholder(): string {

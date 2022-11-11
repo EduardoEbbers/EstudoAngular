@@ -7,27 +7,27 @@
     <h1>One Way</h1>
     <h3>Diretiva ngIf Bindings</h3>
 
-    <div id="containerModal">
+    <div id="containerModalEstruturaBasica">
         <h5>Estrutura Básica</h5>
         <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalEstruturaBasica">
             <figure class="figure">
-                <img class="figure-img img-fluid" src="../../../assets/imagens/dataBindings/estrutura_basica_diretiva_ngif.jpg" alt="estrutura basica diretiva ngif">
+                <img class="figure-img img-fluid" src="../../../assets/imagens/dataBindings/OneWay/DirectiveBinding/NgIf/ngif.png" alt="estrutura basica diretiva ngif binding">
                 <figcaption class="figure-caption">
-                    <strong>Figura 1:</strong> Estrutura Básica Diretiva NgIf.
+                    <strong>Figura 1:</strong> Estrutura Básica Diretiva NgIf Binding.
                 </figcaption>
             </figure>
         </button>
         
-        <div class="modal fade" id="modalEstruturaBasica" tabindex="-1" aria-labelledby="modalEstruturaBasicaLabel" aria-hidden="true">
+        <div class="modal fade" id="modalEstruturaBasica" tabindex="-1" aria-labelledby="labelModalEstruturaBasica" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="modalEstruturaBasicaLabel">Estrutura Básica Diretiva NgIf</h5>
+                        <h5 class="modal-title" id="labelModalEstruturaBasica">Estrutura Básica Diretiva NgIf Binding</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <img class="figure-img img-fluid"
-                        src="../../../assets/imagens/dataBindings/estrutura_basica_diretiva_ngif.jpg" alt="estrutura basica diretiva ngif">
+                        src="../../../assets/imagens/dataBindings/OneWay/DirectiveBinding/NgIf/ngif.png" alt="estrutura basica diretiva ngif binding">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -37,78 +37,86 @@
         </div>
     </div>
 
-    <div id="sectionBody1">
-        <p>
-            Usa-se para adicionar ou remover fragmentos de conteúdos em um elemento HTML.
-        </p>
-        <p>
-            A expressão é avaliada para ser true, sendo propriedade ou método do componente.
-        </p>
-        <p style="color: red;">
-            <strong>Obs. 1:</strong> O asterisco (*) indica que a diretiva é um micro-template, ver
-            <a style="color: red;" href="/bindings/others/microTemplates">
-                <strong>aqui</strong>
-            </a>.
-        </p>
-        <p style="color: red;">
-            <strong>Obs. 2:</strong> Ao contrário da diretiva ngIf, se for para o controle de visibilidade usa-se os seguintes bindings:
-        </p>
-        <div>
-            <ul>
-                <li>
-                    <p style="color: red;">
-                        De propriedade, através da propriedade <strong>hidden</strong> setado para <strong>true</strong>.
-                    </p>
-                </li>
-                <li>
-                    <p style="color: red;">
-                        De style, através da propriedade <strong>display</strong> do style setado para <strong>none</strong>.
-                    </p>
-                </li>
-            </ul>    
+    <div id="accordionSection">
+        <div id="sectionBody">
+            <p>
+                Usa-se para <strong>adicionar</strong> ou <strong>remover</strong> fragmentos de conteúdos em um elemento HTML através do valor da expressão.
+            </p>
+            <p>
+                A expressão, sendo uma propriedade ou método do componente, é avaliada para ser <strong>true</strong>. 
+            </p>
+            <p id="obs-style-color">
+                <strong>Obs.:</strong> O asterisco (*) indica que a diretiva é um <strong>micro-template</strong>, visto
+                <a href="/bindings/others/microTemplates">
+                    <strong>aqui</strong>
+                </a>.
+            </p>
+            <p id="obs-style-color">
+                <strong>Obs.:</strong> Ao contrário da diretiva ngIf, se for controlar a visibilidade usa-se os seguintes bindings:
+            </p>
+            <div>
+                <ul>
+                    <li>
+                        <p id="obs-style-color">
+                            De <strong>propriedade</strong>, através da propriedade <strong>hidden</strong> setado para <strong>true</strong>.
+                        </p>
+                    </li>
+                    <li>
+                        <p id="obs-style-color">
+                            De <strong>style</strong>, através da propriedade <strong>display</strong> do style setado para <strong>none</strong>.
+                        </p>
+                    </li>
+                </ul>    
+            </div>
         </div>
 
-    </div>
-
-    <div id="sectionBodyExemplo">
-        <ul>
-            <li>
-                <p>
-                    <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseTarget" role="button" aria-expanded="false" aria-controls="collapseTarget">
-                        <strong>Lista de Exemplos</strong>
-                    </a>
-                </p>
-                <div class="collapse card-body" id="collapseTarget">
-                    <div id="accordionExemplo">
-                        <ul>
-                            <li>
-                                <div>
-                                    <div class="card-header" id="headerExemplo1">
-                                        <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplo1" aria-expanded="false" aria-controls="collapseExemplo1">
-                                            <strong>Exemplo 1:</strong> Usando método com retorno String
-                                        </a>
-                                    </div>
-                                
-                                    <div class="collapse card-body" id="collapseExemplo1" aria-labelledby="headerExemplo1" data-bs-parent="#accordionExemplo">
-                                        <div class="text-white">
-                                            <div class="bg-info p-2">
-                                                There are {{getProductCount()}} products.
+        <div id="sectionExemplo">
+            <div id="accordionSectionExemplo">
+                <ul>
+                    <li>
+                        <div id="containerExemplo">
+                            <div class="headerExemplo">
+                                <a class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo" role="button" aria-expanded="false" aria-controls="collapseExemplo">
+                                    <strong>Lista de Exemplos</strong>
+                                </a>
+                            </div>
+    
+                            <div class="collapse" id="collapseExemplo" aria-labelledby="headerExemplo" data-bs-parent="#accordionSection">
+                                <div id="accordionSubSectionExemplo">
+                                    <ul>
+                                        <li>
+                                            <div id="containerExemplo1">
+                                                <div id="headerExemplo1">
+                                                    <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplo1" aria-expanded="false" aria-controls="collapseExemplo1">
+                                                        <strong>Exemplo 1:</strong> Usando método com retorno String
+                                                    </a>
+                                                </div>
+                                            
+                                                <div class="collapse" id="collapseExemplo1" aria-labelledby="headerExemplo1" data-bs-parent="#accordionSubSectionExemplo">
+                                                    <div class="text-white">
+                                                        <div class="bg-info p-2">
+                                                            There are {{getProductCount()}} products.
+                                                        </div>
+                                                        <div *ngIf="getProductCount() > 4" class="bg-info p-2 mt-1">
+                                                            There are more than 4 products in the model
+                                                        </div>
+                                                        <div *ngIf="getProductByPosition(0).name != 'Kayak'" class="bg-info p-2 mt-1">
+                                                            The first product isn't a Kayak
+                                                        </div>
+                                                    </div>
+                                                    <p>Interpertação</p>
+                                                </div>
                                             </div>
-                                            <div *ngIf="getProductCount() > 4" class="bg-info p-2 mt-1">
-                                                There are more than 4 products in the model
-                                            </div>
-                                            <div *ngIf="getProductByPosition(0).name != 'Kayak'" class="bg-info p-2 mt-1">
-                                                The first product isn't a Kayak
-                                            </div>
-                                        </div>
-                                        <p>Interpertação</p>
-                                    </div>
+                                        </li>
+                                    </ul>
                                 </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </li>
-        </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
+    
+    
 </div>

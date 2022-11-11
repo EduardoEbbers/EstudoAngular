@@ -3,111 +3,179 @@
     1.1 Diretiva ngTemplateOutlet Binding
 -->
 
-<h1>One Way</h1>
-<h3>Diretiva ngTemplateOutlet Bindings</h3>
-
-<br>
-
-<h5>Estrutura Básica</h5>
-
 <div>
-    <img src="../../../assets/imagens/dataBindings/estrutura_basica_diretiva_ngTemplateOutlet.jpg" alt="estrutura basica diretiva ngTemplateOutlet binding">
-</div>
-<br>
-<p>
-    Usa-se para repetir blocos de conteúdos em um locais especificados através do elemento ng-template.
-</p>
+    <h1>One Way</h1>
+    <h3>Diretiva ngTemplateOutlet Bindings</h3>
 
-<p>
-    Divide-se em três partes:
-</p>
-<div>
-    <ul>
-        <li>
-            Deve-se definir o elemento ng-template, que contem o conteúdo que vai ser repetido, ver 
-            <a style="color: red;" href="/bindings/others/microTemplates">
-                <strong>aqui</strong>
-            </a>
-        </li>
-        <li>
-            <p>
-                Deve-se definir a variável de referência (reference variable) do qual pode ser usado em outras partes do HTML
-            </p>
-            <p>
-                Ver mais 
-                <a style="color: red;" href="/bindings/others/microTemplates">
-                    <strong>aqui</strong>
-                </a>
-                .
-            </p>
-        </li>
-        <li>
-            <p>
-                Deve-se usar a variável de referência do elemento ng-template de repeticao definido antes
-            </p>
-            <p>
-                E faz-se o binding com a diretiva ngTemplateOutlet em outro elemento ng-template
-            </p>
-            <p style="color: red;">
-                A expressão da diretiva ngTemplateOutlet deve ter o mesmo nome da variável de referência que foi atribuída no elemento ng-template de repetição.
-            </p>
-        </li>
-    </ul>
-</div>
-
-<p style="color: red;">
-    Context Object
-        <!--
-        Explica isso...
-    pode-se usar em data bindings o objeto de contexto (context object) dentro do elemento ng-template
-    -->
-</p>
-
-
-
-
-
-<div>
-    <ul>
-        <li>
-            <p>
-                <strong>
-                    <a class="btn-link" data-bs-toggle="collapse" data-bs-target="#collapseTarget" role="button" aria-expanded="false" aria-controls="collapseTarget">
-                        Lista de Exemplos
-                      </a>
-                </strong>
-            </p>
-            <div class="collapse card-body" id="collapseTarget">
-                <div id="accordionExemplo">
-                    <ul>
-                        <li>
-                            <div>
-                                <div class="card-header" id="headerExemplo1">
-                                    <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplo1" aria-expanded="false" aria-controls="collapseExemplo1">
-                                        <strong>Exemplo 1:</strong> Diretiva ngTemplateOutlet
-                                    </a>
-                                </div>
-                            
-                                <div class="collapse card-body" id="collapseExemplo1" aria-labelledby="headerExemplo1" data-bs-parent="#accordionExemplo">
-                                    <ng-template #titleTemplate>
-                                        <h4 class="p-2 bg-success text-white">
-                                            Repeated Content
-                                        </h4>
-                                    </ng-template>
-                                    
-                                    <ng-template [ngTemplateOutlet]="titleTemplate"></ng-template>
-                                        
-                                    <div class="bg-info p-2 m-2 text-white">
-                                        There are {{getProductCount()}} products.
-                                    </div>
-                                       
-                                    <ng-template [ngTemplateOutlet]="titleTemplate"></ng-template>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+    <div id="containerModalEstruturaBasica">
+        <h5>Estrutura Básica</h5>
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalEstruturaBasica">
+            <figure class="figure">
+                <img class="figure-img img-fluid" src="../../../assets/imagens/dataBindings/estrutura_basica_diretiva_ngTemplateOutlet.jpg" alt="estrutura basica diretiva ngTemplateOutlet binding">
+                <figcaption class="figure-caption">
+                    <strong>Figura 1:</strong> Estrutura Básica Diretiva NgTemplateOutlet Binding.
+                </figcaption>
+            </figure>
+        </button>
+        
+        <div class="modal fade" id="modalEstruturaBasica" tabindex="-1" aria-labelledby="labelModalEstruturaBasica" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="labelModalEstruturaBasica">Estrutura Básica Diretiva NgTemplateOutlet Binding</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img class="figure-img img-fluid"
+                        src="../../../assets/imagens/dataBindings/estrutura_basica_diretiva_ngif.jpg" alt="estrutura basica diretiva ngTemplateOutlet binding">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
-        </li>
-    </ul>
+        </div>
+    </div>
+
+    <div id="accordionSection">
+        <div id="sectionBody">
+            <p>
+                Usa-se para repetir blocos de conteúdos em um locais especificados através do elemento ng-template.
+            </p>
+        
+            <p>
+                Divide-se em três partes:
+            </p>
+
+            <div id="accordionSectionBody">
+                <ul>
+                    <li>
+                        <div id="containerNgTemplate">
+                            <div id="headerNgTemplate">
+                                <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseNgTemplate" aria-expanded="false" aria-controls="collapseNgTemplate">
+                                    <strong>NgTemplate</strong>
+                                </a>
+                            </div>
+                        
+                            <div class="collapse" id="collapseNgTemplate" aria-labelledby="headerNgTemplate" data-bs-parent="#accordionSection">
+                                <p>
+                                    Deve-se definir o elemento ng-template, que contem o conteúdo que vai ser repetido.
+                                </p>
+                                
+                                <p id="nota-style-color">
+                                    <strong>Nota:</strong> Para saber mais sobre elemento <strong>ng-template</strong> consultar
+                                    <a href="/bindings/others/microTemplates">
+                                        <strong>aqui</strong>
+                                    </a>.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div id="containerReferenceVariable">
+                            <div id="headerReferenceVariable">
+                                <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseReferenceVariable" aria-expanded="false" aria-controls="collapseReferenceVariable">
+                                    <strong>Variável de Referência (Reference Variable)</strong>
+                                </a>
+                            </div>
+                        
+                            <div class="collapse" id="collapseReferenceVariable" aria-labelledby="headerReferenceVariable" data-bs-parent="#accordionSection">
+                                <p>
+                                    Deve-se definir a variável de referência (reference variable) do qual pode ser usado em outras partes do HTML
+                                </p>
+                                <p id="nota-style-color">
+                                    <strong>Nota:</strong> Para saber mais sobre elemento <strong>variável de referência</strong> consultar
+                                    <a href="/bindings/others/microTemplates">
+                                        <strong>aqui</strong>
+                                    </a>.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="containerX">
+                            <div id="headerX">
+                                <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseX" aria-expanded="false" aria-controls="collapseX">
+                                    <strong>Variável de Referência (Reference Variable)</strong>
+                                </a>
+                            </div>
+                        
+                            <div class="collapse" id="collapseX" aria-labelledby="headerX" data-bs-parent="#accordionSection">
+                                <p>
+                                    Deve-se usar a variável de referência do elemento ng-template de repeticao definido antes
+                                </p>
+                                <p>
+                                    E faz-se o binding com a diretiva ngTemplateOutlet em outro elemento ng-template
+                                </p>
+                                <p id="nota-style-color">
+                                    <strong>Nota:</strong> Para saber mais sobre elemento <strong>variável de referência</strong> consultar
+                                    <a href="/bindings/others/microTemplates">
+                                        <strong>aqui</strong>
+                                    </a>.
+                                </p>
+                                <p id="obs-style-color">
+                                    <strong>Obs.:</strong> A expressão da diretiva ngTemplateOutlet deve ter o mesmo nome da variável de referência que foi atribuída no elemento ng-template de repetição.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <p style="color: red;">
+                Context Object
+                    <!--
+                    Explica isso...
+                pode-se usar em data bindings o objeto de contexto (context object) dentro do elemento ng-template
+                -->
+            </p>
+        </div>
+
+        <div id="sectionExemplo">
+            <ul>
+                <li>
+                    <div id="containerExemplo">
+                        <div class="headerExemplo">
+                            <a class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo" role="button" aria-expanded="false" aria-controls="collapseExemplo">
+                                <strong>Lista de Exemplos</strong>
+                            </a>
+                        </div>
+                    </div>
+                   
+                    <div class="collapse" id="collapseExemplo" aria-labelledby="headerExemplo" data-bs-parent="#accordionSection">
+                        <div id="accordionSubSectionExemplo">
+                            <ul>
+                                <li>
+                                    <div id="containerExemplo1">
+                                        <div id="headerExemplo1">
+                                            <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplo1" aria-expanded="false" aria-controls="collapseExemplo1">
+                                                <strong>Exemplo 1:</strong> Diretiva ngTemplateOutlet
+                                            </a>
+                                        </div>
+                                    
+                                        <div class="collapse" id="collapseExemplo1" aria-labelledby="headerExemplo1" data-bs-parent="#accordionSubSectionExemplo">
+                                            <ng-template #titleTemplate>
+                                                <h4 class="p-2 bg-success text-white">
+                                                    Repeated Content
+                                                </h4>
+                                            </ng-template>
+                                            
+                                            <ng-template [ngTemplateOutlet]="titleTemplate"></ng-template>
+                                                
+                                            <div class="bg-info p-2 m-2 text-white">
+                                                There are {{getProductCount()}} products.
+                                            </div>
+                                            
+                                            <ng-template [ngTemplateOutlet]="titleTemplate"></ng-template>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
 </div>
