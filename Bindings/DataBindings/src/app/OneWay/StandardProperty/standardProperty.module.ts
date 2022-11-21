@@ -10,9 +10,6 @@ import { StandardPropertyRoutingModule } from "./standardPropertyRouting.module"
     ],
     declarations: [
         StandardPropertyComponent
-    ],
-    exports: [
-        //StandardPropertyComponent
     ]
 })
 export class StandardPropertyModule { }

@@ -10,9 +10,6 @@ import { OneWayRestrictionsRoutingModule } from "./OneWayRestrictionsRouting.mod
     ],
     declarations: [
         OneWayRestrictionsComponent
-    ],
-    exports: [
-        OneWayRestrictionsComponent
     ]
 })
 export class OneWayRestrictionsModule { }

@@ -10,6 +10,7 @@ export class NgStyleComponent {
     constructor(public repository: Repository) {
 
     }
+    
     getStylesMap(key: number) {
         let product = this.repository.getProduct(key);
         return {

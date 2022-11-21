@@ -10,9 +10,6 @@ import { ClassRoutingModule } from "./classRouting.module";
     ],
     declarations: [
         ClassComponent
-    ],
-    exports: [
-        ClassComponent
     ]
 })
 export class ClassModule { }

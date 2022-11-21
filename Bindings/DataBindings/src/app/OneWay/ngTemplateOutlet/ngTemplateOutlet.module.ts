@@ -10,9 +10,6 @@ import { NgTemplateOutletRoutingModule } from "./ngTemplateOutletRouting.module"
     ],
     declarations: [
         NgTemplateOutletComponent
-    ],
-    exports: [
-        //StandardPropertyComponent
     ]
 })
 export class NgTemplateOutletModule { }

@@ -10,9 +10,6 @@ import { StyleRoutingModule } from "./styleRouting.module";
     ],
     declarations: [
         StyleComponent
-    ],
-    exports: [
-        StyleComponent
     ]
 })
 export class StyleModule { }

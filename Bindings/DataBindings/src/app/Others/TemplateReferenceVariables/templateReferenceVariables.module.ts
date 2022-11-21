@@ -10,9 +10,6 @@ import { TemplateReferenceVariablesRoutingModule } from "./TemplateReferenceVari
     ],
     declarations: [
         TemplateReferenceVariablesComponent
-    ],
-    exports: [
-        TemplateReferenceVariablesComponent
     ]
 })
 export class TemplateReferenceVariablesModule { }

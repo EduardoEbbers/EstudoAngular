@@ -10,9 +10,6 @@ import { NgIfRoutingModule } from "./ngIfRouting.module";
     ],
     declarations: [
         NgIfComponent
-    ],
-    exports: [
-        //StandardPropertyComponent
     ]
 })
 export class NgIfModule { }

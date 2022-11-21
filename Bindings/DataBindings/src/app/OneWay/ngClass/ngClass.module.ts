@@ -10,9 +10,6 @@ import { NgClassRoutingModule } from "./ngClassRouting.module";
     ],
     declarations: [
         NgClassComponent
-    ],
-    exports: [
-        //StandardPropertyComponent
     ]
 })
 export class NgClassModule { }

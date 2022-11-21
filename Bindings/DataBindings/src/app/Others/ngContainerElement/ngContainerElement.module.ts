@@ -10,9 +10,6 @@ import { NgContainerElementRoutingModule } from "./ngContainerElementRouting.mod
     ],
     declarations: [
         NgContainerElementComponent
-    ],
-    exports: [
-        //StandardPropertyComponent
     ]
 })
 export class NgContainerElementModule { }

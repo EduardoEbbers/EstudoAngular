@@ -10,9 +10,6 @@ import { NgSwitchRoutingModule } from "./ngSwitchRouting.module";
     ],
     declarations: [
         NgSwitchComponent
-    ],
-    exports: [
-        //StandardPropertyComponent
     ]
 })
 export class NgSwitchModule { }

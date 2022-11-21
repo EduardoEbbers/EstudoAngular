@@ -10,9 +10,6 @@ import { NgStyleRoutingModule } from "./ngStyleRouting.module";
     ],
     declarations: [
         NgStyleComponent
-    ],
-    exports: [
-        //StandardPropertyComponent
     ]
 })
 export class NgStyleModule { }

@@ -10,9 +10,6 @@ import { NgTemplateElementRoutingModule } from "./ngTemplateElementRouting.modul
     ],
     declarations: [
         NgTemplateElementComponent
-    ],
-    exports: [
-        //StandardPropertyComponent
     ]
 })
 export class NgTemplateElementModule { }

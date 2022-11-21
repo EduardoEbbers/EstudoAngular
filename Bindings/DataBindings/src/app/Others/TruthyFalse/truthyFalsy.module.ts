@@ -10,9 +10,6 @@ import { TruthyFalsyRoutingModule } from "./truthyFalsyRouting.module";
     ],
     declarations: [
         TruthyFalsyComponent
-    ],
-    exports: [
-        TruthyFalsyComponent
     ]
 })
 export class TruthyFalsyModule { }

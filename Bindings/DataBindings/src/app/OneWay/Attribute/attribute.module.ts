@@ -10,9 +10,6 @@ import { AttributeRoutingModule } from "./attributeRouting.module";
     ],
     declarations: [
         AttributeComponent
-    ],
-    exports: [
-        AttributeComponent
     ]
 })
 export class AttributeModule { }

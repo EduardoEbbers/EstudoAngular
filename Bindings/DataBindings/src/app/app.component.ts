@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Repository } from './Models/repository.model';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +8,4 @@ import { Repository } from './Models/repository.model';
 export class AppComponent {
   title = 'DataBindings';
   
-  constructor(public repository: Repository) {
-
-  }
 }

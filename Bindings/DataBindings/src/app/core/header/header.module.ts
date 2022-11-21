@@ -6,12 +6,14 @@ import { HeaderComponent } from "./header.component";
 @NgModule({
     imports: [
         CommonModule,
+        // é necessario RouterModule ?
         RouterModule
     ],
     declarations: [
         HeaderComponent
     ],
     exports: [
+        // é necessario exportar HeaderComponent ?
         HeaderComponent
     ]
 })

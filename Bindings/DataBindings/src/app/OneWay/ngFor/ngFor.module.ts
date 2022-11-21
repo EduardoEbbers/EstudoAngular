@@ -10,9 +10,6 @@ import { NgForRoutingModule } from "./ngForRouting.module";
     ],
     declarations: [
         NgForComponent
-    ],
-    exports: [
-        //StandardPropertyComponent
     ]
 })
 export class NgForModule { }

@@ -10,9 +10,6 @@ import { EventRoutingModule } from "./eventRouting.module";
     ],
     declarations: [
         EventComponent
-    ],
-    exports: [
-        EventComponent
     ]
 })
 export class EventModule { }

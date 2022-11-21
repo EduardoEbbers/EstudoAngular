@@ -10,9 +10,6 @@ import { StringInterpolationRoutingModule } from "./stringInterpolationRouting.m
     ],
     declarations: [
         StringInterpolationComponent
-    ],
-    exports: [
-        StringInterpolationComponent
     ]
 })
 export class StringInterpolationModule { }

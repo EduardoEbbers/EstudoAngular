@@ -10,9 +10,6 @@ import { MicroTemplatesRoutingModule } from "./microTemplatesRouting.module";
     ],
     declarations: [
         MicroTemplatesComponent
-    ],
-    exports: [
-        MicroTemplatesComponent
     ]
 })
 export class MicroTemplatesModule { }
