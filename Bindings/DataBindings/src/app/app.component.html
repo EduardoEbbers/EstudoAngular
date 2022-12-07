@@ -1,8 +1,4 @@
-<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">
-        Contents
-    </a>
-</header>
+<app-header></app-header>
 
 <!--
     DEVE-SE ADICIONAR UM BUTTON TOGGLE PARA DROPDOWN
@@ -10,11 +6,11 @@
 -->
 
 <div class="container-fluid">
-    <div class="row">
-        <div class="col col-lg-2 d-md-block bg-primary">
-            <app-header></app-header>
+    <div class="row layout-row">
+        <div class="col bg-primary">
+            <app-sidebar></app-sidebar>
         </div>
-        <div class="col col-lg-10 ms-sm-auto px-md-4">
+        <div class="">
             <main>
                 <router-outlet></router-outlet>
             </main>
