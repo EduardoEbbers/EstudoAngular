@@ -3,12 +3,10 @@ import { RouterModule, Routes } from "@angular/router";
 import { AttributeComponent } from "./attribute.component";
 
 const routes: Routes = [
-    
     { 
         path: 'bindings/oneWay/attribute',
         component: AttributeComponent
     }
-    
 ];
 
 @NgModule({

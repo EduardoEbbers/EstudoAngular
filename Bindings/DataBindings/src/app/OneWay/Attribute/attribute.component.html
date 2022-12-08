@@ -3,10 +3,9 @@
     1.3 Attribute Binding
 -->
 
-<div>
+<div id="bodyMain">
     <h1>One Way</h1>
     <h3>Attribute Binding</h3>
-
     <div id="containerModalEstruturaBasica">
         <h5>Estrutura Básica</h5>
         <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalEstruturaBasica">
@@ -19,7 +18,6 @@
                 </figcaption>
             </figure>
         </button>
-
         <div class="modal fade" id="modalEstruturaBasica" tabindex="-1" aria-labelledby="labelModalEstruturaBasica"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -40,7 +38,6 @@
             </div>
         </div>
     </div>
-
     <div id="accordionSection">
         <div id="sectionBody">
             <p>
@@ -49,16 +46,15 @@
             <p>
                 Usa-se o prefixo <strong>attr.</strong> com o <strong>nome do atributo</strong> dentro de colchetes para setar <strong>atributos</strong> do elemento host.
             </p>
-            <p id="nota-style-color">
+            <p id="nota-color">
                 <strong>Nota:</strong> Existem diferenças entre colspan e colSpan, para saber mais consultar o
                 <a href="http://angular.io/guide/property-binding#colspan">
                     <strong>website</strong>
                 </a>.
             </p>
         </div>
-
-        <div id="sectionExemplo">
-            <div id="accordionSectionExemplo">
+        <div id="sectionBody">
+            <div id="accordionSectionBody">
                 <ul>
                     <li>
                         <div id="containerExemplo">
@@ -68,7 +64,6 @@
                                 </a>
                             </div>
                         </div>
-                        
                         <div class="collapse" id="collapseExemplo" aria-labelledby="headerExemplo" data-bs-parent="#accordionSection">
                             <div id="accordionSubSectionExemplo">
                                 <ul>
@@ -81,7 +76,6 @@
                                                     <strong>Exemplo 1:</strong> Attribute Binding
                                                 </a>
                                             </div>
-        
                                             <div class="collapse" id="collapseExemplo1"
                                                 aria-labelledby="headerExemplo1" data-bs-parent="#accordionSubSectionExemplo">
                                                 <table class="table table-bordered table-striped mt-2 table-sm">
@@ -98,7 +92,6 @@
                                                         </td>
                                                     </tr>
                                                 </table>
-        
                                                 <p>
                                                     interpretacao do exemplo
                                                 </p>

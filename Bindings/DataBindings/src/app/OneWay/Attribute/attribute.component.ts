@@ -8,7 +8,7 @@ import { Repository } from "src/app/Models/repository.model";
     styleUrls: ['./attribute.component.css']
 })
 export class AttributeComponent {
-    constructor(public repository: Repository) {
+    constructor(private repository: Repository) {
 
     }
 
