@@ -1,10 +1,6 @@
 /*
-    Esse deve ter
-    .row>* {
-        padding: 0;
-    }
+    Rows
 */
-
 .layout-row {
     flex-wrap: nowrap;
 }
@@ -13,44 +9,11 @@
     padding: 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
-    **
-    ORIGINAL
-    **
-    ANALISANDO PARA REMOCAO OU NAO
-    MOTIVO: SE PARECE COM .row
-    SOLUCAO: USANDO BOOTSTRAP
-
-    REMOVER, ESPERANDO SO NAO DAR ERRO NO FINAL
-
-    row-container
+    Medias
 */
-/*
-.row-container>* {
-    max-width: 100%;
-    margin-top: var(--bs-gutter-y)
+@media (max-width: 600px) {
+    .layout-row {
+        flex-wrap: wrap;
+    }
 }
-
-.row-container {
-    --bs-gutter-x: 1.5rem;
-    --bs-gutter-y: 0;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: calc(-1 * var(--bs-gutter-y));
-    margin-right: calc(-.5 * var(--bs-gutter-x));
-    margin-left: calc(-.5 * var(--bs-gutter-x))
-}
-*/

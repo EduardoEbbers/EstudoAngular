@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { AttributeModule } from "./Attribute/attribute.module";
 import { ClassModule } from "./Class/class.module";
@@ -18,7 +17,6 @@ import { StyleModule } from "./Style/style.module";
 
 @NgModule({
     imports: [
-        CommonModule,
         StandardPropertyModule,
         StringInterpolationModule,
         AttributeModule,
@@ -31,8 +29,7 @@ import { StyleModule } from "./Style/style.module";
         NgForModule,
         NgSwitchModule,
         NgTemplateOutletModule,
-        OneWayRoutingModule,
-        
+        OneWayRoutingModule
     ],
     declarations: [
         OneWayComponent
