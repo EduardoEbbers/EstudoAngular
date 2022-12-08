@@ -10,7 +10,7 @@ import { Repository } from "src/app/Models/repository.model";
 export class StandardPropertyComponent {
      isDisabled = true;
 
-    constructor(public repository: Repository) {
+    constructor(private repository: Repository) {
 
     }
 

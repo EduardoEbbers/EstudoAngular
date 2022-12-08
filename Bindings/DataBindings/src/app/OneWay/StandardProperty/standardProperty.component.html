@@ -3,10 +3,9 @@
     1.1 Standard Property Binding
 -->
 
-<div>
+<div id="bodyMain">
     <h1>One Way</h1>
     <h3>Standard Property Bindings</h3>
-
     <div id="containerModalEstruturaBasica">
         <h5>Estrutura Básica</h5>
         <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalEstruturaBasica">
@@ -17,7 +16,6 @@
                 </figcaption>
             </figure>
         </button>
-        
         <div class="modal fade" id="modalEstruturaBasica" tabindex="-1" aria-labelledby="labelModalEstruturaBasica" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
@@ -36,7 +34,6 @@
             </div>
         </div>
     </div>
-
     <div id="accordionSection">
         <div id="sectionBody">
             <p>
@@ -45,15 +42,13 @@
             <p>
                 Assim a expressão é avaliada setando a propriedade padrão do elemento host modificando o estado ou conteúdo do elemento.
             </p>
-            
-            <p id="nota-style-color">
+            <p id="nota-color">
                 <strong>Nota:</strong> Para saber mais sobre elementos host e suas propriedades e métodos consultar o 
                 <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement">
                     <strong>website</strong>
                 </a>.
             </p>
         </div>
-
         <div id="sectionExemplo">
             <div id="accordionSectionExemplo">
                 <ul>
@@ -64,7 +59,6 @@
                                     <strong>Lista de Exemplos</strong>
                                 </a>
                             </div>
-
                             <div class="collapse" id="collapseExemplo" aria-labelledby="headerExemplo" data-bs-parent="#accordionSection">
                                 <div id="accordionSubSectionExemplo">
                                     <ul>
@@ -75,17 +69,14 @@
                                                         <strong>Exemplo 1:</strong> Propriedade href da tag anchor 
                                                     </a>
                                                 </div>
-                                            
                                                 <div class="collapse" id="collapseExemplo1" aria-labelledby="headerExemplo1" data-bs-parent="#accordionSubSectionExemplo">
                                                     <div>
                                                         <a [href]="getHref()">Seta href</a>
                                                     </div>
                                                     <br>
-                        
                                                     <div>
-                                                        <img style="margin: 10px;" src="../../../assets/imagens/dataBindings/esquema_standard_property.jpg" alt="estrutura basica standard property bindings" />
+                                                        <img style="margin: 10px;" src="#" alt="estrutura basica standard property bindings" />
                                                     </div>
-                        
                                                     <p>
                                                         A propriedade "href" do elemento host anchor (ou tag a), serve para setar um endereço URL válido após avaliação da expressão do binding 
                                                     </p>
@@ -117,7 +108,6 @@
                                                 </div>
                                             </div>
                                         </li>
-            
                                         <li>
                                             <div id="containerExemplo2">
                                                 <div id="headerExemplo2">
@@ -125,7 +115,6 @@
                                                         <strong>Exemplo 2:</strong> Propriedade href da tag anchor 
                                                     </a>
                                                 </div>
-                                            
                                                 <div class="collapse" id="collapseExemplo2" aria-labelledby="headerExemplo2" data-bs-parent="#accordionSubSectionExemplo">
                                                     <table class="table table-bordered table-striped">
                                                         <tr>
@@ -139,16 +128,13 @@
                                                                     {{ product.name }}
                                                                 </a> 
                                                             </td>
-                                                            
                                                             <td>{{ product.category }}</td>
                                                             <td>{{ product.price }}</td>
-                                                            
                                                         </tr>
                                                     </table>
                                                 </div>
                                             </div>
                                         </li>
-            
                                         <li>
                                             <div id="containerExemplo3">
                                                 <div id="headerExemplo3">
@@ -156,7 +142,6 @@
                                                         <strong>Exemplo 3:</strong> Propriedade disabled da tag button
                                                     </a>
                                                 </div>
-                                            
                                                 <div class="collapse" id="collapseExemplo3" aria-labelledby="headerExemplo3" data-bs-parent="#accordionSubSectionExemplo">
                                                     <button class="btn btn-primary" [disabled]="isDisabled">
                                                         Disabled
@@ -164,7 +149,6 @@
                                                 </div>
                                             </div>
                                         </li>
-            
                                         <li>
                                             <div id="containerExemplo4">
                                                 <div id="headerExemplo4">
@@ -172,13 +156,11 @@
                                                         <strong>Exemplo 4:</strong> Propriedade placeholder da tag input
                                                     </a>
                                                 </div>
-                                            
                                                 <div class="collapse" id="collapseExemplo4" aria-labelledby="headerExemplo4" data-bs-parent="#accordionSubSectionExemplo">
                                                     <input [placeholder]="getPlaceholder()" />
                                                 </div>
                                             </div>
                                         </li>
-            
                                         <li>
                                             <div id="containerExemplo5">
                                                 <div id="headerExemplo5">
@@ -186,7 +168,6 @@
                                                         <strong>Exemplo 5:</strong> Propriedade value da tag input
                                                     </a>
                                                 </div>
-                                            
                                                 <div class="collapse" id="collapseExemplo5" aria-labelledby="headerExemplo5" data-bs-parent="#accordionSubSectionExemplo">
                                                     <input [value]="getProduct(1)?.name || 'None'" />
                                                 </div>
@@ -202,4 +183,3 @@
         </div>
     </div>
 </div>
-

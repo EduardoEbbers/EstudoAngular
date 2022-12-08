@@ -3,12 +3,10 @@ import { RouterModule, Routes } from "@angular/router";
 import { StandardPropertyComponent } from "./standardProperty.component";
 
 const routes: Routes = [
-   
     { 
         path: 'bindings/oneWay/standardProperty',
         component: StandardPropertyComponent
     }
-    
 ];
 
 @NgModule({
