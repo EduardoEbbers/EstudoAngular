@@ -3,10 +3,9 @@
     1.2 String Interpolation
 -->
 
-<div>
+<div id="bodyMain">
     <h1>One Way</h1>
     <h3>String Interpolation Bindings</h3>
-
     <div id="containerModalEstruturaBasica"> 
         <h5>Estrutura Básica</h5>
         <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalEstruturaBasica">
@@ -17,7 +16,6 @@
                 </figcaption>
             </figure>
         </button>
-        
         <div class="modal fade" id="modalEstruturaBasica" tabindex="-1" aria-labelledby="labelModalEstruturaBasica" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
@@ -36,22 +34,20 @@
             </div>
         </div>
     </div>
-
     <div id="accordionSection">
         <div id="sectionBody">
             <p>
                 Usa-se <strong>dupla chaves</strong> que envolve o resultado da expressão.
             </p>
-            
             <p>Assim a expressão é avaliada e seta o conteúdo do elemento host.</p>
             
-            <p id="obs-style-color">
+            <p id="obs-color">
                 <strong>Obs.:</strong> String Interpolation deve-se usar para simples fragmento de código.
             </p>
-            <p id="obs-style-color">
+            <p id="obs-color">
                 <strong>Obs.:</strong> O retorno da expressão é um <strong>string</strong> e equivalente a fazer um data binding na propriedade <strong>textContent</strong> de certos elementos host.
             </p>
-            <p id="nota-style-color">
+            <p id="nota-color">
                 <strong>Nota:</strong> Para saber mais sobre a propriedade <strong>textContent</strong> consultar o
                 <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement">
                     <strong>website1</strong>
@@ -60,9 +56,8 @@
                 </a>.
             </p>
         </div>
-        
-        <div id="sectionExemplo">
-            <div id="accordionSectionExemplo">
+        <div id="sectionBody">
+            <div id="accordionSectionBody">
                 <ul>
                     <li>
                         <div id="containerExemplo">
@@ -71,7 +66,6 @@
                                     <strong>Lista de Exemplos</strong>
                                 </a>
                             </div>
-
                             <div class="collapse" id="collapseExemplo" aria-labelledby="headerExemplo" data-bs-parent="#accordionSection">
                                 <div id="accordionSubSectionExemplo">
                                     <ul>
@@ -87,15 +81,11 @@
                                                     <p>
                                                         Com a propriedade textContent
                                                     </p>
-                        
                                                     <div [textContent]="'Name: ' + (getProduct(1)?.name || 'None')"></div>
-                                                    
                                                     <br>
-                                                    
                                                     <p>
                                                         Com string interpolation
                                                     </p>
-                        
                                                     <div>
                                                         Name: {{ getProduct(1)?.name || 'None' }}
                                                     </div>
@@ -111,4 +101,4 @@
             </div>
         </div>
     </div>    
-</div>    
+</div>

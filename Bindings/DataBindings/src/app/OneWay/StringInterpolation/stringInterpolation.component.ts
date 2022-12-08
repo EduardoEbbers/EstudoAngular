@@ -8,7 +8,7 @@ import { Repository } from "src/app/Models/repository.model";
     styleUrls: ['./stringInterpolation.component.css']
 })
 export class StringInterpolationComponent {
-    constructor(public repository: Repository) {
+    constructor(private repository: Repository) {
         
     }
     

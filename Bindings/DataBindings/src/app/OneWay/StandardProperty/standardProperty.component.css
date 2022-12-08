@@ -12,24 +12,6 @@ p {
 }
 
 /*
-    Links
-*/
-#accordionSectionExemplo a {
-    padding-left: 0;
-    text-decoration: none;
-    padding-top: 0;
-    text-align: left;
-}
-
-/*
-    ul
-*/
-#accordionSectionExemplo ul {
-    padding-left: 1.2rem;
-    padding-right: 1.2rem;
-}
-
-/*
     Modal
 */
 img {
@@ -46,8 +28,25 @@ figcaption {
 }
 
 /*
-    advertence text styles
-    TESTAR TODOS
+    Links
+*/
+#sectionBody a {
+    padding-left: 0;
+    text-decoration: none;
+    padding-top: 0;
+    text-align: left;
+}
+
+/*
+    Ul
+*/
+#accordionSectionBody ul {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+}
+
+/*
+    Advertence Text Styles
 */
 #nota-color {
     color: darkgoldenrod;
@@ -55,8 +54,26 @@ figcaption {
 
 #nota-color a {
     color: darkgoldenrod;
+    text-decoration: underline;
 }
 
 #nota-color a:hover {
     color: rgb(156, 114, 10);
+}
+
+/*
+    Medias
+*/
+@media (min-width: 1000px) {
+    #sectionBody p,
+    #sectionBody a {
+        max-width: 45rem;
+    }
+}
+
+@media (max-width: 700px) {
+    #sectionBody p,
+    #sectionBody a {
+        max-width: 20rem;
+    }
 }
