@@ -3,12 +3,10 @@ import { RouterModule, Routes } from "@angular/router";
 import { NgStyleComponent } from "./ngStyle.component";
 
 const routes: Routes = [
-   
     { 
         path: 'bindings/oneWay/ngStyle',
         component: NgStyleComponent
     }
-    
 ];
 
 @NgModule({

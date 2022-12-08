@@ -1,12 +1,11 @@
 <!--
     1. One Way
-    1.1 Diretiva ngStyle Binding
+    1.8 Diretiva ngStyle Binding
 -->
 
-<div>
+<div id="bodyMain">
     <h1>One Way</h1>
     <h3>Diretiva NgStyle Bindings</h3>
-
     <div id="containerModalEstruturaBasica">
         <h5>Estrutura Básica</h5>
         <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalEstruturaBasica">
@@ -17,7 +16,6 @@
                 </figcaption>
             </figure>
         </button>
-        
         <div class="modal fade" id="modalEstruturaBasica" tabindex="-1" aria-labelledby="labelModalEstruturaBasica" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
@@ -36,7 +34,6 @@
             </div>
         </div>
     </div>
-
     <div id="accordionSection">
         <div id="sectionBody">
             <p>
@@ -48,69 +45,60 @@
             <p>
                 Cada propriedade do objeto representa um estilo ou mais, separados por espaços.
             </p>
-            
-            <p id="obs-style-color">
+            <p id="obs-color">
                 <strong>Obs.:</strong> Cada propriedade do objeto representa apenas um estilo.
             </p> 
-            <p id="obs-style-color">
+            <p id="obs-color">
                 <strong>Obs.:</strong> O estilo será adicionada caso o valor da propriedade for <strong>truthy</strong>, visto 
                 <a href="/bindings/others/truthyFalsy">
                     <strong>aqui</strong>
                 </a>.
             </p> 
-            <p>
-                <!--
-                    Talvez tirar esta parte
-                -->
-                Ver <a href="#">Exemplo 3</a>
-            </p>
-            
             <!--
                 Aplicar a parte de operador nullish ???????
-                -->
+            -->
         </div>
-    
-        <div id="sectionExemplo">
-            <ul>
-                <li>
-                    <div id="containerExemplo">
-                        <div class="headerExemplo">
-                            <a class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo" role="button" aria-expanded="false" aria-controls="collapseExemplo">
-                                <strong>Lista de Exemplos</strong>
-                            </a>
+        <div id="sectionBody">
+            <div id="accordionSectionBody">
+                <ul>
+                    <li>
+                        <div id="containerExemplo">
+                            <div class="headerExemplo">
+                                <a class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo" role="button" aria-expanded="false" aria-controls="collapseExemplo">
+                                    <strong>Lista de Exemplos</strong>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="collapse" id="collapseExemplo" aria-labelledby="headerExemplo" data-bs-parent="#accordionSection">
-                        <div id="accordionSubSectionExemplo">
-                            <ul>
-                                <li>
-                                    <div id="containerExemplo1">
-                                        <div id="headerExemplo1">
-                                            <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplo1" aria-expanded="false" aria-controls="collapseExemplo1">
-                                                <strong>Exemplo 1:</strong> Usando método com Object
-                                            </a>
-                                        </div>
-                                    
-                                        <div class="collapse" id="collapseExemplo1" aria-labelledby="headerExemplo1" data-bs-parent="#accordionSubSectionExemplo">
-                                            <div class="text-white m-2">
-                                                <div class="p-2 bg-warning">
-                                                    O <span [ngStyle]="getStylesMap(1)">primeiro</span> produto é {{ repository.getProduct(1).name }}
-                                                </div>
+                        <div class="collapse" id="collapseExemplo" aria-labelledby="headerExemplo" data-bs-parent="#accordionSection">
+                            <div id="accordionSubSectionExemplo">
+                                <ul>
+                                    <li>
+                                        <div id="containerExemplo1">
+                                            <div id="headerExemplo1">
+                                                <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplo1" aria-expanded="false" aria-controls="collapseExemplo1">
+                                                    <strong>Exemplo 1:</strong> Usando método com Object
+                                                </a>
                                             </div>
-                                            <div class="p-2 bg-info">
+                                            <div class="collapse" id="collapseExemplo1" aria-labelledby="headerExemplo1" data-bs-parent="#accordionSubSectionExemplo">
+                                                <div class="text-white m-2">
+                                                    <div class="p-2 bg-warning">
+                                                        O <span [ngStyle]="getStylesMap(1)">primeiro</span> produto é {{ repository.getProduct(1).name }}
+                                                    </div>
+                                                </div>
                                                 <div class="p-2 bg-info">
-                                                    O <span [ngStyle]="getStylesMap(2)">segundo</span> produto é {{ repository.getProduct(2).name }}
+                                                    <div class="p-2 bg-info">
+                                                        O <span [ngStyle]="getStylesMap(2)">segundo</span> produto é {{ repository.getProduct(2).name }}
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </li>
-                            </ul>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                </li>
-            </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
