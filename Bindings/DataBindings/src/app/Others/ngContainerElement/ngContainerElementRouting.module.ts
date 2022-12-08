@@ -3,12 +3,10 @@ import { RouterModule, Routes } from "@angular/router";
 import { NgContainerElementComponent } from "./ngContainerElement.component";
 
 const routes: Routes = [
-   
     { 
         path: 'bindings/others/ngContainerElement',
         component: NgContainerElementComponent
     }
-    
 ];
 
 @NgModule({
