@@ -3,12 +3,10 @@ import { RouterModule, Routes } from "@angular/router";
 import { NgTemplateOutletComponent } from "./ngTemplateOutlet.component";
 
 const routes: Routes = [
-   
     { 
         path: 'bindings/oneWay/ngTemplateOutlet',
         component: NgTemplateOutletComponent
-    }
-    
+    } 
 ];
 
 @NgModule({
