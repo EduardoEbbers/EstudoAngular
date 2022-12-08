@@ -10,7 +10,7 @@ import { Repository } from "src/app/Models/repository.model";
 export class NgSwitchComponent {
     targetName: string = "Kayak";
 
-    constructor(ref: ApplicationRef, public repository: Repository) {
+    constructor(ref: ApplicationRef, private repository: Repository) {
         (<any>window).appRef = ref;
         (<any>window).repository = this.repository;
     }

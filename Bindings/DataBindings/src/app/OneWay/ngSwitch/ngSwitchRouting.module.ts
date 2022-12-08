@@ -6,8 +6,7 @@ const routes: Routes = [
     { 
         path: 'bindings/oneWay/ngSwitch',
         component: NgSwitchComponent
-    }
-    
+    } 
 ];
 
 @NgModule({

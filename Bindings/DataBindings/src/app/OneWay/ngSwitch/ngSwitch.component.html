@@ -1,12 +1,11 @@
 <!--
     1. One Way
-    1.1 Diretiva ngSwitch Binding
+    1.11 Diretiva ngSwitch Binding
 -->
 
-<div>
+<div id="bodyMain">
     <h1>One Way</h1>
-    <h3>Diretiva ngSwitch Bindings</h3>
-
+    <h3>Diretiva NgSwitch Bindings</h3>
     <div id="containerModalEstruturaBasica">
         <h5>Estrutura Básica</h5>
         <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalEstruturaBasica">
@@ -17,7 +16,6 @@
                 </figcaption>
             </figure>
         </button>
-        
         <div class="modal fade" id="modalEstruturaBasica" tabindex="-1" aria-labelledby="labelModalEstruturaBasica" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
@@ -36,20 +34,17 @@
             </div>
         </div>
     </div>
-
     <div id="accordionSection">
         <div id="sectionBody">
             <p>
                 Usa-se quando se quer selecionar, dentre outras, uma opção do <strong>ngSwitchCase</strong> baseado no resultado da expressão do <strong>ngSwitch</strong>.
             </p>
-            <p id="obs-style-color">
+            <p id="obs-color">
                 <strong>Obs.:</strong> Equivalente ao switch case do JavaScript.
             </p>
-
             <p>
                 A diretiva se divide em três partes:
             </p>
-
             <div id="accordionSectionBody">
                 <ul>
                     <li>
@@ -59,18 +54,16 @@
                                     <strong>Diretiva ngSwitch</strong>
                                 </a>
                             </div>
-                        
                             <div class="collapse" id="collapseNgSwitch" aria-labelledby="headerNgSwitch" data-bs-parent="#accordionSection">
                                 <p>
                                     Diretiva que faz um <strong>data binding</strong> da expressão que retorna um string. <!-- ou number ? -->
                                 </p>
-                                <p id="obs-style-color">
+                                <p id="obs-color">
                                     <strong>Obs.:</strong> Colchetes em <strong>ngSwitch</strong> indica que é um <strong>data binding</strong>, ver <strong>estrutura básica</strong> acima.
                                 </p>
                             </div>
                         </div>
                     </li>
-            
                     <li>
                         <div id="containerNgSwitchCase">
                             <div id="headerNgSwitchCase">
@@ -78,27 +71,25 @@
                                     <strong>Diretiva ngSwitchCase</strong>
                                 </a>
                             </div>
-                        
                             <div class="collapse" id="collapseNgSwitchCase" aria-labelledby="headerNgSwitchCase" data-bs-parent="#accordionSection">
                                 <p>
                                     Diretiva que <strong>adiciona</strong> conteúdo caso o valor da sua expressão se <strong>igualar</strong> com a expressão do <strong>ngSwitch</strong>.
                                 </p>
-                                <p id="obs-style-color">
+                                <p id="obs-color">
                                     <strong>Obs.:</strong> A diretiva ngSwitchCase apenas <strong>inclui</strong> conteúdo no HTML, <strong>não remove</strong>.
                                 </p>
-                                <p id="obs-style-color">
+                                <p id="obs-color">
                                     <strong>Obs.:</strong> Existe um problema em relação à <strong>valores string literal</strong>, visto 
-                                    <a href="/bindings/others/microTemplates">
+                                    <a href="/bindings/others/microTemplate">
                                         <strong>aqui</strong>
                                     </a>.
                                 </p> 
-                                <p id="obs-style-color">
+                                <p id="obs-color">
                                     <strong>Obs.:</strong> Asterisco (*) em <strong>ngSwitchCase</strong> indica que é <strong>micro-templates</strong>, visto 
-                                    <a href="/bindings/others/microTemplates">
+                                    <a href="/bindings/others/microTemplate">
                                         <strong>aqui</strong>
                                     </a>.
-                                </p>  
-
+                                </p> 
                                 <!--
                                     <p>
                                         ngSwitchCase sempre eh o elemento span ??
@@ -108,7 +99,6 @@
                             </div>
                         </div>
                     </li>
-            
                     <li>
                         <div id="containerNgSwitchDefault">
                             <div id="headerNgSwitchDefault">
@@ -116,14 +106,13 @@
                                     <strong>Diretiva ngSwitchDefault</strong>
                                 </a>
                             </div>
-                        
                             <div class="collapse" id="collapseNgSwitchDefault" aria-labelledby="headerNgSwitchDefault" data-bs-parent="#accordionSection">
                                 <p>
                                     Diretiva que <strong>adiciona</strong> conteúdo caso <strong>não exista</strong> opções de ngSwitchCase.
                                 </p>
-                                <p id="obs-style-color">
+                                <p id="obs-color">
                                     <strong>Obs.:</strong> Asterisco (*) em <strong>ngSwitchDefault</strong> indica que é <strong>micro-templates</strong>, visto 
-                                    <a href="/bindings/others/microTemplates">
+                                    <a href="/bindings/others/microTemplate">
                                         <strong>aqui</strong>
                                     </a>.
                                 </p> 
@@ -133,9 +122,8 @@
                 </ul>
             </div>
         </div>
-        
-        <div id="sectionExemplo">
-            <div id="accordionSectionExemplo">
+        <div id="sectionBody">
+            <div id="accordionSectionBody">
                 <ul>
                     <li>
                         <div id="containerExemplo">
@@ -145,7 +133,6 @@
                                 </a>
                             </div>
                         </div>
-                        
                         <div class="collapse" id="collapseExemplo" aria-labelledby="headerExemplo" data-bs-parent="#accordionSection">
                             <div id="accordionSubSectionExemplo">
                                 <ul>
@@ -153,10 +140,9 @@
                                         <div id="containerExemplo1">
                                             <div id="headerExemplo1">
                                                 <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplo1" aria-expanded="false" aria-controls="collapseExemplo1">
-                                                    <strong>Exemplo 1:</strong> Diretiva ngSwitch
+                                                    <strong>Exemplo 1:</strong> Diretiva NgSwitch
                                                 </a>
                                             </div>
-                                        
                                             <div class="collapse" id="collapseExemplo1" aria-labelledby="headerExemplo1" data-bs-parent="#accordionSubSectionExemplo">
                                                 <div class="text-white">
                                                     <div class="bg-info p-2">
@@ -180,4 +166,3 @@
         </div>
     </div>
 </div>
-
