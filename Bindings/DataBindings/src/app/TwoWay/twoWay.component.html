@@ -1,10 +1,265 @@
-<h1>Two Way</h1>
-<h3>Basic</h3>
-<ul class="list-unstyled">
-    <li>
-        <a class="btn btn-link" 
-           routerLink="/bindings/twoWay/ngModelDirective">
-           ngModelDirective
-        </a>
-    </li>
-</ul>
+<!--
+    2. Two Way
+-->
+
+<div id="bodyMain">
+    <h1>Two Way</h1>
+    <h3>Básico</h3>
+    <div id="containerModalEstruturaBasica">
+        <h5>Estrutura Básica</h5>
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalEstruturaBasica">
+            <figure class="figure">
+                <img class="figure-img img-fluid" src="../../assets/imagens/dataBindings/TwoWay/basic.png" alt="estrutura basica ... binding">
+                <figcaption class="figure-caption">
+                    <strong>Figura 1:</strong> Estrutura Básica ... Binding.
+                </figcaption>
+            </figure>
+        </button>
+        <div class="modal fade" id="modalEstruturaBasica" tabindex="-1" aria-labelledby="labelModalEstruturaBasica" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="labelModalEstruturaBasica">Estrutura Básica ... Binding</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img class="figure-img img-fluid" src="../../assets/imagens/dataBindings/TwoWay/basic.png" alt="estrutura basica ... binding">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="accordionSection">
+        <div id="sectionBody">
+            <div id="containerInterpretacao">
+                <div id="headerInterpretacao">
+                    <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseInterpretacao" aria-expanded="false" aria-controls="collapseInterpretacao">
+                        <strong>Interpretação da Estrutura Básica</strong>
+                    </a>
+                </div>
+                <div class="collapse" id="collapseInterpretacao" aria-labelledby="headerInterpretacao" data-bs-parent="#accordionSection">
+                    <p>
+
+                    </p>
+                    
+                    <p id="divisor"></p>
+                </div>
+            </div>
+        </div>
+        <div id="sectionBody">
+            <p>
+                One-way data binding são recursos usados em templates HTML do Angular, 
+                para gerar conteúdos ou modificar comportamentos através da interação com o usuário.
+            </p>
+            <p>
+                Possui o fluxo de dados em uma direção (Ver <strong>Figura 1</strong>):
+            </p>
+            <!--
+                TALVEZ TIRAR ESTA PARTE DO accordionSectionBody
+            -->
+            <div id="accordionSectionBody">
+                <ul>
+                    <li>
+                        <div id="containerDataBinding">
+                            <div id="headerDataBinding">
+                                <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseDataBinding" aria-expanded="false" aria-controls="collapseDataBinding">
+                                    <strong>Binding de Dados (Data Bindings)</strong>
+                                </a>
+                            </div>
+                            <div class="collapse" id="collapseDataBinding" aria-labelledby="headerDataBinding" data-bs-parent="#accordionSection">
+                                <p>Os dados fluem do <strong>componente</strong> para o <strong>template</strong>.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="containerEventBinding">
+                            <div id="headerEventBinding">
+                                <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseEventBinding" aria-expanded="false" aria-controls="collapseEventBinding">
+                                    <strong>Binding de Eventos (Event Bindings)</strong>
+                                </a>
+                            </div>
+                            <div class="collapse" id="collapseEventBinding" aria-labelledby="headerEventBinding" data-bs-parent="#accordionSection">
+                                <p>Os dados fluem do <strong>template</strong> para o <strong>componente</strong>.</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="sectionBody">
+            <!--
+                TALVEZ TIRAR ESTA PARTE DO accordionSectionBody
+            -->
+            <p>
+                A estrutura básica, à esquerda da <strong>Figura 1</strong>, é dividida em quatro partes:	
+            </p>
+            <div id="accordionSectionBody">
+                <ul>
+                    <li>
+                        <div id="containerHostElement">
+                            <div id="headerHostElement">
+                                <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseHostElement" aria-expanded="false" aria-controls="collapseHostElement">
+                                    <strong>Elemento hospedeiro (Host Element)</strong>
+                                </a>
+                            </div>
+                        
+                            <div class="collapse" id="collapseHostElement" aria-labelledby="headerHostElement" data-bs-parent="#accordionSection">
+                                <p>
+                                    Elemento HTML ou tag HTML do qual vai mudar a <strong>aparência</strong>, <strong>conteúdo</strong> ou <strong>comportamento</strong>.
+                                </p>
+                                <p id="obs-color">
+                                    <strong>Obs.:</strong> Data Bindings pode ser aplicado a qualquer elemento host e um elemento host pode ter múltiplos data bindings.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <!--
+                        COLOCAR A PARTE DO BANANA-IN-BOX, ABAIXO
+                    -->
+                    <li>
+                        <div id="containerBracket">
+                            <div id="headerBracket">
+                                <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseBracket" aria-expanded="false" aria-controls="collapseBracket">
+                                    <strong>Colchetes (Brackets)</strong>
+                                </a>
+                            </div>
+                            <div class="collapse" id="collapseBracket" aria-labelledby="headerBracket" data-bs-parent="#accordionSection">
+                                <p>
+                                    Colchetes (ou Parênteses) envolvem o alvo denotando avaliar uma expressão que passa o resultado para o alvo, do qual faz mudança no elemento host.
+                                </p>
+                                <p>
+                                    <strong>Colchetes</strong> indica ser um <strong>data binding</strong>.
+                                </p>
+                                <p>
+                                    <strong>Parênteses</strong> indica ser um <strong>event binding</strong>.
+                                </p>
+                                <!--
+                                <p>
+                                    <strong>Colchetes</strong> indicam que os dados fluem do componente para o template HTML (<strong>data bindings</strong>).
+                                </p>
+                                <p>
+                                    <strong>Parênteses</strong> indicam que os dados fluem do template HTML para o componente (<strong>event bindings</strong>).
+                                </p>
+                                -->
+                                <p id="obs-color">
+                                    <strong>Obs.:</strong> Pode-se também usar <strong>dupla chaves</strong>, visto em
+                                    <a href="/bindings/oneWay/stringInterpolation">
+                                        <strong>string interpolation binding</strong>,
+                                    </a>
+                                    e uma combinação de colchetes envolvendo parênteses chamado <strong>banana-in-box</strong>, visto em 
+                                    <a href="/bindings/twoWay">
+                                        <strong>two-way bindings</strong>
+                                    </a>.
+                                </p>
+                                <p id="obs-color">
+                                    <strong>Obs.:</strong> Omitindo os colchetes ou parênteses a expressão não será avaliada, passando a ser considerada um 
+                                    <a href="#">
+                                        <strong>valor literal</strong>
+                                    </a>. 
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="containerTarget">
+                            <div id="headerTarget">
+                                <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseTarget" aria-expanded="false" aria-controls="collapseTarget">
+                                    <strong>Alvo (Target)</strong>
+                                </a>
+                            </div>
+                            <div class="collapse" id="collapseTarget" aria-labelledby="headerTarget" data-bs-parent="#accordionSection">
+                                <p>
+                                    É aquele que vai especificar o que o binding vai fazer, sendo:
+                                </p>
+                                <div id="accordionSubSectionTarget">
+                                    <ul>
+                                        <li>
+                                            <div id="containerDirectiveBinding">
+                                                <div id="headerDirectiveBinding">
+                                                    <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseDirectiveBinding" aria-expanded="false" aria-controls="collapseDirectiveBinding">
+                                                        <strong>Bindings de Diretiva (Directive Bindings)</strong>
+                                                    </a>
+                                                </div>
+                                                <div class="collapse" id="collapseDirectiveBinding" aria-labelledby="headerDirectiveBinding" data-bs-parent="#accordionSubSectionTarget">
+                                                    <p>
+                                                        Podem ser fornecidos pelo Angular (built-in directives) prefixados com <strong>ng</strong> ou <strong>personalizados</strong>.
+                                                    </p>
+                                                    <p>
+                                                        São divididos em:
+                                                    </p>
+                                                    <div>
+                                                        <ul>
+                                                            <li>
+                                                                <a class="btn btn-link" 
+                                                                routerLink="/bindings/twoWay/ngModel">
+                                                                    Diretiva <strong>NgModel</strong>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!--
+                        ALTERAR ESTA PARTE
+                    -->
+                    <li>
+                        <div id="containerExpression">
+                            <div id="headerExpression">
+                                <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseExpression" aria-expanded="false" aria-controls="collapseExpression">
+                                    <strong>Expressão (Expression)</strong>
+                                </a>
+                            </div>
+                            <div class="collapse " id="collapseExpression" aria-labelledby="headerExpression" data-bs-parent="#accordionSection">
+                                <p>
+                                    Fragmento de código analisado através de <strong>propriedades</strong> e <strong>métodos</strong> do <strong>componente</strong> (ou escrito inline no template).
+                                </p>
+                                <p>
+                                    O retorno do componente para a expressão no template modifica a propriedade, dando funcionalidade ao binding que modifica o elemento host.
+                                </p>
+                                <p id="obs-color">
+                                    <!--
+                                        Colocar exemplo de metodo e string literal ?  [ngClass]="'text-white m-2 p-2 ' + getClasses()"
+                                    -->
+                                    <strong>Obs.:</strong> Na expressão pode-se misturar métodos e propriedades do componente com 
+                                    <a href="">
+                                        <strong>valor literal</strong>
+                                    </a>.
+                                </p>
+                                <p id="obs-color">
+                                    <strong>Obs.:</strong> Dependendo da complexidade da lógica não é aconselhável escrever inline no template.
+                                </p>
+                                <p id="obs-color">
+                                    <strong>Obs.:</strong> Quando se tem mais de um valor para se apresentar na expressão, deve-se separar por espaços.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

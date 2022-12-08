@@ -3,12 +3,10 @@ import { RouterModule, Routes } from "@angular/router";
 import { NgModelDirectiveComponent } from "./ngModelDirective.component";
 
 const routes: Routes = [
-   
     { 
         path: 'bindings/twoWay/ngModel',
         component: NgModelDirectiveComponent
     }
-    
 ];
 
 @NgModule({
