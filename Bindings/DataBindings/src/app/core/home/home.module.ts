@@ -8,6 +8,11 @@ import { HomeRoutingModule } from "./homeRouting.module";
         CommonModule,
         HomeRoutingModule
     ],
+    /*
+        TALVEZ AQUI SE COLOQUE route-outlet
+        PARA AS ROTAS CHILD...
+        CONSTRUIR O HOME
+    */
     declarations: [
         HomeComponent
     ]

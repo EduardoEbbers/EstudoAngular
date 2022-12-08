@@ -1,21 +1,12 @@
 /*
-    PARTE DO MAIN
-*/
-
-/*
-    flex: 0 0 auto;
-    width: 83.33333333%;
-}
-*/
-
-/* ALGO NESTE SENTINDO ABAIXO
-
-*/
-/*
     DEVE-SE COLOCAR RESPONSIVIDADE PARA QUEBRAR TUDO talvez flex-direction: row
     E MODIFICAR CERTAS CONFIGURACOES
     comeca a "comer" as palavras em aproximadamente 640px x 819px
     FALTA FAZER O @media() para os tamanhos de width possiveis com o texto 
+*/
+
+/*
+    fazer o teste para todos
 */
 #bodyMain {
     
@@ -30,14 +21,7 @@
     /* width: 78.54%; */
     max-width: 79%;
     text-align: justify;
-
 }
-
-/*
-    colocar em p
-
-    text-align: justify;
-*/
 
 p {
     padding-left: 0;
@@ -45,7 +29,7 @@ p {
 
 
 /*
-    falta analisar img, figure e fixcaption
+    falta analisar img, figure e figcaption
     MAS PROVAVELMENTE TUDO OK
 */
 img {
@@ -61,20 +45,11 @@ figcaption {
     text-align: start;
 }
 
-/* REARRANJAR POIS text-decorantion: none esta se REPETINDO em
-     #headerInterpretacao a, #accordionSectionBody a, #accordionSubSectionTarget li>a
-
-*/
-
-#headerInterpretacao a {
-    padding-left: 0;
-    text-decoration: none;
-}
-
-#accordionSectionBody a {
+#sectionBody a {
     padding-left: 0;
     text-decoration: none;
     padding-top: 0;
+    text-align: justify;
 }
 
 #accordionSectionBody ul {
@@ -110,15 +85,13 @@ figcaption {
     opacity: 1
 }
 
-
-
-
 /*  TESTE COM @media para solucionar o problema do texto
-
+    ajustar os @media para os links (tag a) para align-text:center;
 */
 
 @media (min-width: 1000px) {
-    #sectionBody p {
+    #sectionBody p,
+    #sectionBody a {
         max-width: 45rem;
         /* white-space: break-spaces; */
     }
@@ -127,7 +100,8 @@ figcaption {
 /*  */
 
 @media (max-width: 700px) {
-    #sectionBody p {
+    #sectionBody p,
+    #sectionBody a {
         max-width: 20rem;
         /* white-space: break-spaces; */
     }
@@ -138,7 +112,7 @@ figcaption {
     EH ALGO PARECIDO COM flex-direction: column 
     ou algo com display: e flex-wrap: wrap ?
 
-    @media (max-width: 700px) {
+    @media (max-width: aproximadamente = 500px) {
         #sectionBody p {
             max-width: 20rem;
             white-space: break-spaces;
