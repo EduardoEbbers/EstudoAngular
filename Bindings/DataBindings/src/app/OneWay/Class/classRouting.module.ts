@@ -3,12 +3,10 @@ import { RouterModule, Routes } from "@angular/router";
 import { ClassComponent } from "./class.component";
 
 const routes: Routes = [
-    
     { 
         path: 'bindings/oneWay/class',
         component: ClassComponent
     }
-    
 ];
 
 @NgModule({

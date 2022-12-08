@@ -3,10 +3,9 @@
     1.4 Class Binding
 -->
 
-<div>
+<div id="bodyMain">
     <h1>One Way</h1>
     <h3>Class Binding</h3>
-
     <div id="accordionSection">
         <div id="sectionBody">
             <p>
@@ -15,7 +14,6 @@
             <p>
                 Existe 3 formas de manipulação desta propriedade:     
             </p>
-            
             <div id="accordionSectionBody">
                 <ul>
                     <li>
@@ -25,7 +23,6 @@
                                     <strong>Standard Property Binding</strong>
                                 </a>
                             </div>
-
                             <div class="collapse" id="collapseClass" aria-labelledby="headerClass" data-bs-parent="#accordionSection">
                                 <div id="containerModalEstruturaBasicaClass">
                                     <h5>Estrutura Básica</h5>
@@ -37,7 +34,6 @@
                                             </figcaption>
                                         </figure>
                                     </button>
-                                    
                                     <div class="modal fade" id="modalEstruturaBasicaClass" tabindex="-1" aria-labelledby="labelModalEstruturaBasicaClass" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered modal-lg">
                                             <div class="modal-content">
@@ -56,22 +52,18 @@
                                         </div>
                                     </div>
                                 </div>
-            
-                                <div id="subSection">
-                                    <p>
-                                        Seta, em uma única etapa, <strong>todas as classes</strong> de um elemento HTML após a avaliação da expressão através de uma propriedade ou método do componente.
-                                    </p>
-                                    <p id="obs-style-color">
-                                        <strong>Obs.:</strong> A expressão deve ter um retorno string.
-                                    </p>
-                                    <p id="obs-style-color">
-                                        <strong>Obs.:</strong> Caso houver mais de uma classe no retorno do componente, deve-se separar por espaço.
-                                    </p> 
-                                </div>
+                                <p>
+                                    Seta, em uma única etapa, <strong>todas as classes</strong> de um elemento HTML após a avaliação da expressão através de uma propriedade ou método do componente.
+                                </p>
+                                <p id="obs-color">
+                                    <strong>Obs.:</strong> A expressão deve ter um retorno string.
+                                </p>
+                                <p id="obs-color">
+                                    <strong>Obs.:</strong> Caso houver mais de uma classe no retorno do componente, deve-se separar por espaço.
+                                </p> 
                             </div>
                         </div>
                     </li>
-
                     <li>
                         <div id="containerSpecialClass">
                             <div id="headerSpecialClass">
@@ -79,7 +71,6 @@
                                     <strong>Special Class Binding</strong>
                                 </a>
                             </div>
-
                             <div class="collapse" id="collapseSpecialClass" aria-labelledby="headerSpecialClass" data-bs-parent="#accordionSection">
                                 <div id="containerModalEstruturaBasicaSpecialClass">
                                     <h5>Estrutura Básica</h5>
@@ -91,7 +82,6 @@
                                             </figcaption>
                                         </figure>
                                     </button>
-                                    
                                     <div class="modal fade" id="modalEstruturaBasicaSpecialClass" tabindex="-1" aria-labelledby="labelModalEstruturaBasicaSpecialClass" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered modal-lg">
                                             <div class="modal-content">
@@ -110,25 +100,21 @@
                                         </div>
                                     </div>
                                 </div>
-            
-                                <div id="subSection">
-                                    <p>
-                                        Seta <strong>uma única classe</strong> através de um controle mais refinado usando uma expressão.
-                                    </p>
-                                    <p>
-                                        Usa-se a propriedade <strong>class.</strong> com o <strong>nome da classe</strong> dentro de colchetes para modificar o elemento host.
-                                    </p>
-                                    <p id="obs-style-color">
-                                        <strong>Obs.:</strong> A expressão deve ter um retorno baseado em truthy, visto 
-                                        <a href="/bindings/others/truthyFalsy">
-                                            <strong>aqui</strong>
-                                        </a>.
-                                    </p>
-                                </div>
+                                <p>
+                                    Seta <strong>uma única classe</strong> através de um controle mais refinado usando uma expressão.
+                                </p>
+                                <p>
+                                    Usa-se a propriedade <strong>class.</strong> com o <strong>nome da classe</strong> dentro de colchetes para modificar o elemento host.
+                                </p>
+                                <p id="obs-color">
+                                    <strong>Obs.:</strong> A expressão deve ter um retorno baseado em truthy, visto 
+                                    <a href="/bindings/others/truthyFalsy">
+                                        <strong>aqui</strong>
+                                    </a>.
+                                </p>
                             </div>
                         </div>
                     </li>
-
                     <li>
                         <div id="containerNgClass">
                             <div id="headerNgClass">
@@ -136,7 +122,6 @@
                                     <strong>Diretiva NgClass</strong>
                                 </a>
                             </div>
-                        
                             <div class="collapse" id="collapseNgClass" aria-labelledby="headerNgClass" data-bs-parent="#accordionSection">
                                 <div id="containerModalEstruturaBasicaNgClass">
                                     <h5>Estrutura Básica</h5>
@@ -148,7 +133,6 @@
                                             </figcaption>
                                         </figure>
                                     </button>
-                                    
                                     <div class="modal fade" id="modalEstruturaBasicaNgClass" tabindex="-1" aria-labelledby="labelModalEstruturaBasicaNgClass" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered modal-lg">
                                             <div class="modal-content">
@@ -167,23 +151,19 @@
                                         </div>
                                     </div>
                                 </div>
-            
-                                <div id="subSection">
-                                    <p>
-                                        Use-se a diretiva ngClass, explicado <a href="/bindings/oneWay/ngClass">
-                                            <strong>aqui</strong>.
-                                        </a> 
-                                    </p>
-                                </div>
+                                <p>
+                                    Use-se a diretiva ngClass, explicado <a href="/bindings/oneWay/ngClass">
+                                        <strong>aqui</strong>.
+                                    </a> 
+                                </p>
                             </div>
                         </div>
                     </li>
                 </ul>
             </div>
         </div>
-        
-        <div id="sectionExemplo">
-            <div id="accordionSectionExemplo">
+        <div id="sectionBody">
+            <div id="accordionSectionBody">
                 <ul>
                     <li>
                         <div id="containerExemplo">
@@ -193,7 +173,6 @@
                                 </a>
                             </div>
                         </div>
-                        
                         <div class="collapse" id="collapseExemplo" aria-labelledby="headerExemplo" data-bs-parent="#accordionSection">
                             <div id="accordionSubSectionExemplo">
                                 <ul>
@@ -204,13 +183,7 @@
                                                     <strong>Exemplo 1:</strong> Class binding
                                                 </a>
                                             </div>
-                                        
                                             <div class="collapse" id="collapseExemplo1" aria-labelledby="headerExemplo1" data-bs-parent="#accordionSubSectionExemplo">
-                                                <!--
-                                                    1.4.1 Standard Property Binding
-        
-                                                        - Setting All Classes with property binding
-                                                -->
                                                 <div class="text-white p-2">
                                                     <div [class]="getClasses(1)">
                                                         O primeiro produto é {{ repository.getProduct(1).name }}
@@ -224,7 +197,6 @@
                                             </div>
                                         </div>
                                     </li>
-        
                                     <li>
                                         <div id="containerExemplo2">
                                             <div id="headerExemplo2">
@@ -232,13 +204,7 @@
                                                     <strong>Exemplo 2:</strong> Special Class Binding
                                                 </a>
                                             </div>
-                                        
                                             <div class="collapse" id="collapseExemplo2" aria-labelledby="headerExemplo2" data-bs-parent="#accordionSubSectionExemplo">
-                                                <!--
-                                                    1.4.2 Special Class Binding
-        
-                                                        - Setting Individual Class with Special binding
-                                                -->
                                                 <div class="p-2" [class.bg-danger]="repository.getProduct(2).price < 50" [class.bg-warning]="repository.getProduct(2).price >= 50">
                                                     O segundo produto é {{ repository.getProduct(2).name }}
                                                 </div>
@@ -254,3 +220,4 @@
         </div>
     </div>
 </div>
+        
