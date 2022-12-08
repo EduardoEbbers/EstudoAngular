@@ -1,14 +1,12 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { TemplateReferenceVariablesComponent } from "./templateReferenceVariables.component";
+import { TemplateReferenceVariableComponent } from "./templateReferenceVariable.component";
 
 const routes: Routes = [
-    
     { 
         path: 'bindings/others/templateReferenceVariable',
-        component: TemplateReferenceVariablesComponent
+        component: TemplateReferenceVariableComponent
     }
-    
 ];
 
 @NgModule({
@@ -19,4 +17,4 @@ const routes: Routes = [
         RouterModule
     ]
 })
-export class TemplateReferenceVariablesRoutingModule { }
+export class TemplateReferenceVariableRoutingModule { }

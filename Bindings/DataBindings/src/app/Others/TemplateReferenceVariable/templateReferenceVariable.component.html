@@ -1,0 +1,97 @@
+<!--
+    3. Others
+    3.1 Template x Template Reference Variables
+-->
+
+<div id="bodyMain">
+    <h1>Others</h1>
+    <h3>Template x Template Reference Variables</h3>
+    <div id="containerModalEstruturaBasica">
+        <h5>Estrutura Básica</h5>
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalEstruturaBasica">
+            <figure class="figure">
+                <img class="figure-img img-fluid"
+                    src="../../../assets/imagens/dataBindings/Others/TemplateReferenceVariable/templatereferencevariable.png"
+                    alt="estrutura basica template reference variable">
+                <figcaption class="figure-caption">
+                    <strong>Figura 1:</strong> Estrutura Básica Template Reference Variables.
+                </figcaption>
+            </figure>
+        </button>
+        <div class="modal fade" id="modalEstruturaBasica" tabindex="-1" aria-labelledby="labelModalEstruturaBasica"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="labelModalEstruturaBasica">Estrutura Básica Template Reference Variables</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img class="figure-img img-fluid"
+                            src="../../../assets/imagens/dataBindings/Others/TemplateReferenceVariable/templatereferencevariable.png"
+                            alt="estrutura basica template reference variable">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="accordionSection">
+        <div id="sectionBody">
+            <p>
+                Deve-se usar quando não se tem o <strong>atributo</strong> do elemento HTML na <strong>propriedade</strong> equivalente do API DOM, como <strong>colspan</strong>.
+            </p>
+            <p>
+                Usa-se o prefixo <strong>attr.</strong> com o <strong>nome do atributo</strong> dentro de colchetes para setar <strong>atributos</strong> do elemento host.
+            </p>
+            <p id="nota-color">
+                <strong>Nota:</strong> Existem diferenças entre colspan e colSpan, para saber mais consultar o
+                <a href="http://angular.io/guide/property-binding#colspan">
+                    <strong>website</strong>
+                </a>.
+            </p>
+        </div>
+        <div id="sectionBody">
+            <div id="accordionSectionBody">
+                <ul>
+                    <li>
+                        <div id="containerExemplo">
+                            <div class="headerExemplo">
+                                <a class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo" role="button" aria-expanded="false" aria-controls="collapseExemplo">
+                                    <strong>Lista de Exemplos</strong>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="collapse" id="collapseExemplo" aria-labelledby="headerExemplo" data-bs-parent="#accordionSection">
+                            <div id="accordionSubSectionExemplo">
+                                <ul>
+                                    <li>
+                                        <div id="containerExemplo1">
+                                            <div id="headerExemplo1">
+                                                <a class="btn btn-link" role="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseExemplo1" aria-expanded="false"
+                                                    aria-controls="collapseExemplo1">
+                                                    <strong>Exemplo 1:</strong> Attribute Binding
+                                                </a>
+                                            </div>
+                                            <div class="collapse" id="collapseExemplo1"
+                                                aria-labelledby="headerExemplo1" data-bs-parent="#accordionSubSectionExemplo">
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
