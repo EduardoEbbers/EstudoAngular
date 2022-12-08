@@ -2,13 +2,11 @@ import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { NgForComponent } from "./ngFor.component";
 
-const routes: Routes = [
-   
+const routes: Routes = [ 
     { 
         path: 'bindings/oneWay/ngFor',
         component: NgForComponent
-    }
-    
+    }  
 ];
 
 @NgModule({
