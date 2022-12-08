@@ -1,12 +1,11 @@
 <!--
     1. One Way
-    1.1 Diretiva ngClass Binding
+    1.7 Diretiva ngClass Binding
 -->
 
-<div>
+<div id="bodyMain">
     <h1>One Way</h1>
     <h3>Diretiva NgClass Bindings</h3>
-
     <div id="containerModalEstruturaBasica">
         <h5>Estrutura Básica</h5>
         <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalEstruturaBasica">
@@ -16,8 +15,7 @@
                     <strong>Figura 1:</strong> Estrutura Básica Diretiva NgClass Binding.
                 </figcaption>
             </figure>
-        </button>
-        
+        </button>    
         <div class="modal fade" id="modalEstruturaBasica" tabindex="-1" aria-labelledby="labelModalEstruturaBasica" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
@@ -36,7 +34,6 @@
             </div>
         </div>
     </div>
-    
     <div id="accordionSection">
         <div id="sectionBody">
             <p>
@@ -45,7 +42,6 @@
             <p>
                 Mais flexíveis em relação ao retorno da expressão, que pode ser:
             </p>
-    
             <div id="accordionSectionBody">
                 <ul>
                     <li>
@@ -56,25 +52,17 @@
                                     <strong>String</strong>
                                 </a>
                             </div>
-        
                             <div class="collapse" id="collapseString" aria-labelledby="headerString"
                                 data-bs-parent="#accordionSection">
                                 <p>
                                     São adicionados classes especificadas através de um string.
                                 </p>
-                                <p id="obs-style-color">
+                                <p id="obs-color">
                                     <strong>Obs.:</strong> Múltiplas classes são separadas por espaços.
-                                </p>
-                                <p>
-                                    <!--
-                                        Retirar esta Parte ??
-                                    -->
-                                    Ver <a href="#">Exemplo 1</a>
                                 </p>
                             </div>
                         </div>
                     </li>
-        
                     <li>
                         <div id="containerArray">
                             <div id="headerArray">
@@ -83,22 +71,14 @@
                                     <strong>Array (Lista)</strong>
                                 </a>
                             </div>
-        
                             <div class="collapse" id="collapseArray" aria-labelledby="headerArray"
                                 data-bs-parent="#accordionSection">
                                 <p>
                                     Cada objeto do array representa uma classe que vai ser adicionado no elemento.
                                 </p>
-                                <p>
-                                    <!--
-                                        Retirar esta Parte ??
-                                    -->
-                                    Ver <a href="#">Exemplo 2</a>
-                                </p>
                             </div>
                         </div>
                     </li>
-        
                     <li>
                         <div id="containerObject">
                             <div id="headerObject">
@@ -107,158 +87,143 @@
                                     <strong>Object (Map)</strong>
                                 </a>
                             </div>
-        
                             <div class="collapse" id="collapseObject" aria-labelledby="headerObject"
                                 data-bs-parent="#accordionSection">
                                 <p>
                                     Cada propriedade do objeto representa uma class ou mais.
                                 </p>
-                                <strong>
-                                    <!--
+                                <!--
                                         criar alguma coisa de style para este tipo de situacao ?
                                         ou mudar a cor ?
                                     -->
-                                    <p style="color: green;">
-                                        Mais usado.
-                                    </p>
-                                </strong>
-                                <p id="obs-style-color">
+                                <p style="color: green;">
+                                    <strong>Mais usado.</strong>
+                                </p>
+                                <p id="obs-color">
                                     <strong>Obs.:</strong> Múltiplas classes em uma propriedade do objeto são separadas por espaços.
                                 </p>
-                                
-                                <p id="obs-style-color">
+                                <p id="obs-color">
                                     <strong>Obs.:</strong> A classe será adicionada caso o valor da propriedade for <strong>truthy</strong>, visto 
                                     <a href="/bindings/others/truthyFalsy">
                                         <strong>aqui</strong>
                                     </a>.
-                                </p> 
-                                <p>
-                                     <!--
-                                        Retirar esta Parte ??
-                                    -->
-                                    Ver <a href="#">Exemplo 3</a>
                                 </p>
                             </div>
                         </div>
                     </li>
                 </ul>
             </div>
-            
             <!--
             Aplicar a parte de operador nullish
             -->
-
         </div>
-        
-    
-        <div id="sectionExemplo">
-            <ul>
-                <li>
-                    <div id="containerExemplo">
-                        <div class="headerExemplo">
-                            <a class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo" role="button" aria-expanded="false" aria-controls="collapseExemplo">
-                                <strong>Lista de Exemplos</strong>
-                            </a>
+        <div id="sectionBody">
+            <div id="accordionSectionBody">
+                <ul>
+                    <li>
+                        <div id="containerExemplo">
+                            <div class="headerExemplo">
+                                <a class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#collapseExemplo" role="button" aria-expanded="false" aria-controls="collapseExemplo">
+                                    <strong>Lista de Exemplos</strong>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="collapse" id="collapseExemplo" aria-labelledby="headerExemplo" data-bs-parent="#accordionSection">
-                        <div id="accordionSubSectionExemplo">
-                            <ul>
-                                <li>
-                                    <div id="containerExemplo1">
-                                        <div id="headerExemplo1">
-                                            <a class="btn btn-link" role="button" data-bs-toggle="collapse"
-                                                data-bs-target="#collapseExemplo1" aria-expanded="false"
-                                                aria-controls="collapseExemplo1">
-                                                <strong>Exemplo 1:</strong> Usando método com retorno String
-                                            </a>
-                                        </div>
-    
-                                        <div class="collapse" id="collapseExemplo1"
-                                            aria-labelledby="headerExemplo1" data-bs-parent="#accordionSubSectionExemplo">
-                                            <div class="text-white m-2">
-                                                <div class="p-2" [ngClass]="getClassesString(1)">
-                                                    O primeiro produto é {{ repository.getProduct(1).name }}
-                                                </div>
-                                                <div class="p-2" [ngClass]="getClassesString(2)">
-                                                    O segundo produto é {{ repository.getProduct(2).name }}
-                                                </div>
-                                                <div class="p-2"
-                                                    [ngClass]="repository.getProduct(3).name == 'Kayak' ? 'text-center bg-danger' : 'bg-info'">
-                                                    O terceiro produto é {{ repository.getProduct(3).name }}
+                        <div class="collapse" id="collapseExemplo" aria-labelledby="headerExemplo" data-bs-parent="#accordionSection">
+                            <div id="accordionSubSectionExemplo">
+                                <ul>
+                                    <li>
+                                        <div id="containerExemplo1">
+                                            <div id="headerExemplo1">
+                                                <a class="btn btn-link" role="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseExemplo1" aria-expanded="false"
+                                                    aria-controls="collapseExemplo1">
+                                                    <strong>Exemplo 1:</strong> Usando método com retorno String
+                                                </a>
+                                            </div>
+                                            <div class="collapse" id="collapseExemplo1"
+                                                aria-labelledby="headerExemplo1" data-bs-parent="#accordionSubSectionExemplo">
+                                                <div class="text-white m-2">
+                                                    <div class="p-2" [ngClass]="getClassesString(1)">
+                                                        O primeiro produto é {{ repository.getProduct(1).name }}
+                                                    </div>
+                                                    <div class="p-2" [ngClass]="getClassesString(2)">
+                                                        O segundo produto é {{ repository.getProduct(2).name }}
+                                                    </div>
+                                                    <div class="p-2"
+                                                        [ngClass]="repository.getProduct(3).name == 'Kayak' ? 'text-center bg-danger' : 'bg-info'">
+                                                        O terceiro produto é {{ repository.getProduct(3).name }}
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </li>
-    
-                                <li>
-                                    <div id="containerExemplo2">
-                                        <div id="headerExemplo2">
-                                            <a class="btn btn-link" role="button" data-bs-toggle="collapse"
-                                                data-bs-target="#collapseExemplo2" aria-expanded="false"
-                                                aria-controls="collapseExemplo2">
-                                                <strong>Exemplo 2:</strong> Usando método com retorno Array
-                                            </a>
-                                        </div>
-    
-                                        <div class="collapse" id="collapseExemplo2"
-                                            aria-labelledby="headerExemplo2" data-bs-parent="#accordionSubSectionExemplo">
-                                            <div class="text-white m-2">
-                                                <div class="p-2" [ngClass]="getClassesArray(1)">
-                                                    O primeiro produto {{ repository.getProduct(1).name }} tem o preço {{
-                                                    repository.getProduct(1).price }}
-                                                </div>
-                                                <div class="p-2" [ngClass]="getClassesArray(2)">
-                                                    O segundo produto {{ repository.getProduct(2).name }} tem o preço {{
-                                                    repository.getProduct(2).price }}
-                                                </div>
-                                                <div class="p-2"
-                                                    [ngClass]="repository.getProduct(3).price < 50 ? ['text-center bg-danger'] : ['text-center', 'bg-warning']">
-                                                    O terceiro produto {{ repository.getProduct(3).name }} tem o preço {{
-                                                    repository.getProduct(3).price }}
+                                    </li>
+                                    <li>
+                                        <div id="containerExemplo2">
+                                            <div id="headerExemplo2">
+                                                <a class="btn btn-link" role="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseExemplo2" aria-expanded="false"
+                                                    aria-controls="collapseExemplo2">
+                                                    <strong>Exemplo 2:</strong> Usando método com retorno Array
+                                                </a>
+                                            </div>
+                                            <div class="collapse" id="collapseExemplo2"
+                                                aria-labelledby="headerExemplo2" data-bs-parent="#accordionSubSectionExemplo">
+                                                <div class="text-white m-2">
+                                                    <div class="p-2" [ngClass]="getClassesArray(1)">
+                                                        O primeiro produto {{ repository.getProduct(1).name }} tem o preço {{
+                                                        repository.getProduct(1).price }}
+                                                    </div>
+                                                    <div class="p-2" [ngClass]="getClassesArray(2)">
+                                                        O segundo produto {{ repository.getProduct(2).name }} tem o preço {{
+                                                        repository.getProduct(2).price }}
+                                                    </div>
+                                                    <div class="p-2"
+                                                        [ngClass]="repository.getProduct(3).price < 50 ? ['text-center bg-danger'] : ['text-center', 'bg-warning']">
+                                                        O terceiro produto {{ repository.getProduct(3).name }} tem o preço {{
+                                                        repository.getProduct(3).price }}
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </li>
-    
-                                <li>
-                                    <div id="containerExemplo3">
-                                        <div id="headerExemplo3">
-                                            <a class="btn btn-link" role="button" data-bs-toggle="collapse"
-                                                data-bs-target="#collapseExemplo3" aria-expanded="false"
-                                                aria-controls="collapseExemplo3">
-                                                <strong>Exemplo 3:</strong> Usando método com retorno Object
-                                            </a>
-                                        </div>
-    
-                                        <div class="collapse" id="collapseExemplo3" aria-labelledby="headerExemplo3"
-                                            data-bs-parent="#accordionSubSectionExemplo">
-                                            <div class="text-white m-2">
-                                                <div class="p-2" [ngClass]="getClassesMap(1)">
-                                                    O primeiro produto {{ repository.getProduct(1).name }} tem o preço {{
-                                                    repository.getProduct(1).price }}
-                                                </div>
-                                                <div class="p-2" [ngClass]="getClassesMap(2)">
-                                                    O segundo produto {{ repository.getProduct(2).name }} tem o preço {{
-                                                    repository.getProduct(2).price }}
-                                                </div>
-                                                <div class="p-2"
-                                                    [ngClass]="{'text-center bg-danger': repository.getProduct(3).name == 'Kayak', 'bg-success': repository.getProduct(3).price < 50}">
-                                                    O terceiro produto {{ repository.getProduct(3).name }} tem o preço {{
-                                                    repository.getProduct(3).price }}
+                                    </li>
+                                    <li>
+                                        <div id="containerExemplo3">
+                                            <div id="headerExemplo3">
+                                                <a class="btn btn-link" role="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseExemplo3" aria-expanded="false"
+                                                    aria-controls="collapseExemplo3">
+                                                    <strong>Exemplo 3:</strong> Usando método com retorno Object
+                                                </a>
+                                            </div>
+                                            <div class="collapse" id="collapseExemplo3" aria-labelledby="headerExemplo3"
+                                                data-bs-parent="#accordionSubSectionExemplo">
+                                                <div class="text-white m-2">
+                                                    <div class="p-2" [ngClass]="getClassesMap(1)">
+                                                        O primeiro produto {{ repository.getProduct(1).name }} tem o preço {{
+                                                        repository.getProduct(1).price }}
+                                                    </div>
+                                                    <div class="p-2" [ngClass]="getClassesMap(2)">
+                                                        O segundo produto {{ repository.getProduct(2).name }} tem o preço {{
+                                                        repository.getProduct(2).price }}
+                                                    </div>
+                                                    <div class="p-2"
+                                                        [ngClass]="{'text-center bg-danger': repository.getProduct(3).name == 'Kayak', 'bg-success': repository.getProduct(3).price < 50}">
+                                                        O terceiro produto {{ repository.getProduct(3).name }} tem o preço {{
+                                                        repository.getProduct(3).price }}
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </li>
-                            </ul>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                </li>
-            </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
+                        
+        
+        

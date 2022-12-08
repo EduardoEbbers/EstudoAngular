@@ -2,13 +2,11 @@ import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { EventComponent } from "./event.component";
 
-const routes: Routes = [
-    
+const routes: Routes = [ 
     { 
         path: 'bindings/oneWay/event',
         component: EventComponent
     }
-    
 ];
 
 @NgModule({

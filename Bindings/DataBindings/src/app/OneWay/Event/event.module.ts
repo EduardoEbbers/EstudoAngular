@@ -5,7 +5,6 @@ import { EventRoutingModule } from "./eventRouting.module";
 
 @NgModule({
     imports: [
-        CommonModule,
         EventRoutingModule
     ],
     declarations: [
