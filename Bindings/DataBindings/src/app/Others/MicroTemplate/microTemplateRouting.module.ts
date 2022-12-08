@@ -1,14 +1,12 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { MicroTemplatesComponent } from "./microTemplates.component";
+import { MicroTemplateComponent } from "./microTemplate.component";
 
 const routes: Routes = [
-    
     { 
         path: 'bindings/others/microTemplate',
-        component: MicroTemplatesComponent
+        component: MicroTemplateComponent
     }
-    
 ];
 
 @NgModule({
@@ -19,4 +17,4 @@ const routes: Routes = [
         RouterModule
     ]
 })
-export class MicroTemplatesRoutingModule { }
+export class MicroTemplateRoutingModule { }
