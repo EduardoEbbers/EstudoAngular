@@ -5,7 +5,7 @@ import { MicroTemplateModule } from "./MicroTemplate/microTemplate.module";
 import { NgContainerElementModule } from "./NgContainerElement/ngContainerElement.module";
 import { NgTemplateElementModule } from "./NgTemplateElement/ngTemplateElement.module";
 import { TruthyFalsyModule } from "./truthyFalse/truthyFalsy.module";
-import { OneWayRestrictionsModule } from "./OneWayRestrictions/oneWayRestrictions.module";
+import { OneWayRestrictionsModule } from "./OneWayRestriction/oneWayRestriction.module";
 
 
 @NgModule({

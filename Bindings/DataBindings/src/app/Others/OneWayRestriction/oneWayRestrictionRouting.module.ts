@@ -1,14 +1,12 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { OneWayRestrictionsComponent } from "./OneWayRestrictions.component";
+import { OneWayRestrictionComponent } from "./oneWayRestriction.component";
 
 const routes: Routes = [
-    
     { 
         path: 'bindings/others/oneWayRestriction',
-        component: OneWayRestrictionsComponent
+        component: OneWayRestrictionComponent
     }
-    
 ];
 
 @NgModule({
@@ -19,4 +17,4 @@ const routes: Routes = [
         RouterModule
     ]
 })
-export class OneWayRestrictionsRoutingModule { }
+export class OneWayRestrictionRoutingModule { }
