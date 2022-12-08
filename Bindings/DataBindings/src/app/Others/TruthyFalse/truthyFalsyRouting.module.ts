@@ -3,12 +3,10 @@ import { RouterModule, Routes } from "@angular/router";
 import { TruthyFalsyComponent } from "./truthyFalsy.component";
 
 const routes: Routes = [
-    
     { 
         path: 'bindings/others/truthyFalsy',
         component: TruthyFalsyComponent
     }
-    
 ];
 
 @NgModule({
