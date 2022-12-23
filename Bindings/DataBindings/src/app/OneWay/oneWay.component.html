@@ -113,7 +113,7 @@
                                 </a>
                             </div>
                             <div class="collapse" id="collapseDataBinding" aria-labelledby="headerDataBinding" data-bs-parent="#accordionSection">
-                                <p>Os dados fluem do <strong>componente</strong> para o <strong>template</strong>.</p>
+                                <p>Os dados fluem do <strong>componente</strong> para o <strong>template HTML</strong>.</p>
                             </div>
                         </div>
                     </li>
@@ -125,7 +125,7 @@
                                 </a>
                             </div>
                             <div class="collapse" id="collapseEventBinding" aria-labelledby="headerEventBinding" data-bs-parent="#accordionSection">
-                                <p>Os dados fluem do <strong>template</strong> para o <strong>componente</strong>.</p>
+                                <p>Os dados fluem do <strong>template HTML</strong> para o <strong>componente</strong>.</p>
                             </div>
                         </div>
                     </li>
@@ -148,7 +148,7 @@
                         
                             <div class="collapse" id="collapseHostElement" aria-labelledby="headerHostElement" data-bs-parent="#accordionSection">
                                 <p>
-                                    Elemento HTML ou tag HTML do qual vai mudar a <strong>aparência</strong>, <strong>conteúdo</strong> ou <strong>comportamento</strong>.
+                                    Elemento HTML (ou tag HTML) que implicará na mudaça da <strong>aparência</strong>, <strong>conteúdo</strong> ou <strong>comportamento</strong>.
                                 </p>
                                 <p id="obs-color">
                                     <strong>Obs.:</strong> Data Bindings pode ser aplicado a qualquer elemento host e um elemento host pode ter múltiplos data bindings.
@@ -165,22 +165,11 @@
                             </div>
                             <div class="collapse" id="collapseBracket" aria-labelledby="headerBracket" data-bs-parent="#accordionSection">
                                 <p>
-                                    Colchetes (ou Parênteses) envolvem o alvo denotando avaliar uma expressão que passa o resultado para o alvo, do qual faz mudança no elemento host.
+                                    Colchetes (ou Parênteses) envolvem o alvo denotando avaliar uma expressão do qual o valor do resultado fará mudança no elemento host.
                                 </p>
                                 <p>
-                                    <strong>Colchetes</strong> indica ser um <strong>data binding</strong>.
+                                    Colchetes indicam ser um <strong>data binding</strong>, e Parênteses indicam ser um <strong>event binding</strong>.
                                 </p>
-                                <p>
-                                    <strong>Parênteses</strong> indica ser um <strong>event binding</strong>.
-                                </p>
-                                <!--
-                                <p>
-                                    <strong>Colchetes</strong> indicam que os dados fluem do componente para o template HTML (<strong>data bindings</strong>).
-                                </p>
-                                <p>
-                                    <strong>Parênteses</strong> indicam que os dados fluem do template HTML para o componente (<strong>event bindings</strong>).
-                                </p>
-                                -->
                                 <p id="obs-color">
                                     <strong>Obs.:</strong> Pode-se também usar <strong>dupla chaves</strong>, visto em
                                     <a href="/bindings/oneWay/stringInterpolation">
@@ -254,6 +243,9 @@
                                                                     Binding de Estilo (<strong>Style Binding</strong>)
                                                                 </a>
                                                             </li>
+                                                            <!--
+                                                                TIRAR ESTA PARTE DE DEBAIXO ?
+                                                            -->
                                                             <li>
                                                                 <a class="btn btn-link" 
                                                                 routerLink="/bindings/oneWay/event">
@@ -274,7 +266,7 @@
                                                 </div>
                                                 <div class="collapse" id="collapseDirectiveBinding" aria-labelledby="headerDirectiveBinding" data-bs-parent="#accordionSubSectionTarget">
                                                     <p>
-                                                        Podem ser fornecidos pelo Angular (built-in directives) prefixados com <strong>ng</strong> ou <strong>personalizados</strong>.
+                                                        Podem ser fornecidos pelo <strong>built-in directives</strong> do Angular (prefixados com <strong>ng</strong>) ou podem ser <strong>personalizados</strong>.
                                                     </p>
                                                     <p>
                                                         São divididos em:
@@ -317,6 +309,12 @@
                                                                     Diretiva <strong>NgTemplateOutlet</strong>
                                                                 </a>
                                                             </li>
+                                                            <li>
+                                                                <a class="btn btn-link" 
+                                                                routerLink="/bindings/oneWay/ngModel">
+                                                                    Diretiva <strong>NgModel</strong>
+                                                                </a>
+                                                            </li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -336,16 +334,17 @@
                             </div>
                             <div class="collapse " id="collapseExpression" aria-labelledby="headerExpression" data-bs-parent="#accordionSection">
                                 <p>
-                                    Fragmento de código analisado através de <strong>propriedades</strong> e <strong>métodos</strong> do <strong>componente</strong> (ou escrito inline no template).
+                                    Fragmento de código JavaScript analisado através de <strong>propriedades</strong> e <strong>métodos</strong> do <strong>componente</strong> (ou escrito <strong>inline</strong> no template HTML).
                                 </p>
                                 <p>
-                                    O retorno do componente para a expressão no template modifica a propriedade, dando funcionalidade ao binding que modifica o elemento host.
+                                    O valor retorno do componente para a expressão no template HTML dará funcionalidade ao alvo que ao fazer binding modificará o elemento host.
                                 </p>
                                 <p id="obs-color">
                                     <!--
                                         Colocar exemplo de metodo e string literal ?  [ngClass]="'text-white m-2 p-2 ' + getClasses()"
+                                        MELHORAR A REFERENCIA E O TEXTO ABAIXO.
                                     -->
-                                    <strong>Obs.:</strong> Na expressão pode-se misturar métodos e propriedades do componente com 
+                                    <strong>Obs.:</strong> Na expressão pode-se realizar operações de concatenação JavaScript de valores de propriedades e métodos do componente com 
                                     <a href="">
                                         <strong>valor literal</strong>
                                     </a>.

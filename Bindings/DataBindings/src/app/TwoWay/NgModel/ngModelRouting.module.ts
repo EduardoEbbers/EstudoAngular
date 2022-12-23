@@ -1,11 +1,11 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { NgModelDirectiveComponent } from "./ngModelDirective.component";
+import { NgModelComponent } from "./ngModel.component";
 
 const routes: Routes = [
     { 
         path: 'bindings/twoWay/ngModel',
-        component: NgModelDirectiveComponent
+        component: NgModelComponent
     }
 ];
 
@@ -17,4 +17,4 @@ const routes: Routes = [
         RouterModule
     ]
 })
-export class NgModelDirectiveRoutingModule { }
+export class NgModelRoutingModule { }
