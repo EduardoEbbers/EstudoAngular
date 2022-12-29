@@ -61,6 +61,19 @@ figcaption {
     color: rgb(218, 2, 2);
 }
 
+#nota-color {
+    color: darkgoldenrod;
+}
+
+#nota-color a {
+    color: darkgoldenrod;
+    text-decoration: underline;
+}
+
+#nota-color a:hover {
+    color: rgb(156, 114, 10);
+}
+
 /*
     Medias
 */

@@ -10,7 +10,7 @@
         <h5>Estrutura Básica</h5>
         <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalEstruturaBasica">
             <figure class="figure">
-                <img class="figure-img img-fluid" src="../../../assets/imagens/dataBindings/OneWay/DirectiveBinding/NgTemplateOutlet/ngtemplateoutlet.png" alt="estrutura basica diretiva ngTemplateOutlet binding">
+                <img class="figure-img img-fluid" src="../../../assets/imagens/dataBindings/OneWay/DirectiveBinding/NgTemplateOutlet/ngtemplateoutlet.png" alt="estrutura basica diretiva ngtemplateoutlet binding">
                 <figcaption class="figure-caption">
                     <strong>Figura 1:</strong> Estrutura Básica Diretiva NgTemplateOutlet Binding.
                 </figcaption>
@@ -25,7 +25,7 @@
                     </div>
                     <div class="modal-body">
                         <img class="figure-img img-fluid"
-                        src="../../../assets/imagens/dataBindings/OneWay/DirectiveBinding/NgTemplateOutlet/ngtemplateoutlet.png" alt="estrutura basica diretiva ngTemplateOutlet binding">
+                        src="../../../assets/imagens/dataBindings/OneWay/DirectiveBinding/NgTemplateOutlet/ngtemplateoutlet.png" alt="estrutura basica diretiva ngtemplateoutlet binding">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -37,7 +37,13 @@
     <div id="accordionSection">
         <div id="sectionBody">
             <p>
-                Usa-se para repetir blocos de conteúdos em um locais especificados através do elemento ng-template.
+                Usa-se para <strong>repetir blocos</strong>, do mesmo conteúdo ou não, em um locais especificados através do elemento HTML <strong>ng-template</strong>.
+            </p>
+            <p id="obs-color">
+                <strong>Obs.:</strong> Pode-se <strong>gerar</strong> conteúdo <strong>sem adição</strong> da estrutura HTML através do elemento HTML <strong>ng-container</strong>, visto
+                <a href="/bindings/others/ngContainerElement">
+                    <strong>aqui</strong>
+                </a>.
             </p>
             <p>
                 Divide-se em três partes:
@@ -48,12 +54,12 @@
                         <div id="containerNgTemplate">
                             <div id="headerNgTemplate">
                                 <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseNgTemplate" aria-expanded="false" aria-controls="collapseNgTemplate">
-                                    <strong>NgTemplate</strong>
+                                    <strong>Elemento Ng-Template</strong>
                                 </a>
                             </div>
                             <div class="collapse" id="collapseNgTemplate" aria-labelledby="headerNgTemplate" data-bs-parent="#accordionSection">
                                 <p>
-                                    Deve-se definir o elemento ng-template, que contem o conteúdo que vai ser repetido.
+                                    Elemento HTML que contém o <strong>conteúdo</strong> que vai ser repetido.
                                 </p>
                                 <p id="nota-color">
                                     <strong>Nota:</strong> Para saber mais sobre elemento <strong>ng-template</strong> consultar
@@ -73,12 +79,18 @@
                                 </a>
                             </div>
                             <div class="collapse" id="collapseReferenceVariable" aria-labelledby="headerReferenceVariable" data-bs-parent="#accordionSection">
+                                <!--
+                                    FAZER A TRANSLOCACAO DESSE CONTEUDO PARA OTHERS/templateReferenceVariable
+                                -->
                                 <p>
-                                    Deve-se definir a variável de referência (reference variable) do qual pode ser usado em outras partes do HTML
+                                    Definido dentro do elemento HTML ng-template do qual pode ser <strong>usado</strong> em <strong>outras partes</strong> do HTML.
+                                </p>
+                                <p>
+                                    É formado por uma <strong>hashtag</strong> (#) seguido do <strong>nome da variável</strong> (ver <strong>Figura 1</strong>).
                                 </p>
                                 <p id="nota-color">
                                     <strong>Nota:</strong> Para saber mais sobre elemento <strong>variável de referência</strong> consultar
-                                    <a href="/bindings/others/microTemplate">
+                                    <a href="/bindings/others/templateReferenceVariable">
                                         <strong>aqui</strong>
                                     </a>.
                                 </p>
@@ -86,41 +98,30 @@
                         </div>
                     </li>
                     <li>
-                        <div id="containerX">
-                            <div id="headerX">
-                                <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseX" aria-expanded="false" aria-controls="collapseX">
-                                    <strong>Variável de Referência (Reference Variable)</strong>
+                        <div id="containerNgTemplateOutlet">
+                            <div id="headerNgTemplateOutlet">
+                                <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseNgTemplateOutlet" aria-expanded="false" aria-controls="collapseNgTemplateOutlet">
+                                    <strong>Diretiva ngTemplateOutlet</strong>
                                 </a>
                             </div>
-                        
-                            <div class="collapse" id="collapseX" aria-labelledby="headerX" data-bs-parent="#accordionSection">
+                            <div class="collapse" id="collapseNgTemplateOutlet" aria-labelledby="headerNgTemplateOutlet" data-bs-parent="#accordionSection">
                                 <p>
-                                    Deve-se usar a variável de referência do elemento ng-template de repeticao definido antes
+                                    Usa-se para fazer um <strong>binding</strong> no <strong>elemento ng-template</strong> do qual <strong>adiciona o conteúdo</strong>, definido antes, dentro do HTML.
                                 </p>
-                                <p>
-                                    E faz-se o binding com a diretiva ngTemplateOutlet em outro elemento ng-template
+                                <p id="obs-color">
+                                    <strong>Obs.:</strong> A expressão da diretiva ngTemplateOutlet deve ter o <strong>mesmo nome</strong> da variável de referência que foi atribuída, anteriormente, no <strong>elemento ng-template</strong> de repetição.
                                 </p>
-                                <p id="nota-color">
-                                    <strong>Nota:</strong> Para saber mais sobre elemento <strong>variável de referência</strong> consultar
+                                <p id="obs-color">
+                                    <strong>Obs.:</strong> Pode-se usar uma combinação da diretiva <strong>ngTemplateOutlet</strong> e <strong>ngTemplateOutletContext</strong> do elemento HTML <strong>ng-template</strong> para fornecer um conteúdo mais dinâminco, visto
                                     <a href="/bindings/others/microTemplate">
                                         <strong>aqui</strong>
                                     </a>.
-                                </p>
-                                <p id="obs-color">
-                                    <strong>Obs.:</strong> A expressão da diretiva ngTemplateOutlet deve ter o mesmo nome da variável de referência que foi atribuída no elemento ng-template de repetição.
                                 </p>
                             </div>
                         </div>
                     </li>
                 </ul>
             </div>
-            <p style="color: red;">
-                Context Object
-                    <!--
-                    Explica isso...
-                pode-se usar em data bindings o objeto de contexto (context object) dentro do elemento ng-template
-                -->
-            </p>
         </div>
         <div id="sectionBody">
             <div id="accordionSectionBody">

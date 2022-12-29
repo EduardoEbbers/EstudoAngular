@@ -37,10 +37,10 @@
     <div id="accordionSection">
         <div id="sectionBody">
             <p>
-                Usa-se quando se quer selecionar, dentre outras, uma opção do <strong>ngSwitchCase</strong> baseado no resultado da expressão do <strong>ngSwitch</strong>.
+                Usa-se quando se quer selecionar uma opção, dentre outras, do <strong>ngSwitchCase</strong> baseado no resultado da expressão do <strong>ngSwitch</strong>.
             </p>
             <p id="obs-color">
-                <strong>Obs.:</strong> Equivalente ao switch case do JavaScript.
+                <strong>Obs.:</strong> É equivalente à declaração <strong>switch case</strong> do JavaScript.
             </p>
             <p>
                 A diretiva se divide em três partes:
@@ -56,10 +56,10 @@
                             </div>
                             <div class="collapse" id="collapseNgSwitch" aria-labelledby="headerNgSwitch" data-bs-parent="#accordionSection">
                                 <p>
-                                    Diretiva que faz um <strong>data binding</strong> da expressão que retorna um string. <!-- ou number ? -->
+                                    Diretiva que faz um <strong>data binding</strong> após o retorno da expressão, sendo string ou um number.
                                 </p>
                                 <p id="obs-color">
-                                    <strong>Obs.:</strong> Colchetes em <strong>ngSwitch</strong> indica que é um <strong>data binding</strong>, ver <strong>estrutura básica</strong> acima.
+                                    <strong>Obs.:</strong> Colchetes em <strong>ngSwitch</strong> indica que é um <strong>data binding</strong> (ver <strong>Figura 1</strong>).
                                 </p>
                             </div>
                         </div>
@@ -73,14 +73,14 @@
                             </div>
                             <div class="collapse" id="collapseNgSwitchCase" aria-labelledby="headerNgSwitchCase" data-bs-parent="#accordionSection">
                                 <p>
-                                    Diretiva que <strong>adiciona</strong> conteúdo caso o valor da sua expressão se <strong>igualar</strong> com a expressão do <strong>ngSwitch</strong>.
+                                    Diretiva que <strong>adiciona</strong> conteúdo caso o valor da sua expressão for <strong>igual</strong> ao valor da expressão do <strong>ngSwitch</strong>.
                                 </p>
                                 <p id="obs-color">
                                     <strong>Obs.:</strong> A diretiva ngSwitchCase apenas <strong>inclui</strong> conteúdo no HTML, <strong>não remove</strong>.
                                 </p>
                                 <p id="obs-color">
                                     <strong>Obs.:</strong> Existe um problema em relação à <strong>valores string literal</strong>, visto 
-                                    <a href="/bindings/others/microTemplate">
+                                    <a href="/bindings/others/">
                                         <strong>aqui</strong>
                                     </a>.
                                 </p> 

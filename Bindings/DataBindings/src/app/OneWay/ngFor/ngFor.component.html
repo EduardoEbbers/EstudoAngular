@@ -40,23 +40,23 @@
                 Usa-se quando se quer <strong>repetir</strong> a secção de conteúdos para <strong>cada objeto</strong> de um array.
             </p>
             <p id="obs-color">
+                <strong>Obs.:</strong> É equivalente à declaração <strong>loop foreach</strong> do JavaScript.
+            </p>
+            <p id="obs-color">
                 <strong>Obs.:</strong> Asterisco (*) indica que a diretiva é um <strong>micro-template</strong>, visto
                 <a href="/bindings/others/microTemplate">
                     <strong>aqui</strong>
                 </a>.
             </p>
             <p id="obs-color">
-                <strong>Obs.:</strong> Equivale com loop foreach do JavaScript
+                <strong>Obs.:</strong> Usa-se geralmente para popular elementos aninhados, como as linhas de uma tabela.
             </p>
-            <!--
-                Talvez colocar uma nota dizendo com o website para explicar a diferenca entre of e in de ngFor do javascript
-            -->
-            <!--
-                Colocar a parte que geralmente o ngFor popula uma tabela gerando uma linha para cada objeto ?  
-            -->
-            <!--
-                Colocar a parte que o melhor jeito de se usar é eh elementos aninhados (como uma tabela)  
-            -->
+            <p id="nota-color">
+                <strong>Nota:</strong> Na expressão deve-se usar <strong>of</strong> em ngFor, pois existe uma diferença entre <strong>of</strong> e <strong>in</strong> da declaração <strong>for</strong> do JavaScript, visto no
+                <a href="#">
+                    <strong>website</strong>
+                </a>.
+            </p>
             <p>
                 A expressão se divide em duas partes:
             </p>
@@ -66,22 +66,34 @@
                     <li>
                         <div id="containerTemplateVariable">
                             <div id="headerTemplateVariable">
+                                <!--
+                                    TALVEZ TRANSLOCAR ESTA PARTE PARA A SESSAO DE OTHERS/TEMPLATEREFERENCEVARIABLE
+                                -->
                                 <a class="btn btn-link" role="button" data-bs-toggle="collapse" data-bs-target="#collapseTemplateVariable" aria-expanded="false" aria-controls="collapseTemplateVariable">
                                     <strong>Variável de Template (Template Variable)</strong>
                                 </a>
                             </div>
                             <div class="collapse" id="collapseTemplateVariable" aria-labelledby="headerTemplateVariable" data-bs-parent="#accordionSection">
+                                <!--
+                                    TALVEZ FZER A TRANSLOCACAO DESTA PARTE PARA OTHERS/TEMPLATEREFERENCEVARIABLES
+                                -->
                                 <p>
-                                    Usa-se a keyword de inicialização de variável <strong>let</strong> e o <strong>nome da variável de template</strong>.
+                                    Usa-se a keyword de inicialização de variável <strong>let</strong> e o <strong>nome da variável de template</strong> (ver <strong>Figura 1</strong>).
                                 </p>
                                 <p>
-                                    A variável de template representa cada <strong>objeto ou item</strong> do <strong>data source</strong> (fonte de dados) para serem usados dentro do template.
+                                    A variável de template representa cada <strong>objeto ou item</strong> do <strong>data source</strong> (fonte de dados) para serem usados dentro do template HTML.
                                 </p>
                                 <p id="obs-color">
-                                    <strong>Obs.:</strong> Variáveis de template geralmente são usadas dentro de string interpolation binding.
+                                    <strong>Obs.:</strong> Variáveis de template geralmente são usadas com string interpolation binding.
+                                </p>
+                                <p id="nota-color">
+                                    <strong>Nota:</strong> Para saber mais sobre elemento <strong>variável de template</strong> consultar
+                                    <a href="/bindings/others/templateReferenceVariable">
+                                        <strong>aqui</strong>
+                                    </a>.
                                 </p>
                                 <p>
-                                    Existem outras variáveis de template (que são separadas por <strong>ponto-e-vígula</strong> (;) após a expressão), são eles:
+                                    Existem outras variáveis de template (separadas por <strong>ponto-e-vígula</strong> dentro da expressão e depois do data source), são eles:
                                 </p>
                                 <div id="accordionSubSectionTemplateVariable">
                                     <ul>
@@ -94,10 +106,7 @@
                                                 </div>
                                                 <div class="collapse" id="collapseIndex" aria-labelledby="headerIndex" data-bs-parent="#accordionSubSectionTemplateVariable">
                                                     <p>
-                                                        Indica a <strong>posição</strong> do objeto <strong>atual</strong>.
-                                                    </p>
-                                                    <p>
-                                                        Usa-se <strong>incrementando</strong> para cada objeto do data source.
+                                                        Indica a <strong>posição</strong> do objeto <strong>atual</strong>, sendo <strong>incrementado</strong> para cada objeto do data source.
                                                     </p>
                                                     <p id="obs-color">
                                                         <strong>Obs.:</strong> O valor da variável é do tipo <strong>number</strong>.
@@ -114,7 +123,7 @@
                                                 </div>
                                                 <div class="collapse" id="collapseCount" aria-labelledby="headerCount" data-bs-parent="#accordionSubSectionTemplateVariable">
                                                     <p>
-                                                        Indica a <strong>quantidade</strong> de itens no <strong>data source</strong>.
+                                                        Indica a <strong>quantidade</strong> de itens do <strong>data source</strong>.
                                                     </p>
                                                     <p id="obs-color">
                                                         <strong>Obs.:</strong> O valor da variável é do tipo <strong>number</strong>.
@@ -132,6 +141,9 @@
                                                 <div class="collapse" id="collapseOdd" aria-labelledby="headerOdd" data-bs-parent="#accordionSubSectionTemplateVariable">
                                                     <p>
                                                         Indica que a <strong>posição</strong> (index) do atual objeto no data source é <strong>impar</strong>, caso retorne <strong>true</strong>.
+                                                    </p>
+                                                    <p id="obs-color">
+                                                        <strong>Obs.:</strong> É o oposto de <strong>even</strong> (visto abaixo), significando que se <strong>odd</strong> é <strong>true</strong>, <strong>even</strong> deve ser <strong>false</strong>.
                                                     </p>
                                                     <p id="obs-color">
                                                         <strong>Obs.:</strong> O valor da variável é do tipo <strong>boolean</strong>.
@@ -154,6 +166,9 @@
                                                         Indica que a <strong>posição</strong> (index) do atual objeto no data source é <strong>par</strong>, caso retorne <strong>true</strong>.
                                                     </p>
                                                     <p id="obs-color">
+                                                        <strong>Obs.:</strong> É o oposto de <strong>odd</strong> (visto acima), significando que se <strong>even</strong> é <strong>true</strong>, <strong>odd</strong> deve ser <strong>false</strong>.
+                                                    </p>
+                                                    <p id="obs-color">
                                                         <strong>Obs.:</strong> O valor da variável é do tipo <strong>boolean</strong>.
                                                     </p>
                                                     <p id="obs-color">
@@ -171,7 +186,10 @@
                                                 </div>
                                                 <div class="collapse" id="collapseFirst" aria-labelledby="headerFirst" data-bs-parent="#accordionSubSectionTemplateVariable">
                                                     <p>
-                                                        Indica que a <strong>posição</strong> do atual objeto é o <strong>primeiro</strong> no data source, caso retorne <strong>true</strong>.
+                                                        Indica que a <strong>posição</strong> do atual objeto no data source é o <strong>primeiro</strong>, caso retorne <strong>true</strong>.
+                                                    </p>
+                                                    <p id="obs-color">
+                                                        <strong>Obs.:</strong> Quando <strong>first</strong> é <strong>true</strong> para o primeiro objeto do array, significa que todos os outros objetos vão ser <strong>false</strong>.
                                                     </p>
                                                     <p id="obs-color">
                                                         <strong>Obs.:</strong> O valor da variável é do tipo <strong>boolean</strong>.
@@ -188,7 +206,10 @@
                                                 </div>
                                                 <div class="collapse" id="collapseLast" aria-labelledby="headerLast" data-bs-parent="#accordionSubSectionTemplateVariable">
                                                     <p>
-                                                        Indica que a <strong>posição</strong> do atual objeto é o <strong>último</strong> no data source, caso retorne <strong>true</strong>.
+                                                        Indica que a <strong>posição</strong> do atual objeto no data source é o <strong>último</strong>, caso retorne <strong>true</strong>.
+                                                    </p>
+                                                    <p id="obs-color">
+                                                        <strong>Obs.:</strong> Quando <strong>last</strong> é <strong>true</strong> para o último objeto do array, significa que todos os outros objetos vão ser <strong>false</strong>.
                                                     </p>
                                                     <p id="obs-color">
                                                         <strong>Obs.:</strong> O valor da variável é do tipo <strong>boolean</strong>.
@@ -220,6 +241,7 @@
 
             <!--
                 Separar esta parte de tudo
+                é considerado uma variavel de template ?
                 
                 <li>
                     <div id="containerTrackBy">
